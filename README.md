@@ -1,4 +1,5 @@
 ---
+---
 
 CODE@TACC: Real-World Raspberry Pi
 =================================
@@ -29,11 +30,13 @@ This is the online material for TACC's summer high school program "CODE@TACC" in
 | 12:00 -  1:00 | Lunch |
 |  1:00 -  2:15 | [Connecting your Raspi to the world](raspi/index.md) |
 |  2:15 -  3:00 | Break |
-|  2:30 -  3:45 | [Building a pulse oximeter](pulsox/index.md) |
+|  2:30 -  3:45 | [Build a pulse oximeter](pulsox/index.md) |
 |  3:45 -  4:00 | Closing |
 
 ## Day 2
-
+|Time           | Topic                                                        |
+|---------------|--------------------------------------------------------------|
+| | |
 
 ---
 ---
