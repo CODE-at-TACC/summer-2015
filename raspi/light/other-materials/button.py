@@ -2,19 +2,13 @@
 
 import RPi.GPIO as GPIO
 import time
-# blinking function
-def blink(pin):
-        GPIO.output(pin,GPIO.HIGH)
-        time.sleep(1)
-        GPIO.output(pin,GPIO.LOW)
-        time.sleep(1)
-        return
-# to use Raspberry Pi board pin numbers
-GPIO.setmode(GPIO.BOARD)
-# set up GPIO25 output channel
-GPIO.setup(22, GPIO.OUT)
-# blink GPIO25 5 times
-for i in range(0,5):
-        blink(22)
-	print 'blink #' + str(i + 1)
-GPIO.cleanup() 
+
+GPIO.setmode(GPIO.BCM)
+
+GPIO.setup(18, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+
+while True:
+    input_state = GPIO.input(18)
+    if input_state == False:
+        print('Button Pressed')
+        time.sleep(0.2)

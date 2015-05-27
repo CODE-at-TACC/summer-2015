@@ -2,6 +2,7 @@
 
 import RPi.GPIO as GPIO
 import time
+
 # blinking function
 def blink(pin):
         GPIO.output(pin,GPIO.HIGH)
@@ -9,12 +10,16 @@ def blink(pin):
         GPIO.output(pin,GPIO.LOW)
         time.sleep(1)
         return
-# to use Raspberry Pi board pin numbers
-GPIO.setmode(GPIO.BOARD)
-# set up GPIO25 output channel
-GPIO.setup(22, GPIO.OUT)
-# blink GPIO25 5 times
+
+# Use BCM pin numbers
+GPIO.setmode(GPIO.BCM)
+# Set up GPIO25 output channel
+GPIO.setup(25, GPIO.OUT)
+
+# Blink GPIO25 5 times
 for i in range(0,5):
-        blink(22)
+        blink(25)
 	print 'blink #' + str(i + 1)
+
+# Reset all the pins when we are done
 GPIO.cleanup() 
