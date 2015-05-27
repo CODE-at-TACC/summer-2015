@@ -1,8 +1,8 @@
-= Introduction to Processing =
+# Introduction to Processing
 
 https://processing.org/
 
-= Installation =
+# Installation
 
 There is no official ARM version of processing available, but luckily it runs
 in java, so we can use the jdk 7 available in the raspbian respositories.

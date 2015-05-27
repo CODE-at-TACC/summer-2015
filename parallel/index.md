@@ -1,4 +1,4 @@
-= Parallel Computing =
+# Parallel Computing
 
 1. Introduction
 2. Multi-core Programming
