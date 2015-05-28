@@ -45,6 +45,3 @@ The Raspberry Pi is a low cost, credit-card sized computer that plugs into a com
 
 **On the monitor, you will see a lot of text scroll by. This is the computer "booting up"**
 
-![Raspbian desktop](images/desktop-start.jpg)
-
-**After the boot sequence, the system will start up a desktop operating environment**
