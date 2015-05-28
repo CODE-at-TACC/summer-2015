@@ -9,7 +9,7 @@ There is no official ARM version of processing available, but luckily it runs in
 ```shell
 sudo apt-get install oracle-java7-jdk
 ```
-Now that we have java, we can download and untar processing.
+Now that we have java, we can download and un-tar processing.
 
 ```shell
 wget http://download.processing.org/processing-2.2.1-linux32.tgz
@@ -33,6 +33,6 @@ After some messages on your console, the graphical IDE pictured below should app
 
 ![processing IDE](images/processing.png)
 
-Next, we'll be learning the basics of processing and making our first program.
+IDE stands for *Integrated Development Environment* and usually allows code editing, building, and debugging all from inside the program. All of our Processing development will be taking place inside of this IDE, so you won't be learning any new keyboard shortcuts! Even though IDE development is easier, knowing how to edit text inside a terminal is invaluable when working on remote systems like stampede. Up next, we'll be making our first program, or sketch.
 
 [:arrow_right: First Sketch](04-first-sketch)
