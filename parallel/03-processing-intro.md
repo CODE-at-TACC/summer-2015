@@ -35,4 +35,4 @@ After some messages on your console, the graphical IDE pictured below should app
 
 IDE stands for *Integrated Development Environment* and usually allows code editing, building, and debugging all from inside the program. All of our Processing development will be taking place inside of this IDE, so you won't be learning any new keyboard shortcuts! Even though IDE development is easier, knowing how to edit text inside a terminal is invaluable when working on remote systems like stampede. Up next, we'll be making our first program, or sketch.
 
-[:arrow_right: First Sketch](04-first-sketch)
+[:arrow_right: First Sketch](04-first-sketch.md)
