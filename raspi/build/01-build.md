@@ -38,10 +38,13 @@ The Raspberry Pi is a low cost, credit-card sized computer that plugs into a com
 * Connect the power supply to the Pi microUSB power input
 
 ![Raspberry Pi Assembled](images/connected.jpg)
+
 **:red_circle: The status LEDs on the Pi should light up**
 
 ![Boot sequence on screen](images/boot-screen.jpg)
+
 **On the monitor, you will see a lot of text scroll by. This is the computer "booting up"**
 
 ![Raspbian desktop](images/desktop-start.jpg)
+
 **After the boot sequence, the system will start up a desktop operating environment**
