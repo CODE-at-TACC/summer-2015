@@ -34,14 +34,15 @@ Out of the box, all Pis are named "raspberrypi" on the network. This is going to
 * Move the cursor to **8 Advanced Options**, hit **Return**, then navigate to **A2 Hostname** and hit **Return** again. Read the message about valid characters, hit **Return** one more time. 
 * Enter a new name for your Pi in the box labeled "Please enter a hostname". When you're ready to end, use **Tab** to navigate to the "OK" field and hit **Return**
 
+**Rules of the Road**
+
+1. You can only use the characters a-z, 0-9, and the hyphen
+2. All names used in our workshop have to be appropriate for a classroom setting
+
 ### Restarting
 
 Most of the changes you made won't take effect until the computer restarts. So, let's do that now from within **raspi-config**
 
 * Navigate the cursor to **Finish** and hit **Return*, then watch the system restart. It should only take a few seconds. Then, you will be ready to explore the desktop!
 
-**Rules of the Road**
-
-1. You can only use the characters a-z, 0-9, and the hyphen
-2. All names used in our workshop have to be appropriate for a classroom setting
 
