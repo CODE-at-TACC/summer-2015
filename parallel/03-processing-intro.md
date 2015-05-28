@@ -29,6 +29,10 @@ The ln command makes a [symbolic link](http://en.wikipedia.org/wiki/Symbolic_lin
 ```shell
 ./processing
 ```
+After some messages on your console, the graphical IDE pictured below should appear.
+
+![processing IDE](images/processing.png)
+
 Next, we'll be learning the basics of processing and making our first program.
 
-### > First program
+[:arrow_right: First Sketch](04-first-sketch)
