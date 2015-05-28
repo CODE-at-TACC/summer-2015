@@ -40,7 +40,8 @@ Most of the changes you made won't take effect until the computer restarts. So, 
 
 * Navigate the cursor to **Finish** and hit **Return*, then watch the system restart. It should only take a few seconds. Then, you will be ready to explore the desktop!
 
-*Rules of the Road*
+**Rules of the Road**
+
 1. You can only use the characters a-z, 0-9, and the hyphen
 2. All names used in our workshop have to be appropriate for a classroom setting
 
