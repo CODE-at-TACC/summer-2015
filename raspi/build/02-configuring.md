@@ -29,10 +29,10 @@ Some systems launch to a powerful text interface by default because this saves p
 
 ### Renaming your Pi
 
-Out of the box, all Pis are named "raspberrypi" on the network. This is going to get confusing, so we want you to give your Pi a unique name. 
+Out of the box, all Pis are named **raspberrypi** on the network. This is going to get confusing, so you are going to give your Pi its own unique name. 
 
 * Move the cursor to **8 Advanced Options**, hit **Return**, then navigate to **A2 Hostname** and hit **Return** again. Read the message about valid characters, hit **Return** one more time. 
-* Enter a new name for your Pi in the box labeled "Please enter a hostname". When you're ready to end, use **Tab** to navigate to the "OK" field and hit **Return**
+* Enter a new name for your Pi in the box labeled "Please enter a hostname". When you're ready to end, use **Tab** to navigate to the **OK** field and hit **Return**
 
 **Rules of the Road**
 
@@ -43,6 +43,6 @@ Out of the box, all Pis are named "raspberrypi" on the network. This is going to
 
 Most of the changes you made won't take effect until the computer restarts. So, let's do that now from within **raspi-config**
 
-* Navigate the cursor to **Finish** and hit **Return*, then watch the system restart. It should only take a few seconds. Then, you will be ready to explore the desktop!
+* Navigate the cursor to **Finish** and hit **Return**, then watch the system restart. It should only take a few seconds. Then, you will be ready to explore the desktop!
 
 
