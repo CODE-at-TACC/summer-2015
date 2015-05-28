@@ -41,3 +41,11 @@ rect(25,25,50,50);
   }
 }
 ```
+
+Scary.
+
+This pile of Java is why Processing was developed. You don't start with the traditional "Hello World!"; you're starting with a graphic! From a single line, which the compiler turned into complicated Java code. Before we make a bigger and better program, lets learn a little about the window, or canvas, that all graphics are drawn to.
+
+# The Processing Canvas
+
+
