@@ -13,7 +13,7 @@ When you first boot up, the system will launch **raspi-config**
 
 ![Raspberry Pi Software Configuration Tool](images/raspi-config.png)
 
-**Raspi-config** is a text-based application, so you can't use your mouse to navigate. Instead, use the **Arrow** and **Tab** keys to move between fields, **Return** to select, and use **Esc** to cancel. You can always get back to the main page by hitting Esc a couple of times!
+**Raspi-config** is a text-based application, so you can't use your mouse to navigate. Instead, use the **Arrow** and **Tab** keys to move between fields, **Return** to select, and use **Esc** to cancel. You can always get back to the main page by tapting Esc a couple of times!
 
 :star: You can access this screen in the future to make other changes by typing `sudo raspi-config` in any Terminal window (more on Terminals later...)
 
@@ -21,7 +21,7 @@ When you first boot up, the system will launch **raspi-config**
 
 The Raspbian operating system takes up just a small portion of the available storage space, but we don't start off knowing how big of a disk it was installed on. So, the first time we boot up from a new SD card we need to let the system know how much room there is for programs and doge pics.
 
-* Move the red cursor to **1 Expand Filesystem** using the arrow keys and hit **Return**. You should see a message go by the the filesystem will be enlarged next time you reboot. Simple right?
+* Move the red cursor to **1 Expand Filesystem** using the arrow keys and tap **Return**. You should see a message go by the the filesystem will be enlarged next time you reboot. Simple right?
 
 ![Raspberry Doge](images/doge.jpg)
 
@@ -29,14 +29,14 @@ The Raspbian operating system takes up just a small portion of the available sto
 
 Some systems launch to a powerful text interface by default because this saves precious memory and processor power. For now, we want to make sure the Raspi starts up in a friendly desktop environment.
 
-* Move the red cursor to **3 Enable Boot to Desktop/Scratch**, hit **Return**, and select **Desktop Log in as user 'pi' at the graphical desktop**. Hit **Return**.
+* Move the red cursor to **3 Enable Boot to Desktop/Scratch**, tap **Return**, and select **Desktop Log in as user 'pi' at the graphical desktop**. tap **Return**.
 
 ### Renaming your Pi
 
 Out of the box, all Pis are named **raspberrypi** on the network. This is going to get confusing, so you are going to give your Pi its own unique name.
 
-* Move the cursor to **8 Advanced Options**, hit **Return**, then navigate to **A2 Hostname** and hit **Return** again. Read the message about valid characters, hit **Return** one more time.
-* Enter a new name for your Pi in the box labeled "Please enter a hostname". When you're ready to end, use **Tab** to navigate to the **OK** field and hit **Return**
+* Move the cursor to **8 Advanced Options**, tap **Return**, then navigate to **A2 Hostname** and tap **Return** again. Read the message about valid characters, tap **Return** one more time.
+* Enter a new name for your Pi in the box labeled "Please enter a hostname". When you're ready to end, use **Tab** to navigate to the **OK** field and tap **Return**
 
 #### Rules of the Road
 
@@ -48,6 +48,9 @@ Out of the box, all Pis are named **raspberrypi** on the network. This is going 
 
 Most of the changes you made won't take effect until the computer restarts. So, let's do that now from within **raspi-config**
 
-* Navigate the cursor to **Finish** and hit **Return**, then watch the system restart. It should only take a few seconds. Then, you will be ready to explore the desktop!
+* Navigate the cursor to **Finish** and tap **Return**, then watch the system restart. It should only take a few seconds. Then, you will be ready to explore the desktop!
 
+![Raspbian Desktop](images/desktop-start.jpg)
+
+** The Raspbian desktop will appear after you reboot from raspi-config**
 
