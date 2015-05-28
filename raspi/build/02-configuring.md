@@ -9,6 +9,10 @@ Getting Started with Raspberry Pi
 
 # Set it up just so
 
+The Raspberry Pi operating system needs a few hints, provided by you, as to how it should behave. If you have used a PC computer before, this is similar to changing settings in the BIOS.
+
+## About Raspi-config
+
 When you first boot up, the system will launch **raspi-config**
 
 ![Raspberry Pi Software Configuration Tool](images/raspi-config.png)
@@ -52,5 +56,9 @@ Most of the changes you made won't take effect until the computer restarts. So, 
 
 ![Raspbian Desktop](images/desktop-start.jpg)
 
-** The Raspbian desktop will appear after you reboot from raspi-config**
+**The Raspbian desktop will appear after you reboot from raspi-config**
 
+# Challenges
+* None
+
+# References

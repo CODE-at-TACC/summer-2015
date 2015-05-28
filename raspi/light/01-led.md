@@ -40,7 +40,7 @@ GPIO.setup(22, GPIO.OUT)
 for i in range(0,5):
         blink(22)
 	print 'blink #' + str(i + 1)
-GPIO.cleanup() 
+GPIO.cleanup()
 ```
 Save it as *blink.py* (Control O) then quit (Control X)
 List your local directory (by typing *ls* in LXterminal) to verify that blink.py was saved in it
@@ -55,13 +55,13 @@ Did it blink? You've taken your first steps towards building this... (Daft Punk 
 
 *Note* The word *sudo* means run Python as a "super-user" instead of just plain old "pi". The super-user is the boss of other users on your system. We need to do this because not just anyone is allowed to control the GPIO pins by default.
 
-## Challenges
+# Challenges
 * Change the number of times the LED flashes
 * Update the circuit and code so the LED is controlled by another GPIO pin
 * Increase the resistor value to 1000 Ohms - what happens?
 * Make the LED flash faster or slower
 
-## Handy references
+# Handy references
 
-## Sources
+# Sources
 1. http://www.rpiblog.com/2012/09/using-gpio-of-raspberry-pi-to-blink-led.html
