@@ -35,4 +35,4 @@ After some messages on your console, the graphical IDE pictured below should app
 
 Next, we'll be learning the basics of processing and making our first program.
 
-[04-first-sketch](> First Sketch)
+[> First Sketch](04-first-sketch)
