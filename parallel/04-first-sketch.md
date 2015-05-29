@@ -67,15 +67,13 @@ Now that you how shapes are drawn on the canavs, we can experiment with the rect
 
 ## Objectives
 
-* Draw the square in the lower-left corner
+| Objective | Example |
+|:--|---|
+| Draw the square in the lower-left corner | ![lower left](images/lower_left.png) |
+| Draw the square half on the screen | ![half left](images/half_left.png) |
+| Draw a rectangle | ![rectangle](images/rectangle.png) |
+| Draw multiple rectangles | ![more rectangles](images/two_rect.png) |
 
-![lower left](images/lower_left.png)
-* Draw the square half on the screen
+Also feel free to take a look at the documentation to make other things happen
 
-![half left](images/half_left.png)
-* Draw a rectangle
-
-![rectangle](images/rectangle.png)
-* Draw multiple rectangles
-
-![more rectangles](images/two_rect.png)
+[:arrow_right: Animation](05-animation.md)
