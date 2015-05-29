@@ -76,3 +76,6 @@ Now that you how shapes are drawn on the canavs, we can experiment with the rect
 * Draw a rectangle
 
 ![rectangle](images/rectangle.png)
+* Draw multiple rectangles
+
+![more rectangles](images/two_rect.png)
