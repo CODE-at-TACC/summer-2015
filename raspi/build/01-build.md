@@ -48,7 +48,7 @@ The Raspberry Pi is a low cost, credit-card sized computer that plugs into a com
 # Challenges
 * None
 
-# References
+# Resources
 * [What is Raspberry Pi](https://www.raspberrypi.org/help/what-is-a-raspberry-pi/)
 * [Shop for Raspberry Pi and accessories](http://www.adafruit.com/category/105)
 

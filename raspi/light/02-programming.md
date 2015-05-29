@@ -15,6 +15,9 @@ Overview
 ## Create a simple blink program in Python
 
 * Open LXTerminal and start the **nano** text editor by typing `nano` followed by tapping **Return**
+
+![Nano starting display](images/nano-blank.png)
+
 * Copy and paste in the following code from a web browser into **nano**
 
 ```python
@@ -43,22 +46,26 @@ for i in range(0,10):
 GPIO.cleanup()
 ```
 
+Your screen should look like this:
+
 ![Python code pasted into nano](images/nano.png)
 
-* Save this text to a file named **blink.py** by entering **Cntl-O**, specifying the name of the file. Then, then quit **nano** by entering **Cntl-X**.
+* Save this pasted text to a file named **blink.py** by entering **Cntl-O**, specifying the name of the file. Then, then quit **nano** by entering **Cntl-X**.
 * List your local directory (by typing *ls* in LXterminal) to verify that blink.py was saved in it
 
-## Running the program
+## Running the blink.py program
 
 ![Blinken Lights](images/blinken.gif)
 
-We want to start a class-wide disco party of blinking lights. To get there, we have to enter some words into the Terminal: `sudo python blink.py`
+Let's throw a class-wide disco party of blinking lights:
 
-**Did your light blink?** If so, you've taken your first steps towards building this...
-
-![Daft Punk Helmet](images/daft.gif)
+* Enter the following words into the Terminal and keep an eye on your prototype board: `sudo python blink.py`
 
 :star: The word `sudo` means run Python as a **super-user** instead of the regular "pi" user. The super-user is the boss of other users on the system. We need to do this because not just any user is allowed to control the GPIO pins on a Raspberry pi.
+
+**Did your LED light blink?** If so, you've taken your first steps towards building this...
+
+![Daft Punk Helmet](images/daft.gif)
 
 # Challenges
 * Change the number of times the LED flashes
@@ -66,7 +73,5 @@ We want to start a class-wide disco party of blinking lights. To get there, we h
 * Make the LED flash faster or slower
 * Update the circuit and code so the LED is controlled by another GPIO pin
 
-# References
-
-# Sources
+# Resources
 

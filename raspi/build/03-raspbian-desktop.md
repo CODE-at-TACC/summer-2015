@@ -21,4 +21,5 @@ Change keyboard mapping
 * Run raspi-config after booting. Change the password for the "pi" user (but don't forget to write it down).
 * Connect to the "Challenge-Mode" network. The password is written on the whiteboard. Don't forget to re-connect to CODE@TACC network afterwards.
 
-# References
+# Resources
+
