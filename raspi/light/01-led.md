@@ -80,7 +80,7 @@ A diode is basically a one-way street for current. Imagine such a one-way street
 
 ![LED Diagram](images/led_diagram.png)
 
-**The longer lead on an LED is the positive side, or anode, while the sorter is the negative or cathode.**
+**The longer lead on an LED is the positive side (anode), while the shorter lead is the negative (cathode) side.**
 
 ### Attach the Cobbler to the prototyping board
 
