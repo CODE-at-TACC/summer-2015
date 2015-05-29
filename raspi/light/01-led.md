@@ -62,13 +62,25 @@ Resistors are good at one thing: *resisting* the flow of electricity (otherwise 
 
 :star: If we were talking about water current, then pipes are like resistors. Thin pipes let less water through (high resistance), thick pipes let a lot of water through (low resistance). Wth a fire hydrant, you want low resistance. With a water fountain, you'd want high resistance.
 
+**Reading Resistor Codes**
+
 Resistance is measured in **ohms**, often written as the symbol Ω. The bigger the resistance value (in ohms) the more it prevents current flow. Every resistor has printed on it a special code that lets you know what its resistance is. It's a challenge when you are starting out to remember which values are which, but you'll get the hang of it soon enough with some practice!
 
 ![Resistor Chart](images/rescolorcode.jpg)
 
 **:question: What is the value of this resistor?**
 
-![Resistor](images/resistor.gif)
+![Resistor](images/resistor.jpg)
+
+### LEDs
+
+LED stands for **Light Emitting Diode**, and they (usually) have long lifespans and require little power. Because of these characteristics, you've probably got 100 of these in your house on various electrical devices! The light-emitting part of the name makes sense, but what does diode mean?
+
+A diode is basically a one-way street for current. Imagine such a one-way street with a traffic enforcement officer in front. If you want to turn onto the street the wrong way, she will not let you. Likewise a diode simply does not let current go through it the wrong way. Current in a diode can only flow from the positive side to the negative side.
+
+![LED Diagram](images/led_diagram.png)
+
+**The longer lead on an LED is the positive side, or anode, while the sorter is the negative or cathode.**
 
 ### Attach the Cobbler to the prototyping board
 
