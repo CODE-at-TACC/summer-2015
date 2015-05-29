@@ -65,7 +65,9 @@ Now that you how shapes are drawn on the canavs, we can experiment with the rect
 | w | width of the rectangle |
 | h | height of the rectangle |
 
-## Objectives
+## Explore
+
+Take some time and try to replicate these examples from what we learned about the `rect()` command.
 
 | Objective | Example |
 |:--|---|
@@ -74,6 +76,6 @@ Now that you how shapes are drawn on the canavs, we can experiment with the rect
 | Draw a rectangle | ![rectangle](images/rectangle.png) |
 | Draw multiple rectangles | ![more rectangles](images/two_rect.png) |
 
-Also feel free to take a look at the documentation to make other things happen
+After recreating all examples, take a look at the documentation and try making something on your own. The next lesson will cover color and animation.
 
 [:arrow_right: Animation](05-animation.md)
