@@ -1,6 +1,6 @@
 # Introduction to Processing
 
-![Processing logo](http://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Processing_Logo_Clipped.svg/200px-Processing_Logo_Clipped.svg.png) [Processing](https://processing.org/) is the open source language developed over the Java programming language to aid teaching computer programming through visual interactions. Today we will be learning the basics of processing to aid us in understanding distributed computing. First, you need to install processing on your Raspberry Pi 2.
+[<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Processing_Logo_Clipped.svg/200px-Processing_Logo_Clipped.svg.png" align="left" width="75" height="75">rocessing](https://processing.org/) is the open source language developed over the Java programming language to aid teaching computer programming through visual interactions. Today we will be learning the basics of processing to aid us in understanding distributed computing. First, you need to install processing on your Raspberry Pi 2.
 
 # Installation
 
