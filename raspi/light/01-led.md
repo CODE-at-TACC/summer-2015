@@ -80,7 +80,7 @@ Resistance is measured in **ohms**, often written as the symbol Ω. The bigger t
 
 **:question: What is the value of this resistor?**
 
-![Resistor](images/resistor.jpg)
+![1 kOhm Resistor](images/1k_ohm_resistor.jpg)
 
 #### LEDs
 
