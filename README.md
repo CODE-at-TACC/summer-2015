@@ -23,15 +23,18 @@ This is the online material for TACC's summer high school program "CODE@TACC" in
 |Time           | Topic                                                        |
 |---------------|--------------------------------------------------------------|
 |  9:00 -  9:45 | Welcome and team building |
-| 10:00 - 10:45 | Tour of TACC's [Stampede Supercomputer](https://www.tacc.utexas.edu/stampede/) |
+|  9:45 - 10:15 | Tour of TACC's [Stampede Supercomputer](https://www.tacc.utexas.edu/stampede/) |
+| 10:15 - 10:45 | [Getting Started with Raspberry Pi](raspi/01-build.md) |
 | 10:45 - 11:00 | Break |
-| 11:00 -
-| 11:30 - 12:00 | [Assemble and configure your Raspberry Pi](raspi/index.md) |
-| 12:00 -  1:00 | Lunch |
-|  1:00 -  2:15 | [Connecting your Raspi to the world](raspi/index.md) |
-|  2:15 -  3:00 | Break |
-|  2:30 -  3:45 | [Build a pulse oximeter](pulsox/index.md) |
-|  3:45 -  4:00 | Closing |
+| 11:00 - 11:25 | [Introducing the Linux desktop](raspi/03-raspbian-desktop.md) |
+| 11:25 - 11:30 | Questions |
+| 11:30 - 12:00 | [Introduction to the command line and Python](raspi/04-linux-101.md) |
+| 12:00 -  1:00 | Lunch and Challenges |
+|  1:00 -  2:10 | [Physical computing with Raspberry Pi](light/01-led.md) |
+|  2:10 -  2:15 | Questions |
+|  2:15 -  2:30 | Break |
+|  2:30 -  3:30 | Build a medical device with Raspberry Pi |
+|  3:30 -  4:00 | Questions and closing activities |
 
 ## Day 2
 |Time           | Topic                                                        |
