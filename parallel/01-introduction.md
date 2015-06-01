@@ -29,7 +29,7 @@ Compute the max value from an array of numbers. Communication will happen in the
 
 Now that you've physically performed a parallel computation, we're going to learn about ways to make visualizations before we implement one.
 
-:right_arrow: Processing Introduction
+:arrow_right: Processing Introduction
 
 # Citations
 
