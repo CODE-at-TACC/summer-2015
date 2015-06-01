@@ -8,8 +8,6 @@ Physical Computing with Raspberry Pi
 
 # Make your light blink using Python
 
-Overview
-
 You have made a circuit for the Pi to control, but how do we tell the Pi what to do? :snake:Python to the rescue!
 
 ## Create a simple blink program in Python
