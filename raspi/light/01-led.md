@@ -70,7 +70,7 @@ To use a breadboard, you need 22 gauge solid-core (not stranded) wires that have
 
 Resistors are good at one thing: *resisting* the flow of electricity (otherwise known as current). This allows you, as a circuit designer, control where and how fast current flows.
 
-:star: A helpful way of thinking about electrical current and resistance is to think of it in terms of water pressure in a tube. If you have water flowing in a tube and you put a smaller pipe in line, there will be more resistance to water flow. On the other hand, attaching a larger pipe will lead to less resistance to water flow.
+A helpful way of thinking about electrical current and resistance is to think of it in terms of water pressure in a tube. If you have water flowing in a tube and you put a smaller pipe in line, there will be more resistance to water flow. On the other hand, attaching a larger pipe will lead to less resistance to water flow.
 
 **Reading Resistor Codes**
 
@@ -94,27 +94,38 @@ Most LEDs only require a small amount of current. Never connect an LED directly 
 
 **The longer lead on an LED is the positive side (anode), while the shorter lead is the negative (cathode) side.**
 
-### Attach the Cobbler to the prototyping board
+#### Momentary Switch
 
-*Photos demonstrating orientation*
+#### Cobbler
 
-### Create your simple circuit
+The Cobbler is a utility header board and ribbon cable that makes it really easy to connect a Raspberry Pi to a standard solderless breadboard. Like the Pi's output pins, it has 2 rows of 20 pins. The layout of the pins is exactly the same as on the Pi, and as you can see they are even labeled for you. All you have to do is make sure to connect the ribbon cable in the right orientation (it's kind of hard to get wrong)
 
-Explanation of the circuit, including why we need a resistor
+![Raspberry Pi + Ribbon cable + Cobbler + Breadboard](images/cobbler.jpg)
 
-[Fritzing diagram of the circuit](images/led-101_bb.png)
+### Create a simple Pi-powered circuit
 
-**Wire up the circuit exactly as shown. :boom: Make sure  the LED is in the correct orientation or it will not light when we power it up.**
+To turn the LED on and off we need to control it using one of the Raspberry Pi's GPIO pins. We'll worry about the programming later - for now, we will just wire up the circuit and hope for the best!
 
-:question: What is the value in Ohms of the resistor we are using in this circuit?
+1. If you have not already, install the Cobbler on the solderless breadboard. Make sure the first row of pins are seated in breadboard row **1**. Then, connect the ribbon cable from the Cobbler to the Pi.
+2. Connect one jumper wire from the **GND** pin to the **-** rail on the breadboard
+3. Connect another jumper wire from **25** to an open row on the breadboard
+4. Put a **Red-Red-Brown-Gold** resistor on the same row, connecting to another row :question: What is the value in Ohms of this resistor?
+5. Connect the **Anode** of any Red, Green, or Yellow LED downstream of the resistor
+6. Connect the **Cathode** of the LED to the common **GND** rail
+7. Your connections should resemble the ones in the diagram below
+
+![Fritzing diagram of the circuit](images/led-101_bb.png)
+
+**:boom: Make sure  the LED is in the correct orientation or it will not light when we power it up.**
 
 # Challenges
-* None
+* Try briefly moving the wire from **25** to **3V3** - What happens? Don't forget to plug back into **25** when you are done playing :-)
 
 # Resources
 * [Graphical Resistor Chart](http://resistor.cherryjourney.pt)
 * [Sparkfun](http://www.sparkfun.com/)
 * [Adafruit Industries](http://www.adafruit.com/)
+* [Fritzing](http://fritzing.org/)
 
 # Acknowledgements
 1. Lady Ada for images and inspiration pertaining to the breadboarding tutorial
