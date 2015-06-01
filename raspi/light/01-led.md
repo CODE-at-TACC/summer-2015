@@ -8,17 +8,25 @@ Physical Computing with Raspberry Pi
 
 # Building a programmable light
 
-Overview
+Computers can interface with not just with other computers but with nearly anything in the real world, including motors, servos, lights, and sensors. Because a computer program can encode extremely complex behavior, this is how most interactive, automated objects in our world work. We're going to take the first simple steps to creating a programmable thing by connecting your Raspberry Pi to a light emitting diode.
 
 ## Raspberry Pi output pins
 
+Along the top right of the Raspberry Pi circuit board is a 2 row, 20 column matrix of "pins". These are intended for **project makers like you** to hook it up to the real world. Let's take a quick tour through the various pins as they all have specific functions that you can tap into. 
+
 ![Raspberry Pi Pin Diagram](images/GPIO_Pi2.png)
+
+* 3.3v and 5v DC Power - These provide low current power that can be used to drive small circuits
+* Ground - These pins are the _ground_ in an electrical circuit
+* GPIO - This acronym stands for _general purpose input/output_. You reconfigure GPIO pins using software code to tell them how to behave (we'll dig more into this later)
 
 ## Prototype your first circuit
 
+Anyone can build a simple circuit, but not everyone can make it work using a Raspberry Pi!
+
 ### Introducing your prototyping kit
 
-
+Each student has been issued with a ziploc bag containing various components needed to complete this project. 
 
 ![Annotated Photo of Prototyping Kit](images/prototyping.jpg)
 
@@ -56,11 +64,13 @@ To use a breadboard, you need 22 gauge solid-core (not stranded) wires that have
 
 **Voila, your completed jumper wire**
 
+:star: **A note on wire colors:** Wires connected to **ground* are usually black, while wires connected directly to a source of current are usually **red**. Beyond that you are free to use whatever colors you wish!
+
 #### Resistors
 
 Resistors are good at one thing: *resisting* the flow of electricity (otherwise known as current). This allows you, as a circuit designer, control where and how fast current flows.
 
-:star: If we were talking about water current, then pipes are like resistors. Thin pipes let less water through (high resistance), thick pipes let a lot of water through (low resistance). Wth a fire hydrant, you want low resistance. With a water fountain, you'd want high resistance.
+:star: A helpful way of thinking about electrical current and resistance is to think of it in terms of water pressure in a tube. If you have water flowing in a tube and you put a smaller pipe in line, there will be more resistance to water flow. On the other hand, attaching a larger pipe will lead to less resistance to water flow.
 
 **Reading Resistor Codes**
 
@@ -72,11 +82,13 @@ Resistance is measured in **ohms**, often written as the symbol Ω. The bigger t
 
 ![Resistor](images/resistor.jpg)
 
-### LEDs
+#### LEDs
 
 LED stands for **Light Emitting Diode**, and they (usually) have long lifespans and require little power. Because of these characteristics, you've probably got 100 of these in your house on various electrical devices! The light-emitting part of the name makes sense, but what does diode mean?
 
 A diode is basically a one-way street for current. Imagine such a one-way street with a traffic enforcement officer in front. If you want to turn onto the street the wrong way, she will not let you. Likewise a diode simply does not let current go through it the wrong way. Current in a diode can only flow from the positive side to the negative side.
+
+Most LEDs only require a small amount of current. Never connect an LED directly inline in a circuit unless you know for a fact that the current will never exceed that maximum rating for the LED. Otherwise, you will need to buy a new LED :pensive:
 
 ![LED Diagram](images/led_diagram.png)
 
@@ -90,11 +102,11 @@ A diode is basically a one-way street for current. Imagine such a one-way street
 
 Explanation of the circuit, including why we need a resistor
 
-[Fritzing diagram of the circuit](images/led-fritz.png)
+[Fritzing diagram of the circuit](images/led-101_bb.png)
 
-**Wire up the circuit exactly as shown.  Make sure  the LED is in the correct orientation or it will not light when we power it up.**
+**Wire up the circuit exactly as shown. :boom: Make sure  the LED is in the correct orientation or it will not light when we power it up.**
 
-Aside: Resistor values. Find the 220 Ohm resistor in your kit (red/red/brown/gold)
+:question: What is the value in Ohms of the resistor we are using in this circuit?
 
 # Challenges
 * None
