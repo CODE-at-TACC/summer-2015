@@ -4,16 +4,16 @@ Typically, whenever software is written, it is made for serial execution. This m
 
 ![Clock rates](images/clock.png)
 
-This means sequential (single-core) programs won't be running any faster. This means next-gernation graphics in games won't be able to rely on faster chips in our gaming systems. The lastest, fastest Mac won't be able to work through the data coming from all our internet-connected devices. Even all the videos, animations, and ads on a single web-page will drag a CPU to a halt. However, your computer keeps getting faster and all programs keep getting flashier. This is because of Moore's law, which states:
+With current technology, sequential (single-core) programs won't be running any faster. Chips in our gaming systems won't be getting any faster to produce more realistic graphics. No matter how much we spend on the lastest and greatest PC, it won't be any faster than the previous generation. Even all the videos, animations, and ads on a single web-page will drag a CPU to a halt. With all this said about the speed stagnation of the CPU, computers do keep getting better and programs and graphics keep getting flashier. That's because computers are increasing their throughput without relying on their clock rate. This is often measured through the number of operation a processor can perform every second, and it correlates with the number of transistors on the die. Moore's law
 
 > The number of transistors incorporated in a chip will approximately double every 24 months.
 > --Gordon Moore
 
-If we take a look at the nuber of transistors in CPUs over the years, you see that the trend is exponential!
+still holds true today, and the trend is still exponential. Plotting the number of transistors for each processor in the Stanford CPU DB on the logarithmic scale shows that the trend is linear, and would be exponential on a linear scale.
 
 ![Transistor counts](images/transistors.png)
 
-Even though processor speed has leveled off an even slowed down in some cases, we're able to do more though parallel execution. Insead of executing a single instruction at a time, we can execute multiple simultaneously. This increasing trend of cores is present in all aspects of computing: our phones, our desktops, and our graphics processing units (GPUs). However, parallel computation isn't restricted to happening on a single physical computer. 
+Since we can no longer rely on raw speed, we now push the bounds of computation through parallel methods. Insead of executing a single instruction at a time, we can execute multiple simultaneously. This increasing trend of cores is present in all aspects of computing: our phones, our desktops, and our graphics processing units (GPUs). However, parallel computation isn't restricted to happening on a single physical computer. 
 
 # Super Computers
 
