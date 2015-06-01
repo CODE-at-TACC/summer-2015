@@ -6,11 +6,11 @@ Typically, whenever software is written, it is made for serial execution. This m
 
 With current technology, sequential (single-core) programs won't be running any faster. Chips in our gaming systems won't be getting any faster to produce more realistic graphics. No matter how much we spend on the lastest and greatest PC, it won't be any faster than the previous generation. Even all the videos, animations, and ads on a single web-page will drag a CPU to a halt. With all this said about the speed stagnation of the CPU, computers do keep getting better and programs and graphics keep getting flashier. We went from
 
-| Morrowind in 2002 | Skyrim in 2010 |
-|----------------|-------------|
-|<img src="http://img29.imageshack.us/img29/1149/morrowind20110405225039.jpg" height="200"> | <img src="http://cache.gawkerassets.com/assets/images/9/2011/11/69cd3eb274be7c06c809693adb862fa9.jpg" height="200"> |
+| Morrowind in 2002 | Skyrim in 2010 | Minecraft in 2011 |
+|----------------|-------------|---|
+|<img src="http://img29.imageshack.us/img29/1149/morrowind20110405225039.jpg" height="175"> | <img src="http://cache.gawkerassets.com/assets/images/9/2011/11/69cd3eb274be7c06c809693adb862fa9.jpg" height="175"> | <img src="http://upload.wikimedia.org/wikipedia/en/c/c9/Minecraft_Mobs.png" height="175"> |
 
-without a major speed increase. That's because computers are increasing their throughput without relying on their clock rate. This is often measured through the number of operation a processor can perform every second, and it correlates with the number of transistors on the die. Moore's law
+without a major speed increase, and ignoring the anomaly of Minecraft, all graphics are significantly better. That's because computers are increasing their throughput without relying on their clock rate. This is often measured through the number of operation a processor can perform every second, and it correlates with the number of transistors on the die. Moore's law
 
 > The number of transistors incorporated in a chip will approximately double every 24 months.
 > --Gordon Moore
