@@ -22,6 +22,8 @@ To make sure this works for everyone, we're going to cut and paste a program ins
 
 Like **raspi-config**, the **nano** program is a text-based program. You can use code editor like IDLE or a text editor like Leafpad to write your code but we're doing it this way to get you more familiar with the text-based way of getting around. It might seem old-fashioned but the most powerful computers on the planet (like the one down the hall that you have toured) speak this language. 
 
+**blink.py**
+
 ```python
 #!/bin/env python
 
@@ -56,7 +58,7 @@ for i in range(0,10):
 GPIO.cleanup()
 ```
 
-* Copy and paste in the following code from a web browser into **nano**. Your screen should look like this:
+* Copy and paste in this source code from a web browser into **nano**. Your screen should look like this:
 
 ![Python code pasted into nano](images/nano.png)
 
