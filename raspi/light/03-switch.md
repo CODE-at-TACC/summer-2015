@@ -46,7 +46,7 @@ To make sure this works for everyone, we will cut and paste in the program inste
 
 * Open Leafpad (or other text editor) then copy and paste this code from your browser into the editor window.
 
-**[button.py](other-materials/button.py)
+**[button.py](other-materials/button.py)**
 ```python
 #!/bin/env python
 
