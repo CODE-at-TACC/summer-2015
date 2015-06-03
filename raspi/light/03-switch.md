@@ -47,5 +47,6 @@ Both: **Current limit resistor** - protect the GPIO pin from accidential short c
 * Describe how you might reconfigure our circuit to use a pulldown resistor (don't worry about code changes we might have to make, just focus on the circuit) with pin **#18**
 
 # Resources
+* [O'Reilly Raspberry Pi Cookbook](http://razzpisampler.oreilly.com/ch07.html)
 * [Physical computing with Raspberry Pi](https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/robot/buttons_and_switches/) courtesy of the [University of Cambridge Computer Laboratory](https://www.cl.cam.ac.uk/)
-* [Arduino Buttons and Switches Tutorial](http://www.ladyada.net/learn/arduino/lesson5.html)
+* [Make: Tutorial: Raspberry Pi GPIO Pins and Python](http://makezine.com/projects/tutorial-raspberry-pi-gpio-pins-and-python/)
