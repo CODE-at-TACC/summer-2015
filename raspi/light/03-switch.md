@@ -91,7 +91,7 @@ while True:
 
 ![Lights up when pressed](images/lightup.jpg)
 
-* Debug the following python program so that it will flash the LED every time you push the button. Show off to the class when you get it working!
+1. Debug the following python program so that it will flash the LED every time you push the button. Show off to the class when you get it working!
 
 **[button-blink-debug.py](other-materials/button-blink-debug.py)**
 ```python
@@ -121,8 +121,8 @@ while True:
         print('Button Pressed')
         blink(25)
 ```
-* Describe how you might reconfigure our circuit to use a pulldown resistor (don't worry about code changes we might have to make, just focus on the circuit) with pin **#18**
-* List 3-4 other things you could do in response to a button press. What if you had multiple buttons - what could you do then?
+2. Describe how you might reconfigure our circuit to use a pulldown resistor (don't worry about code changes we might have to make, just focus on the circuit) with pin **#18**
+3. List 3-4 other things you could do in response to a button press. What if you had multiple buttons - what could you do then?
 
 # Resources
 * [O'Reilly Raspberry Pi Cookbook](http://razzpisampler.oreilly.com/ch07.html)
