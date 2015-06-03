@@ -36,9 +36,7 @@ This next bit will start off seeming complicated, but it's important to learn to
 
 ![Diagram of pull-up and pull-down resistors](images/pullupdown.jpg)
 
-Top: **Pull-up resistor** - connect the pin via a 10kΩ resistor to **3V3**
-Bottom: **Pull-down resistor** - connect the pin via a a 10kΩ resistor to **GND**
-Both: **Current limit resistor** - protect the GPIO pin from accidential short circuits
+In the top figure, a **pull-up resistor** connects the GPIO pin via a 10kΩ resistor to **3V3**. In the bottom figure, a **pull-down resistor** connects the GPIO pin via a a 10kΩ resistor to **GND**. In both figures, a 1kΩ protect the GPIO pin from accidential short circuits.
 
 * Our circuit features a 10kΩ pullup resistor that pulls pin **#18** up to **3V3** connected to a switch with a 1kΩ protector resistor connected to **GND**. Go ahead and wire it up as in the circuit diagram.
 
