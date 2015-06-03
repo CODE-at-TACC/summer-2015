@@ -11,7 +11,7 @@ Python, when given a text file as input, will “execute” the actions describe
 1. Read Python scripts
 2. Run Python scripts
 3. Edit Python scripts
-4. ~~Love Python scripts~~
+4. Love Python scripts (extra credit)
 
 
 
@@ -37,8 +37,8 @@ To run the code type *python 1_hello_world.py*
 
 #### What you learned
 
-How to use the keyword **print**
-How to view, edit, and run a Python script
+1. How to use the keyword **print**.
+2. How to view, edit, and run a Python script.
 
 
 
@@ -50,13 +50,15 @@ In programming, *information* can be assigned to a **variable**, and variables a
 
 Let us look at Hello world, with variables.
 
-```greeting = "Hello"
+```
+greeting = "Hello"
 
 name = "world"
 
 salutation = greeting + " " + name + "!"
 
-print salutation```
+print salutation
+```
 
 
 *greeting* is assigned the information "Hello" using the **=** symbol.
@@ -78,9 +80,9 @@ Use *2_hello_world_again.py* to say hello to the person on your left by changing
 
 #### What you learned
 
-How to assign information to a variable
-What a **string** is
-How to combine strings
+1. How to assign information to a variable.
+2. What a **string** is.
+3. How to combine strings.
 
 
 ## Putting the “fun” into Function
@@ -103,15 +105,16 @@ greet( "world" )
 greet( "friend" )
 ```
 
-***Notice!*** The print statements are part of the function **greet**, and they are indented using **4 spaces**.  Python relies on indenting to determine which lines are part of the function.  
+***Notice!*** The print statements are part of the function *greet*, and they are indented using **4 spaces**.  Python relies on indenting to determine which lines are part of the function.  
 
-Now when the function **greet** is called with the input "world”, the variable **name** is given the information "world".
+Now when the function *greet* is called with the input "world", the variable *name* is given the information "world".
 
 
 #### Challenge
 
-Add “I look forward to seeing you tomorrow!" to the greeting
-Add the people to your left and right to the greeting
+Add "I look forward to seeing you tomorrow!" to the greeting.
+
+Add the people to your left and right to the greeting.
 
 
 
