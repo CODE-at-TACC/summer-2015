@@ -18,9 +18,9 @@ If you have come here from the [LED tutorial](01-led.md), you will be adding to 
 
 ### Mount the pushbutton switch
 
-![Photograph of pushbutton switch](images/momentary-mounted-topdown.jpg)
+![Photograph of pushbutton switch](images/momentary-topdown.jpg)
 
-* Insert the switch into the breadboard as show in the photograph. Please note that the sets of wires shown as being "connected" should each connect to a different row on the breadboard. If you are not sure you have this set up right, please ask an instructor.
+* Insert the switch into the breadboard as show in the photograph. Please note that the sets of leads shown as being **connected** should each connect to a different row on the breadboard. If you are not sure you have this set up right, please ask an instructor.
 
 :star: Make sure to insert the switch fully into the breadboard, but also very gently so as not to bend the legs.
 
@@ -42,14 +42,11 @@ In the top figure, a **pull-up resistor** connects the GPIO pin via a 10kΩ resi
 
 ## Programming the Raspberry Pi to respond to the switch
 
-To make sure this works for everyone, we're going to cut and paste in the program instead of typing it all in. Feel free to start with this code in the future when you make your own projects!
+To make sure this works for everyone, we will cut and paste in the program instead of typing it all in. Feel free to start with this code in the future when you make your own projects!
 
-* Open LXTerminal and start the **nano** text editor by typing `nano` followed by tapping the **Return** key.
+* Open Leafpad (or other text editor) then copy and paste this code from your browser into the editor window.
 
-![Nano starting display](images/nano-blank.png)
-
-Now copy and paste this code from your browser into the **nano** window
-
+**[button.py](other-materials/button.py)
 ```python
 #!/bin/env python
 
@@ -78,21 +75,25 @@ while True:
         time.sleep(0.2)
 ```
 
-* Save this pasted text to a file named **switch.py** by entering **Control-O**, specifying the name of the file. Then, then quit **nano** by entering **Control-X**.
-* List your local directory (by typing *ls* in LXterminal) to verify that switch.py was saved in it
+* Save the pasted text to a file named **button.py**
 
-## Run the switch.py program
+## Run the button.py program
 
-* Enter the following words into the Terminal: `sudo python switch.py`
+* Enter the following command into the Terminal: `sudo python button.py`. :star: Make sure you current directory is the same as where you saved **button.py**.
 
 :question: Why do we need to put **sudo** in front of the **python** command?
 
-* Now, press the button on your breadboard and watch the Terminal window where switch.py is running. The program should print _Button Pressed_ to the screen every time you or your partner pushes the button.
+* Now, press the button on your breadboard and watch the Terminal window where **button.py** is running. The program should print _Button Pressed_ to the screen every time you or a friend pushes the button.
 
 ![button.py prints to screen](images/terminal-button-py.png)
 
 # Challenges
+
+![Lights up when pressed](images/lightup.jpg)
+
 * Debug the following python program so that it will flash the LED every time you push the button. Show off to the class when you get it working!
+
+**[button-blink-debug.py](other-materials/button-blink-debug.py)**
 ```python
 #!/bin/env python
 
