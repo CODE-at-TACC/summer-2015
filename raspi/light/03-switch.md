@@ -14,11 +14,11 @@ Connecting a Raspberry Pi to an LED lets you control a small part of the world f
 
 ![Raspberry Pi + Cobbler + LED Circuit + Switch](images/led-plus-switch_bb.png)
 
-If you have come here from the LED tutorial, you will be adding to the existing circuit so that it resembles this diagram. If you are coming straight to this sensor tutorial, your circuit will look like [this](images/switch-only_bb.png)
+If you have come here from the LED tutorial, you will be adding to the existing circuit so that it resembles this diagram. If you are coming straight to this sensor tutorial, your circuit will look like [this](images/just-switch_bb.png)
 
 ### Mount the pushbutton switch
 
-![Photograph of pushbutton switch mounted](images/switch-breadboard.jpg)
+![Photograph of pushbutton switch](images/momentary.jpg)
 
 Cautionary information about not bending the legs and making sure the thing is embedded in the breadboard
 
