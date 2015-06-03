@@ -8,9 +8,9 @@ Physical Computing with Raspberry Pi
 
 # Add a pushbutton switch to your circuit
 
-Connecting a Raspberry Pi to an LED lets you control a small part of the world from within your own computer program. The other half of the equation is learning what the world has to say to your Raspberry Pi and reacting inside a program. In this exercise, we will connect the simplest of sensors, a pushbutton switch, to our Pi and learn to detect when someone pushes it. 
+Connecting a Raspberry Pi to an LED lets you control a small part of the world from within your own computer program. The other half of the equation is learning what the world has to say to your Raspberry Pi and reacting inside a program. In this exercise, we will connect the simplest of sensors, a pushbutton switch, to our Pi and learn to detect when someone pushes it.
 
-## Wire up our switch circuit
+## Create the switch circuit
 
 ![Raspberry Pi + Cobbler + LED Circuit + Switch](images/led-plus-switch_bb.png)
 
@@ -87,7 +87,7 @@ while True:
 
 :question: Why do we need to put **sudo** in front of the **python** command?
 
-* Now, press the button on your breadboard and watch the Terminal window where switch.py is running. The program should print _Button Pressed_ to the screen every time you or your partner pushes the button. 
+* Now, press the button on your breadboard and watch the Terminal window where switch.py is running. The program should print _Button Pressed_ to the screen every time you or your partner pushes the button.
 
 ![button.py prints to screen](images/terminal-button-py.png)
 
