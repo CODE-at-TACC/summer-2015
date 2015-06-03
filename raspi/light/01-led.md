@@ -96,6 +96,20 @@ Most LEDs only require a small amount of current. Never connect an LED directly 
 
 #### Momentary Switch
 
+A switch is a simple device with two positions, on and off. When on, two wires are connected inside, which allows current to flow. When off, the two wires are disconnected. You have dozens of switches in your home! 
+
+![Switch circuit diagram](images/switch-101.png)
+
+**On the left, the switch is open and no current flows. On the right, the switch is closed, current flows and the light turns on.**
+
+![Momentary switch illustrated](images/switch-pressed.png)
+
+In your kit, you have a 1-2 **momentary switches**, also known as push-buttons. "Momentary" switches get their name because the current only flows when the button is pressed. The keys on your keyboard are an example of momentary switches. 
+
+![Momentary switch mounted on a breadboard](images/momentary.jpg)
+
+**The momentary switches can be inserted right into the breadboard, but note the orientation. We'll cover this in detail later**
+
 #### Cobbler
 
 The Cobbler is a utility header board and ribbon cable that makes it really easy to connect a Raspberry Pi to a standard solderless breadboard. Like the Pi's output pins, it has 2 rows of 20 pins. The layout of the pins is exactly the same as on the Pi, and as you can see they are even labeled for you. All you have to do is make sure to connect the ribbon cable in the right orientation (it's kind of hard to get wrong)
