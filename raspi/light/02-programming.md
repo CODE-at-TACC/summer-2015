@@ -82,11 +82,11 @@ Let's throw a class-wide disco party of blinking lights:
 Open the blink.py file in nano by entering the following command in a Terminal window `nano blink.py`. Move around within the file using the arrow keys. Delete characters with the **Delete** key and insert characters by putting the cursor at the location you want to modify. Save the file using **Control-O** and quit **nano** with **Control-X**. Feel free to explore other command in nano (there's a link to a quick tutorial in the Resources section)
 
 # Challenges
-* Change the number of times the LED flashes
-* Increase the resistor value to 1000 Ohms - what happens?
-* Make the LED flash faster or slower
-* Update the circuit and code so the LED is controlled by another GPIO pin
-* Update the circuit and code to add a second LED controlled by another GPIO pin
+:sparkle: Change the number of times the LED flashes
+:sparkle: Increase the resistor value to 1000 Ohms - what happens?
+:sparkle: Make the LED flash faster or slower
+:sparkle: Update the circuit and code so the LED is controlled by another GPIO pin
+:sparkle: Update the circuit and code to add a second LED controlled by another GPIO pin
 
 # Resources
 * [Nano manual](http://mintaka.sdsu.edu/reu/nano.html)
