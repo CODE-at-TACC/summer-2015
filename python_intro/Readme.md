@@ -286,11 +286,11 @@ else:
     print "Your name is the same length as my name"
 ```
 
-***Notice!*** You can have up to 1 **else** with an **if**, and as many *elif* as your need.
+***Notice!*** You can have up to 1 **else** with an **if**. You can have as many **elif** as your need.
 
 #### What you learned
 
-1. How to use **if**, **elfi**, and **else**.
+1. How to use **if**, **elif**, and **else**.
 2. What **len** does with strings
 
 
@@ -349,12 +349,12 @@ for each_character in your_name:
 
 1. How to generate a list of numbers using **range**
 2. How to use **for** loops
-3. How to use**while** loops
+3. How to use **while** loops
 
 
 ## The end is near
 
-![The End is Near](images/the-end-is-near.png)
+![The End is Near](images/the_end_is_near.png)
 
 While Python has many built-in functions like **range** and **len**, one can using keyword **import** to bring in even more functions. The keyword **from** can be used with **import**.
 
