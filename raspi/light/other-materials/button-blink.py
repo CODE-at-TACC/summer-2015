@@ -14,7 +14,7 @@ def blink(pin):
 GPIO.setmode(GPIO.BCM)
 
 # Set up channel 18 for input
-GPIO.setup(18, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(18, GPIO.IN)
 # Set up GPIO25 output channel
 GPIO.setup(25, GPIO.OUT)
 

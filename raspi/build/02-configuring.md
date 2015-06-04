@@ -7,11 +7,11 @@ Getting Started with Raspberry Pi
 3. [Explore the Raspbian desktop](03-raspbian-desktop.md)
 4. [Learn a little Linux](04-linux-101.md)
 
-# Set it up just so
+# Configuring the Raspberry Pi
 
 The Raspberry Pi operating system needs a few hints, provided by you, as to how it should behave. If you have used a PC computer before, this is similar to changing settings in the BIOS.
 
-## About Raspi-config
+## Introducing Raspi-config
 
 When you first boot up, the system will launch **raspi-config**
 
@@ -35,6 +35,19 @@ Some systems launch to a powerful text interface by default because this saves p
 
 * Move the red cursor to **3 Enable Boot to Desktop/Scratch**, tap **Return**, and select **Desktop Log in as user 'pi' at the graphical desktop**. tap **Return**.
 
+### Setting Timezone and Keyboard Type
+
+Raspberry Pis are British computers and as such default to Greenwich Mean Time (GMT) and a UK keyboard layout. The former will make the Pi think its 5-6 hours later than it is and the latter will make some of your keys act funny when using an American keyboard.
+
+* Move the red cursor to **4 Internationalisation Options**, tap **Return**, select **I2 Change Timezone**, and tap **Return** again.
+* After a brief pause, you will see a menu called **Configuring tzdata**. Select **US** and then **Central**, then tap **Return**
+* From the main **raspi-config** page, choose **4 Internationalisation Options** again. This time, select **I3 Change Keyboard Layout** then make the following selections:
+	* Keyboard model: Generic 101-key PC
+	* Keyboard layout: English (US)
+	* Key to function as AltGr: The default for the keyboard layout
+	* Compose key: No compose key
+	* Use Control+Alt+Backspace to termine the X server: Yes
+
 ### Renaming your Pi
 
 Out of the box, all Pis are named **raspberrypi** on the network. This is going to get confusing, so you are going to give your Pi its own unique name.
@@ -48,6 +61,12 @@ Out of the box, all Pis are named **raspberrypi** on the network. This is going 
 2. Try to keep your names short because you and others will have to type them
 3. :exclamation: All names used in our workshop have to be appropriate for a classroom setting
 
+### Enabling SPI
+
+SPI is a special interface that will be used later in the workshop. We need to turn it on in **raspi-config**.
+
+* Go to **8 Advanced Options** again and tap **Return**. Select **A6 SPI** and when asked if you would like the SPI interface to be enabled, select **Yes**. When asked if you would like the SPI kernel module to be loaded by default, again select **Yes**.
+
 ### Restarting
 
 Most of the changes you made won't take effect until the computer restarts. So, let's do that now from within **raspi-config**
@@ -57,6 +76,24 @@ Most of the changes you made won't take effect until the computer restarts. So, 
 ![Raspbian Desktop](images/desktop-start.jpg)
 
 **The Raspbian desktop will appear after you reboot from raspi-config**
+
+## Connecting to Wifi
+
+There's a lot of corners to explore on the Raspbian desktop, but the first thing most folks want to do is connect to the Internet. If you have access to a wired, or **Ethernet**, network you can connect to it via the **Ethernet Port** on the Raspi using a cable. Most of us use wireless, or **Wifi** connections and so shall we in our workshop. 
+
+* In the top right corner of the screen, click on the networking icon. It will either look like a pair of computers or a common "Wifi" signal icon. 
+
+![CODE@TACC SSID](images/01-find-wifi.jpg)
+
+**Select the CODE@TACC network. You will not have access to the others.**
+
+* Enter either this access key **0123456789** or one provided to you by the instructors
+
+![CODE@TACC WPA2](images/02-enter-wpa2.jpg)
+
+**If you entered the key correctly, when you click on the Wifi icon, it will show your Raspi to be connected to the CODE@TACC network**
+
+![CODE@TACC connected](images/03-connected-wifi.jpg)
 
 # Challenges
 * None
