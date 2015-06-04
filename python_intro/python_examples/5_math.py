@@ -12,4 +12,6 @@ print "4 % 3 is " + str( 4 % 3 )        # Modulo, remainder of 4 divided by 3
 print ""
 print "4.0 / 3 is " + str( 4.0 / 3 )	# Division, 4 divided by 3, not rounded
 print ""
-
+# your_number = raw_input( "Enter a number: " )
+# answer = float( your_number ) * 3 + 2
+# print "Your result is " + str( answer )

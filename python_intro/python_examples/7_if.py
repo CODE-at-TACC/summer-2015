@@ -1,12 +1,11 @@
 my_name = "Raspberry Pi"
-
 print "My name is " + my_name
 
 your_name = raw_input( "What is your name? " )
 
-# you can find the length of a string using len( string )
-
+# Check to see if your_name was entered
 if len( your_name ) == 0:
+    # name was not entered
     print "I really really really would like to know your name."
     your_name = raw_input( "What is your name? " )
 

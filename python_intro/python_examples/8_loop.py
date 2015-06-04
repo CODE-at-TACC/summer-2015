@@ -1,9 +1,9 @@
-# range( ) creates a list of numbers starting at 0
-print range(10)
+# range( ) creates a list of integers starting at 0
+print range( 10 )
 print ""
 
 # 'for' sets a variable to each value in a list
-for x in range(5):
+for x in range( 5 ):
     print "x = " + str(x)
 
 print ""
