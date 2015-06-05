@@ -132,6 +132,12 @@ To turn the LED on and off we need to control it using one of the Raspberry Pi's
 
 **:boom: Make sure  the LED is in the correct orientation or it will not light when we power it up.**
 
+# What you learned
+* The purpose of common electronics components like breadboards, LEDs, and resistors
+* How to read resistor codes
+* Technique for cutting and preparing jumper wires
+* How to follow a circuit diagram to create a functioning circuit
+
 # Challenges
 :sparkle: Try briefly moving the wire from **#25** to **3V3** - What happens? Don't forget to plug back into **#25** when you are done playing :-)
 

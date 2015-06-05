@@ -87,6 +87,14 @@ while True:
 
 ![button.py prints to screen](images/terminal-button-py.png)
 
+# What you learned
+* How to create a switch circuit
+* Why and how to use pull-up or pull-down resistors
+* Why and how to use a protection resistor
+* How to configure a Raspberry Pi GPIO pin for input
+* Using an infinite loop to monitor a GPIO pin
+* How to read the value of a GPIO pin
+
 # Challenges
 
 ![Lights up when pressed](images/lightup.jpg)

@@ -95,6 +95,12 @@ There's a lot of corners to explore on the Raspbian desktop, but the first thing
 
 ![CODE@TACC connected](images/03-connected-wifi.jpg)
 
+# What you learned
+* How to use navigate inside a "screen-based" application
+* Finding and configuring various options inside **raspi-config**
+* How to rename a Raspberry Pi
+* Connecting a Raspberry Pi to a Wifi internet connection
+
 # Challenges
 * None
 

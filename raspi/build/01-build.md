@@ -45,6 +45,10 @@ The Raspberry Pi is a low cost, credit-card sized computer that plugs into a com
 
 **On the monitor, you will see a lot of text scroll by. This is the computer "booting up"**
 
+# What you learned
+* What the various connection ports are for on a Raspberry Pi computer
+* How to assemble and power up a Raspberry Pi computer
+
 # Challenges
 * None
 

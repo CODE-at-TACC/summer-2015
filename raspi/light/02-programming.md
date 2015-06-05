@@ -81,6 +81,12 @@ Let's throw a class-wide disco party of blinking lights:
 
 Open the blink.py file in nano by entering the following command in a Terminal window `nano blink.py`. Move around within the file using the arrow keys. Delete characters with the **Delete** key and insert characters by putting the cursor at the location you want to modify. Save the file using **Control-O** and quit **nano** with **Control-X**. Feel free to explore other command in nano (there's a link to a quick tutorial in the Resources section)
 
+# What you learned
+* How to define Raspberry Pi GPIO pins as outputs
+* How to use a function to turn a GPIO pin on and off
+* Why we need to preface some commands with **sudo**
+* How to reset the GPIO system at the end of a program
+
 # Challenges
 :sparkle: Change the number of times the LED flashes
 :sparkle: Increase the resistor value to 1000 Ohms - what happens?
