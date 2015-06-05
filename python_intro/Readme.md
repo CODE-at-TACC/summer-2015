@@ -15,32 +15,31 @@ Python, when given a text file as input, will “execute” the actions describe
 
 
 
-## Start at the very beginning
+## Let's start at the very beginning
 
-When learning a new language, the first word learned is often “Hello”.  Similarly, when learning at new computer language, the first computer program written is “Hello world!” This is a computer program that, when run, will print to the screen the words “Hello world!”
+When learning a new language, the first word learned is often “Hello”.  Similarly, when learning a new computer language, the first computer program written is “Hello world!” This is a computer program that, when run, will print to the screen the words “Hello world!”
 
-In Python, writing this first program is very simple. It uses the keyword **print**
+![Hello world!](images/HelloWorld.png)
+
+In Python, writing this first program is very simple and a very good place to start. It uses the keyword **print**
 
 ```print "Hello world!"```
 
-***Notice!*** Python recognizes the difference between uppercase and lowercase.  **print** is a keyword, however **Print** and **PRINT** are not keywords in Python.
+***Notice!*** Python recognizes the difference between uppercase and lowercase.  **print** is a keyword, however *Print* and *PRINT* are not keywords in Python.
 
 #### Challenge
 
-Use Python to say hello to the person on your right.
+Use Python to say hello to the person on your right.  For convenience, you already have the scripts.  
 
-To speed up this introduction, you already have the code files.  
-
-You can open the file *1_hello_world.py* in Leafpad.
-
-Make you change and save the file.
-
-To run the script, type *python 1_hello_world.py*
+1. Open the file *1_hello_world.py* in Leafpad.
+2. Make you change and save the file.
+3. To run the script, type *python 1_hello_world.py* into the terminal
 
 #### What you learned
 
 1. How to use the keyword **print**.
 2. How to view, edit, and run a Python script.
+3. Python is case-sensitive.
 
 
 
@@ -87,11 +86,11 @@ Use *2_hello_world_again.py* to say hello to the person on your left by changing
 1. How to assign information to a variable.
 2. What a **string** is.
 3. How to combine strings.
-4. Code reads and runs from top to bottom
+4. A script reads and runs from top to bottom
 5. A variable needs to associate with information before using the variable
 
 
-## Putting the “fun” into Function
+## Putting the “fun” into function
 
 When performing essentially the same set of actions repeatedly, you can create a *function* for these set of actions. Because computers are generally used to perform repeated tasks, we are almost always creating a lot of functions.
 
@@ -135,9 +134,11 @@ Also greet the people to your left and right.
 
 ## I got a blank space and I’ll write your name
 
+Functions not only perform tasks, but can be used to **return** results.  Using the keyword **return** in a function will cause information to output from the function.  
+
 ![Function machine](images/FunctionMachine.png)
 
-Functions not only perform tasks, but can be used to **return** results.  Using the keyword **return** in a function will cause information to output from the function.  In this example, the function *get_name* outputs the information of the variable *result*
+In this example, the function *get_name* outputs the information of the variable *result*
 
 ```
 def get_name():
@@ -198,7 +199,7 @@ print ""
 # print "Your result is " + str( answer )
 ```
 
-***Notice!*** The **#** symbol indicates that the following text in the line is a comment.  Python ignores comments.  Comments can be used to explain the script to others, or to disable specific lines of the script.
+***Notice!*** The **#** symbol indicates that the following text in the line should be ignored.  One use of this is to add a comment to the script that helps explain the script to others.  Another use of **#** is to disable specific lines of the script.
 
 ***Notice!*** A number must be converted into a string using build-in function **str** before being combined with a string.  Convert a string to an integer using **int** and to a decimal using **float**.
 
@@ -354,8 +355,6 @@ for each_character in your_name:
 
 ## The end is near
 
-![The End is Near](images/the_end_is_near.png)
-
 While Python has many built-in functions like **range** and **len**, one can using keyword **import** to bring in even more functions. The keyword **from** can be used with **import**.
 
 Functions have different *methods* that you can access, as seen in the script below.
@@ -392,6 +391,8 @@ print "I actually slept for " + str( nap_time ) + " seconds."
 1. Accessing more functions using **import**
 2. How to measure time elapsed
 3. How to add a delay to your script
+
+![The End is Near](images/the_end_is_near.png)
 
 
 
