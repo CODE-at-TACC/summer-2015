@@ -1,11 +1,9 @@
 Introducing Python
 ==================
 
-Python is a language for computer scripts.  It can be run on practically any computer.
+Python is a language for computer *scripts*.  Python, when given a text file (*script*) as input, will *execute* the actions described in the text file. Python works on practically any computer and is easy to learn. 
 
-Python is easy to learn, and plays well with others.
-
-Python, when given a text file as input, will “execute” the actions described in the text file.
+The purpose of this *Introduction* is so that you can understand and modify the Python scripts that will be used during the next two weeks 
 
 #### Objectives
 1. Read Python scripts
@@ -159,7 +157,7 @@ Also note that the function *get_name* has no input.
 
 The variable *result* is assigned the information that you type in when prompted by the built-in function **raw_input**.
 
-**raw_input** lets you enter information into a variable using your keyboard while the script is running.
+**raw_input** lets you create a new string using your keyboard while the script is running.
 
 #### Challenge
 
@@ -170,7 +168,7 @@ The variable *result* is assigned the information that you type in when prompted
 
 1. Functions can return information.
 2. A function will end if it performs a **return**. 
-3. **raw_input** allows input from keyboards
+3. **raw_input** converts input from keyboards into a **string**
 
 
 ## Basic math
@@ -213,13 +211,15 @@ Enable the last 3 lines of the script and run it again.
 
 1. Using Python to do basic math.
 2. How to force Python to use decimals in calculations.
-3. How to use comments
+3. How to use comments.
 4. Converting numbers into strings, and strings into numbers.
 
 
 ## To be or not to be
 
 ![Calvin Hamlet](images/CalvinHamlet.png)
+
+Sometimes you just need a *yes* or a *no* answer to a question.  
 
 Run the script: *python 6_comparisons.py*
 
@@ -252,12 +252,12 @@ print "not ( False or (False and True) ) is " + str( not ( False or (False and T
 
 ***Notice!*** Capitalize the first letter of **True** and **False**.
 
-Knowing if something is True or False can be useful when making decisions, as we will see in the next section.
+Knowing if something is **True** or **False** can be useful when making decisions, as we will see in the next section.
 
 ####  What you learned
 
-1. How comparisons and boolean operators evaluate.
-
+1. Using **>**, **<**, **==**, **>=**, **<=**, and **!=** to perform comparisons.
+2. Boolean operators **and**, **or**, and **not** and boolean operators evaluate.
 
 
 ## If, elif, else
@@ -336,6 +336,8 @@ while haters_gonna_hate:
         haters_gonna_hate = False
 ```
 
+***Notice!*** The last line of script had a double indent, so 8 spaces.  Why? The line is inside an **if**, which is inside a **while**.
+
 #### Challenge 
 
 Python treats strings as a list of characters.  What would you expect the following script to do?
@@ -393,6 +395,23 @@ print "I actually slept for " + str( nap_time ) + " seconds."
 3. How to add a delay to your script
 
 ![The End is Near](images/the_end_is_near.png)
+
+## Go forth with confidence
+
+![Cat Confidence](images/cat_confidence.png)
+
+#### Congratulations
+
+You now know how to read, run, and edit Python scripts.  If you need to review, come back and take a look anytime.
+
+#### Additional resources 
+
+If you want to take it your Python knowledge to the next level, I highly recommend the following free online class.
+
+[Python at Code Academy](http://www.codecademy.com/en/tracks/python)
+
+
+
 
 
 
