@@ -29,7 +29,7 @@ After install finishes, the Pi will restart.
 # Installing Python Library
 
 ```shell
-git clone git@github.com:DexterInd/BrickPi_Python.git
+git clone https://github.com/DexterInd/BrickPi_Python.git
 cd BrickPi_Python
 sudo python setup.py install
 ```
