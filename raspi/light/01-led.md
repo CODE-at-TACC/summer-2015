@@ -42,7 +42,7 @@ Each student has been issued with a ziploc bag containing various components nee
 
 #### Breadboard
 
-Solderless breadboards are a cheap, reusable way to make quick circuits and test out ideas before making a permanent Printed Circuit Board. They often look like this:
+Solderless [breadboards](http://en.wikipedia.org/wiki/Breadboard) are a cheap, reusable way to make quick circuits and test out ideas before making a permanent Printed Circuit Board. They often look like this:
 
 ![Breadboard](images/breadboard.jpg)
 
@@ -64,11 +64,11 @@ To use a breadboard, you need 22 gauge solid-core (not stranded) wires that have
 
 **Voila, your completed jumper wire**
 
-:star: **A note on wire colors:** Wires connected to **ground* are usually black, while wires connected directly to a source of current are usually **red**. Beyond that you are free to use whatever colors you wish!
+:star: **A note on wire colors:** Wires connected to ground are usually black, while wires connected directly to a source of current are usually red. Beyond that you are free to use whatever colors you wish!
 
 #### Resistors
 
-Resistors are good at one thing: *resisting* the flow of electricity (otherwise known as current). This allows you, as a circuit designer, control where and how fast current flows.
+[Resistors](http://en.wikipedia.org/wiki/Resistor) are good at one thing: *resisting* the flow of electricity (otherwise known as current). This allows you, as a circuit designer, control where and how fast current flows.
 
 A helpful way of thinking about electrical current and resistance is to think of it in terms of water pressure in a tube. If you have water flowing in a tube and you put a smaller pipe in line, there will be more resistance to water flow. On the other hand, attaching a larger pipe will lead to less resistance to water flow.
 
@@ -84,7 +84,7 @@ Resistance is measured in **ohms**, often written as the symbol Ω. The bigger t
 
 #### LEDs
 
-LED stands for **Light Emitting Diode**, and they (usually) have long lifespans and require little power. Because of these characteristics, you've probably got 100 of these in your house on various electrical devices! The light-emitting part of the name makes sense, but what does diode mean?
+[LED](http://en.wikipedia.org/wiki/Light-emitting_diode) stands for **Light Emitting Diode**, and they (usually) have long lifespans and require little power. Because of these characteristics, you've probably got 100 of these in your house on various electrical devices! The light-emitting part of the name makes sense, but what does diode mean?
 
 A diode is basically a one-way street for current. Imagine such a one-way street with a traffic enforcement officer in front. If you want to turn onto the street the wrong way, she will not let you. Likewise a diode simply does not let current go through it the wrong way. Current in a diode can only flow from the positive side to the negative side.
 
@@ -96,7 +96,7 @@ Most LEDs only require a small amount of current. Never connect an LED directly 
 
 #### Momentary Switch
 
-A switch is a simple device with two positions, on and off. When on, two wires are connected inside, which allows current to flow. When off, the two wires are disconnected. You have dozens of switches in your home! 
+A [switch](http://en.wikipedia.org/wiki/Switch#Electronic_switches) is a simple device with two positions, on and off. When on, two wires are connected inside, which allows current to flow. When off, the two wires are disconnected. You have dozens of switches in your home! 
 
 ![Switch circuit diagram](images/switch-101.png)
 

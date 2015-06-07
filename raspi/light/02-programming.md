@@ -89,9 +89,13 @@ Open the blink.py file in nano by entering the following command in a Terminal w
 
 # Challenges
 :sparkle: Change the number of times the LED flashes
+
 :sparkle: Increase the resistor value to 1000 Ohms - what happens?
+
 :sparkle: Make the LED flash faster or slower
+
 :sparkle: Update the circuit and code so the LED is controlled by another GPIO pin
+
 :sparkle: Update the circuit and code to add a second LED controlled by another GPIO pin
 
 # Resources

@@ -129,7 +129,9 @@ while True:
         print('Button Pressed')
         blink(25)
 ```
+
 :sparkle: List 3-4 other things you could do in response to a button press. What if you had multiple buttons - what could you do then?
+
 :sparkle: Describe how you might reconfigure our circuit to use a pulldown resistor (don't worry about code changes we might have to make, just focus on the circuit) with pin **#18**
 
 # Resources
