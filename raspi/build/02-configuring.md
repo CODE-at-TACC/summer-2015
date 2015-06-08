@@ -93,7 +93,7 @@ Most of the changes you made won't take effect until the computer restarts. So, 
 
 * Navigate the cursor to **Finish** and tap **Return**
 
-![images/booting.jpg]
+![Wall of text...](images/booting.jpg)
 
 **Watch the system restart. It should only take a few seconds.**
 
