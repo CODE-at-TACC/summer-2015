@@ -98,7 +98,7 @@ def Read_NXT_Touch(port, default=0, delay=POLL_DELAY):
         print "S" + str(port) + " was not configured as an NXT touch sensor"
         return default
 
-def Read_NXT_Color((port, default=0, delay=POLL_DELAY):
+def Read_NXT_Color(port, default=0, delay=POLL_DELAY):
     if BrickPi.SensorType[port] in [TYPE_SENSOR_COLOR_FULL, TYPE_SENSOR_COLOR_RED, TYPE_SENSOR_COLOR_GREEN, TYPE_SENSOR_COLOR_BLUE, TYPE_SENSOR_COLOR_NONE]:
         # return Read_Sensor_Robustly(port, default=0, delay=POLL_DELAY)
         print "TACC_Pi does not yet support the NXT color sensor"
