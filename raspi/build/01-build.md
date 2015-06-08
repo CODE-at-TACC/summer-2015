@@ -47,7 +47,7 @@ The Raspberry Pi is a low cost, credit-card sized computer that plugs into a com
 
 # What you learned
 * What the various connection ports are for on a Raspberry Pi computer
-* How to assemble and power up a Raspberry Pi computer
+* Assembling and powering up a Raspberry Pi computer
 
 # Challenges
 * None
