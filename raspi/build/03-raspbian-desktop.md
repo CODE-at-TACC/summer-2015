@@ -13,6 +13,8 @@ Getting Started with Raspberry Pi
 Introduction and background
 
 
+![Desktop](images/desktop.png)
+
 ![Web browser](images/epiphany-browser.png)
 
 
