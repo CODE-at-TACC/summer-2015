@@ -68,7 +68,7 @@ Let's install **bsdgames**!
 
 **Hooray! You installed and launched snake. Type X to quit**
 
-![Unsure](images/fry-bsdgames.png)
+![Unsure](images/fry-bsdgames.jpeg)
 
 #### Challenges
 
