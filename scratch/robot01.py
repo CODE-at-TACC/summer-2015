@@ -32,20 +32,20 @@ motor1=PORT_B
 motor2=PORT_C
 BrickPi.MotorEnable[motor1] = 1 #Enable the Motor A
 BrickPi.MotorEnable[motor2] = 1 #Enable the Motor B 
-BrickPi.SensorType[PORT_4] = TYPE_SENSOR_ULTRASONIC_CONT
-BrickPi.SensorType[PORT_1] = TYPE_SENSOR_TOUCH
+BrickPi.SensorType[PORT_1] = TYPE_SENSOR_ULTRASONIC_CONT
+BrickPi.SensorType[PORT_4] = TYPE_SENSOR_EV3_TOUCH_DEBOUNCE
 BrickPiSetupSensors()   #Send the properties of sensors to BrickPi
-BrickPi.Timeout=1000   #Set timeout value for the time till which to run the motors after the last command is pressed
+BrickPi.Timeout=100   #Set timeout value for the time till which to run the motors after the last command is pressed
 BrickPiSetTimeout()     #Set the timeout
 
-speed=10   #Set the speed
+speed=100   #Set the speed
 state=0 # This is the current 'behavior' of the robot
 
 while True:
 
     # Poll the sensors
-    ultrasonic = Read_NXT_Ultrasonic( PORT_4, 0, 0.01)
-    touch = Read_NXT_Touch( PORT_4, 0, 0.01)
+    ultrasonic = Read_NXT_Ultrasonic( PORT_1, 0, 0.01)
+    touch = Read_EV3_Touch( PORT_4, 0, 0.01)
 
     # front object sensor
     if ultrasonic > 25:
@@ -65,9 +65,11 @@ while True:
 
     # rear bump sensor
     if touch == 1:
-        if state == 4:
+        if state == 5:
             state = 1 + random.randint(0,2) # move forward in random direction
-
+        else:
+            state = 5
+ 
     # Tell the motors what to do
     if state==1:
         fwd()  
@@ -78,6 +80,8 @@ while True:
     elif state==4:
         back()
     elif state==0:
+        stop()
+    elif state==5:
         stop()
 
     BrickPiUpdateValues()

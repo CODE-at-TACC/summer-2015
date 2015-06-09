@@ -11,4 +11,4 @@ BrickPiSetupSensors()
 while True:
     infrared = Read_EV3_Infrared( PORT_4, 0, 0.01)
     print str(infrared)
-
+    time.sleep(1)
