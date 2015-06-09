@@ -78,13 +78,13 @@ I2C is a special interface that will be used later in the workshop. We need to t
 
 [Secure Shell](http://en.wikipedia.org/wiki/Secure_Shell) is a very secure way for one to access a remote computer over the Internet. Instead of interacting with that computer by typing on its keys and reading its screen, your local computer takes over control. We will show you how to use SSH later in the workshop, but for now let's just turn it on because we are going to need it.
 
-* Go to **8 Advanced Options**, tap **Return**, select **A4 SSH**, and tap **Return** again. When asked "Would you like the SSH server enabled or disabled?" select **Enabled**, please. 
+* Go to **8 Advanced Options**, tap **Return**, select **A4 SSH**, and tap **Return** again. When asked "Would you like the SSH server enabled or disabled?" select **Enabled**, please.
 
 :star: If a Raspberry Pi computer is connected to the Internet and has SSH turned on, anyone who knows a username and password for that computer can log into it and run commands. Good safety practices for operating an SSH server include [changing the password](http://www.tldp.org/LDP/lame/LAME/linux-admin-made-easy/changing-user-passwords.html) for the pi (or other) user before making it available over the Internet.
 
 ### Disabling the Serial Console
 
-Normally, one can log into a Raspberry Pi by connecting two wires on its main board to a USB connection on another computer via a **serial** connection. However, we need this function to be turned off for another project later in the workshop to work correctly. 
+Normally, one can log into a Raspberry Pi by connecting two wires on its main board to a USB connection on another computer via a **serial** connection. However, we need this function to be turned off for another project later in the workshop to work correctly.
 
 * Go to **8 Advanced Options**, tap **Return**, select **A8 Serial**, and tap **Return** again. When asked if you would you like a login shell to be accessible over serial, select **No**
 
@@ -104,9 +104,9 @@ Most of the changes you made won't take effect until the computer restarts. So, 
 
 ## Connecting to Wifi
 
-There's a lot of corners to explore on the Raspbian desktop, but the first thing most folks want to do is connect to the Internet. If you have access to a wired, or **Ethernet**, network you can connect to it via the **Ethernet Port** on the Raspi using a cable. Most of us use wireless, or **Wifi** connections and so shall we in our workshop. 
+There's a lot of corners to explore on the Raspbian desktop, but the first thing most folks want to do is connect to the Internet. If you have access to a wired, or **Ethernet**, network you can connect to it via the **Ethernet Port** on the Raspi using a cable. Most of us use wireless, or **Wifi** connections and so shall we in our workshop.
 
-* In the top right corner of the screen, click on the networking icon. It will either look like a pair of computers or a common "Wifi" signal icon. 
+* In the top right corner of the screen, click on the networking icon. It will either look like a pair of computers or a common "Wifi" signal icon.
 
 ![CODE@TACC SSID](images/01-find-wifi.jpg)
 
@@ -120,13 +120,15 @@ There's a lot of corners to explore on the Raspbian desktop, but the first thing
 
 ![CODE@TACC connected](images/03-connected-wifi.jpg)
 
-# What you learned
+#### What you learned
 * Navigating inside a "screen-based" application
 * Finding and configuring various options inside **raspi-config**
 * Renaming a Raspberry Pi
 * Connecting a Raspberry Pi to a Wifi internet connection
 
-# Challenges
+## Challenges
 * None
 
-# Resources
+## Resources
+
+* [Raspberry Pi raspi-config page](https://www.raspberrypi.org/documentation/configuration/raspi-config.md)

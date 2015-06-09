@@ -18,7 +18,7 @@ The Raspberry Pi is a low cost, credit-card sized computer that plugs into a com
 
 ## Overview of your Raspberry Pi kit
 
-![Photograph of the kit issued to each student](images/kit-annotated.png)
+![Photograph of the kit issued to each student](images/kit-annotated.jpg)
 
 | Part | Notes |
 |------|-------|
@@ -46,14 +46,14 @@ The Raspberry Pi is a low cost, credit-card sized computer that plugs into a com
 
 **On the monitor, you will see a lot of text scroll by. This is the computer "booting up"**
 
-# What you learned
+#### What you learned
 * What the various connection ports are for on a Raspberry Pi computer
 * Assembling and powering up a Raspberry Pi computer
 
-# Challenges
+## Challenges
 * None
 
-# Resources
+## Resources
 * [What is Raspberry Pi](https://www.raspberrypi.org/help/what-is-a-raspberry-pi/)
 * [Shop for Raspberry Pi and accessories](http://www.adafruit.com/category/105)
 
