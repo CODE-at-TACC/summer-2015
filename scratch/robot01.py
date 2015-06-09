@@ -38,7 +38,7 @@ BrickPiSetupSensors()   #Send the properties of sensors to BrickPi
 BrickPi.Timeout=100   #Set timeout value for the time till which to run the motors after the last command is pressed
 BrickPiSetTimeout()     #Set the timeout
 
-speed=100   #Set the speed
+speed=75   #Set the speed
 state=0 # This is the current 'behavior' of the robot
 
 while True:
@@ -48,20 +48,21 @@ while True:
     touch = Read_EV3_Touch( PORT_4, 0, 0.01)
 
     # front object sensor
-    if ultrasonic > 25:
-        state = 1 # no obstacles, move ahead
-    elif ultrasonic in range(11,25):
-        if state == 1:
-            # change direction randomly if moving forward
-            state = 2 + random.randint(0,1)
-        elif state in range(2,3):
-            # keep going the direction we chose to avoid the obstacle
-            state = state
-    elif ultrasonic in range (1,10):
-        state=4 # probably blocked - back up
-    elif ultrasonic == 0:
-        # Stop if we can't get a reading from the object sensor
-        state = 4
+    if not state == 5: # state 5 is user_stop
+        if ultrasonic > 25:
+            state = 1 # no obstacles, move ahead
+        elif ultrasonic in range(11,25):
+            if state == 1:
+                # change direction randomly if moving forward
+                state = 2 + random.randint(0,1)
+            elif state in range(2,3):
+                # keep going the direction we chose to avoid the obstacle
+                state = state
+        elif ultrasonic in range (1,10):
+            state=4 # probably blocked - back up
+        elif ultrasonic == 0:
+            # Stop if we can't get a reading from the object sensor
+            state = 4
 
     # rear bump sensor
     if touch == 1:
