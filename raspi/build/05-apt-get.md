@@ -24,7 +24,7 @@ Every so often (starting today) it's essential to refresh the list of available 
 
 ![Updates going on...](images/updates.jpg)
 
-** You will see some text scroll by as the system accesses the remote list and updates the Raspberry Pi's local copy of the list. **
+**Much helpful text will scroll by as the system fetches the remote list and updates the Raspberry Pi's local copy.**
 
 * Now enter this command: `sudo apt-get -y upgrade`
 
@@ -32,7 +32,7 @@ Every so often (starting today) it's essential to refresh the list of available 
 
 #### Challenges
 
-1. Read the upgrade log and determine the name of one program that was updated
+1. Read the upgrade log in your Terminal window and find the name of one program that was updated
 
 ## Finding and installing software
 
