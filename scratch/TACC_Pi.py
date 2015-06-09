@@ -1,10 +1,10 @@
 import time
 from BrickPi import *  
 
-TIMEOUT=10 # seconds
+TIMEOUT=5 # seconds
 BAD_RESPONSE=1000
 POLL_DELAY=0.01
-TACC_DEBUG=1
+TACC_DEBUG=0
 EV3_COLORNAMES = ['None', 'Black', 'Blue', 'Green', 'Yellow', 'Red', 'White', 'Brown']
 
 def log( message ):
