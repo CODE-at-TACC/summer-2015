@@ -13,19 +13,19 @@ Getting Started with Raspberry Pi
 Introduction and background
 
 
-![Web browser](epiphany-browser.png)
+![Web browser](images/epiphany-browser.png)
 
 
-![File browser](file-browser.png)
+![File browser](images/file-browser.png)
 
 
-![Leadpad](leafpad.png)
+![Leadpad](images/leafpad.png)
 
 
-![Logout](logout.png)
+![Logout](images/logout.png)
 
 
-![Terminal](terminal.png)
+![Terminal](images/terminal.png)
 
 
 
