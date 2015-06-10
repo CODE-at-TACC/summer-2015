@@ -58,7 +58,7 @@ The Raspberry Pi is a low cost, credit-card sized computer that plugs into a com
 * [Shop for Raspberry Pi and accessories](http://www.adafruit.com/category/105)
 
 #### Next Objective
-1. [~~Build a tiny computer~~](01-build.md)
+1. [x] [Build a tiny computer](01-build.md)
 2. **[Set it up just so](02-configuring.md)**
 3. [Explore the Raspbian desktop](03-raspbian-desktop.md)
 4. [Learn a little Linux](04-linux-101.md)
