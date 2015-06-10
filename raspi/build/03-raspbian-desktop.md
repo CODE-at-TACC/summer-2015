@@ -11,20 +11,20 @@ Getting Started with Raspberry Pi
 # Explore the Raspbian desktop
 
 
-#### The desktop
+#### Desktop
 
 The graphical desktop is similar in many aspects to what you find with Windows of Mac.  The different icons and features are highlighted here.
 
 ![Desktop](images/desktop.png)
 
 
-#### The web browser
+#### Web browser
 
 The default web browser on the Raspberry Pi is called *Epiphany*.  It is similar in capability to other standard web browsers such as Internet Explorer, Safari, Chrome, and Firefox. There key buttons are and capabilities are marked.
 
 ![Web browser](images/epiphany-browser.png)
 
-#### The file browser
+#### File browser
 
 When looking around for files on your Raspberry Pi, you can use the *file browser*.  Like both Mac and Windows, you can see folders and files, double click folders to open them for viewing, and double click files to open the file in an appropriate program.
 
@@ -32,7 +32,7 @@ Opening the file browser is a convenient way to see how much space you have on y
 
 ![File browser](images/file-browser.png)
 
-#### The terminal
+#### Terminal
 
 Similar to the *file browser*, the *terminal* allows you to explore files and folders.  However, the terminal does not have a graphical interface.  This is an advantage when working with programs that also do not have a graphical interface.  We will learn more about using the terminal in a little while.
 
