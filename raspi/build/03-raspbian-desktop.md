@@ -17,6 +17,7 @@ The graphical desktop is similar in many aspects to what you find with Windows o
 
 ![Desktop](images/desktop.png)
 
+In particular, the *Menu* allows access to almost all installed software with graphical interfaces, including Programming tools, Games, Accessories, and Preferences. 
 
 #### The web browser
 
@@ -38,15 +39,17 @@ Similar to the *file browser*, the *terminal* allows you to explore files and fo
 
 ![Terminal](images/terminal.png)
 
-#### Leafpad
+#### Text editor
 
-Leafpad can be run by clicking the icon in the *start menu*.  It is an easy to use text editor.
+You can create and edit text files using the *Text Editor* called Leafpad.  To access Leafpad, click the *Menu* icon and select *Accessories* and then select *Text Editor*.
 
-![Leadpad](images/leafpad.png)
+![Leafpad](images/leafpad.png)
+
+Turning on *Line Numbers* can be helpful when working with computer code.  You can turn it one through the *Option* menu in Leafpad.
 
 #### Turning off
 
-Through the *start menu* you can access the shut down options.  Here you can elegantly power down the Raspberry pi, reboot, or simply logout.
+Through the *Menu* you can access the *Shutdown* options.  Here you can elegantly power down the Raspberry pi, reboot, or simply logout.
 
 ![Logout](images/logout.png)
 
@@ -54,7 +57,11 @@ Through the *start menu* you can access the shut down options.  Here you can ele
 #### Challenge
 
 1. Open up this page in your web browser
-2. Create a file in Leafpad and save it to your Desktop
+2. Make a local copy of this website (called a *git repository*) onto your computer. First, open the terminal.  Then, copy the following line from your web browser and paste it into the terminal. Press *Enter*
+```
+git clone https://github.com/CODE-at-TACC/summer-2015.git
+```
+3. Use Leafpad to create a new file and save it to your Desktop
 
 #### What you learned
 
