@@ -20,21 +20,23 @@ The graphical desktop is similar in many aspects to what you find with Windows o
 
 #### Web browser
 
-The default web browser on the Raspberry Pi is called *Epiphany*.  It is similar in capability to other standard web browsers such as Internet Explorer, Safari, Chrome, and Firefox. There key buttons are and capabilities are marked.
+The default web browser on the Raspberry Pi is called *Epiphany*.  It is similar in capability to other standard web browsers such as Internet Explorer, Safari, Chrome, and Firefox. The key buttons and their actions are marked.
 
 ![Web browser](images/epiphany-browser.png)
 
 #### File browser
 
-When looking around for files on your Raspberry Pi, you can use the *file browser*.  Like both Mac and Windows, you can see folders and files, double click folders to open them for viewing, and double click files to open the file in an appropriate program.
+When looking around for files on your Raspberry Pi, you can use the *file browser*.  Like both Mac and Windows, you can see icons for folders and files and can double-click folders to open them for viewing or double-click files to open the file in an appropriate program.
 
-Opening the file browser is a convenient way to see how much space you have on your SD card.  We’ll talk more about the command-line path in a little while.
+`TIP`:
+* Opening the file browser is a convenient way to see how much space you have on your SD card.
+* It also gives you a simple text summary of which folder/file you're viewing, called the `command-line path`. We’ll talk more about the [command-line path](04-linux-101.md#where-am-i) in a little while.
 
 ![File browser](images/file-browser.png)
 
 #### Terminal
 
-Similar to the *file browser*, the *terminal* allows you to explore files and folders.  However, the terminal does not have a graphical interface.  This is an advantage when working with programs that also do not have a graphical interface.  We will learn more about using the terminal in a little while.
+Similar to the *file browser*, the *terminal* allows you to explore files and folders.  However, the terminal does not have a graphical interface. Instead you type `text` commands to control the computer. This is an advantage when working with programs that also do not have a graphical interface.  We will learn more about [using the terminal](04-linux-101.md) in a little while.
 
 ![Terminal](images/terminal.png)
 
