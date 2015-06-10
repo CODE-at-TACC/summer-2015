@@ -85,9 +85,9 @@ Let's install **bsdgames**!
 * [Raspberry Pi Official APT page](https://www.raspberrypi.org/documentation/linux/software/apt.md)
 
 #### Next Objectives
-1. [~~Build a tiny computer~~](01-build.md)
-2. [~~Set it up just so~~](02-configuring.md)
-3. [~~Explore the Raspbian desktop~~](03-raspbian-desktop.md)
-4. [~~Learn a little Linux~~](04-linux-101.md)
-5. [~~~Update and install software~~](05-apt-get.md)
+1. [x] [Build a tiny computer](01-build.md)
+2. [x] [Set it up just so](02-configuring.md)
+3. [x] [Explore the Raspbian desktop](03-raspbian-desktop.md)
+4. [x] [Learn a little Linux](04-linux-101.md)
+5. [x] [Update and install software](05-apt-get.md)
 6. [**Day 1 Schedule**](../../README.md#day-1)
