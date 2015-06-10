@@ -28,9 +28,9 @@ The default web browser on the Raspberry Pi is called *Epiphany*.  It is similar
 
 When looking around for files on your Raspberry Pi, you can use the *file browser*.  Like both Mac and Windows, you can see icons for folders and files and can double-click folders to open them for viewing or double-click files to open the file in an appropriate program.
 
-`TIP`:
-* Opening the file browser is a convenient way to see how much space you have on your SD card.
-* It also gives you a simple text summary of which folder/file you're viewing, called the `command-line path`. We’ll talk more about the [command-line path](04-linux-101.md#where-am-i) in a little while.
+> `TIP`:
+> * Opening the file browser is a convenient way to see how much space you have on your SD card.
+> * It also gives you a simple text summary of which folder/file you're viewing, called the `command-line path`. We’ll talk more about the [command-line path](04-linux-101.md#path) in a little while.
 
 ![File browser](images/file-browser.png)
 
