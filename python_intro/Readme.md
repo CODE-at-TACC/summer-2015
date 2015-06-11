@@ -297,11 +297,11 @@ print "not ( False or (False and True) ) is " + str( not ( False or (False and T
 
 We see in this example the basic ways to compare two numbers.
 
-At times, we need to take an action only if the comparison is **False**.  We can turn **False** into **True** with **not**.
+At times, we need to take an action only if the result is **False**.  We can turn **False** into **True** with **not**.
 
-Sometimes, we need to do more than one comparison, and only take action if both comparisons are **True**.  To do this, we use the operator **and**.
+Sometimes, we need to do more than one comparison, and only take action if both results are **True**.  To do this, we use the operator **and**.
 
-Other times, we may need to take an action if either comparison is **True**.  To do this, we use the operator **or**.
+Other times, we may need to take an action if either result is **True**.  To do this, we use the operator **or**.
 
 Knowing if something is **True** or **False** can be useful when making decisions, as we will see in the next section.
 
@@ -316,25 +316,25 @@ Knowing if something is **True** or **False** can be useful when making decision
 Now that we know how to compare, we can evaluate situations and take different actions accordingly.  To do this, we ask the question **if**.  
 
 ```
-if comparison:
-    do something if comparison was True	
+if result:
+    do something if result was True	
 else:
-    do something different if comparison was False
+    do something different if result was False
 ```
 
 Sometimes you want to have more than two possible options.  You can use **elif** (which means *else if*) with **if** to do this.  
 
 
 ```
-if first_comparison:
-    do something if first_comparison was True	
-elif second_comparison:
-    do something if first_comparison was False and second_comparison was True	
+if first_result:
+    do something if first_result was True	
+elif second_result:
+    do something if first_result was False and second_result was True	
 else:
-    do something different if first_comparison was False and second_comparison was False
+    do something different if first_result was False and second_result was False
 ```
 
-In the example that follows, the built-in function **len** that returns the number of characters in a string.  
+In the example that follows, the built-in function **len** returns the number of characters in a string.  
 
 ```
 my_name = "Raspberry Pi"
@@ -379,11 +379,10 @@ Here is the basic syntax of a **for** loop.  The keywords are **for** and **in**
 
 ```
 for item in list:
-    do something
-    do something else
+    some_action
 ```
 
-Lists are represented using brackets, **[]**, and commas between the different informations.
+Lists are represented using brackets, **[ ]**, and commas between the different informations.
 
 A convenient way to create a list of numbers is to use the built-in function **range**.
 
@@ -406,12 +405,11 @@ for x in range( 5 ):
 
 ***Notice!*** The function **range** creates a list of numbers starting at 0.  The final number is one less than the input to range.
 
-A **while** loop
+A **while** loop will repeat as long as the criteria is **True**.
 
 ```
 while this_is_True:
-    do something
-    do something else
+    some_action
 ```
 
 Take a look at the following script.  What will it do?
@@ -471,14 +469,14 @@ nap_time = stop_time - start_time
 print "I actually slept for " + str( nap_time ) + " seconds."
 ```
 
-Go ahead and type `python 9_import.py` into the terminal.  How accurate was the length of the nap?  Why was it not measured as exactly 5 seconds?
+Go ahead and type `python 9_import.py` into the terminal.  How accurate was the length of the nap?  
 
 You may see **import** used in other ways, but they basically do the same thing, with minor changes in syntax.
 
 ```
 import time
-from time import time
-import time.time as time
+from time import timelords
+import time.timelords as doctors
 ```
 
 Final point. You may see functions accessing *methods* using a period. What do you think the script below does?
