@@ -24,7 +24,7 @@ The Raspberry Pi is a low cost, credit-card sized computer that plugs into a com
 |------|-------|
 | Raspberry Pi Model 2 | A tiny machine made just for tinkering |
 | HDMI cable | In addition to computer monitors, you may use any TV that has HDMI or composite input as a screen |
-| mini-USB Power Supply & Cable | If you have your own Raspi, any mini-USB can be used as long as its specs are XXX |
+| Micro-USB Power Supply & Cable | A Micro USB charger can be used as long as its specs are 5v and at least 1.2A |
 | Ourlink Wifi Adapter | There are many USB Wifi adapters but this is widely considered to be the best for Raspi |
 | Keyboard and Mouse | You can use any USB keyboard and mouse, but you may need to update the Raspi's keyboard configuration |
 | MicroSD card | This card has been formatted to contain a Raspberry Pi operating system |

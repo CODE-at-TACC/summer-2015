@@ -21,7 +21,7 @@ In particular, the *Menu* allows access to almost all installed software with gr
 
 #### The web browser
 
-The default web browser on the Raspberry Pi is called *Epiphany*.  It is similar in capability to other standard web browsers such as Internet Explorer, Safari, Chrome, and Firefox. There key buttons are and capabilities are marked.
+The default web browser on the Raspberry Pi is called *Epiphany*.  It is similar in capability to other standard web browsers such as Internet Explorer, Safari, Chrome, and Firefox. The important buttons are labelled below.
 
 ![Web browser](images/epiphany-browser.png)
 
