@@ -1,6 +1,6 @@
 def get_name():
-    result = raw_input( "What is your name? ")
-    return result
+    typed_name = raw_input( "What is your name? ")
+    return typed_name
 
 def greet( name ):
     print "Hello " + name + "!"

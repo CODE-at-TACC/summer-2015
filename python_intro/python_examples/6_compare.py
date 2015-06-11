@@ -8,7 +8,7 @@ print "4 >= 3 is " + str( 4 >= 3 )      # 4 greater than or equal to 3
 print "4 <= 3 is " + str( 4 <= 3 )      # 4 less than or equal to 3
 print "4 != 3 is " + str( 4 != 3 )		# 4 not equal to 3
 print ""
-print "Boolean Operators - not, and, or"
+print "Combining comparisons"
 print ""
 print "not True is " + str( not True )
 print "not False is " + str( not False )

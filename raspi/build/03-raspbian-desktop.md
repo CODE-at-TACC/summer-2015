@@ -17,7 +17,7 @@ The graphical desktop is similar in many aspects to what you find with Windows o
 
 ![Desktop](images/desktop.png)
 
-In particular, the *Menu* allows access to almost all installed software with graphical interfaces, including Programming tools, Games, Accessories, and Preferences. 
+In particular, the *Menu* allows access to almost all installed software with graphical interfaces, including *Programming*, *Accessories*, and *Preferences*. 
 
 #### The web browser
 
@@ -45,7 +45,7 @@ You can create and edit text files using the *Text Editor* called Leafpad.  To a
 
 ![Leafpad](images/leafpad.png)
 
-Turning on *Line Numbers* can be helpful when working with computer code.  You can turn it one through the *Option* menu in Leafpad.
+Turning on *Line Numbers* can be helpful when working with computer code.  You can turn it on through the *Option* menu in Leafpad.
 
 #### Turning off
 
@@ -54,22 +54,24 @@ Through the *Menu* you can access the *Shutdown* options.  Here you can elegantl
 ![Logout](images/logout.png)
 
 
-#### Challenge
+#### Challenges
 
-1. Open up this page in your web browser
-2. Make a local copy of this website (called a *git repository*) onto your computer. First, open the terminal.  Then, copy the following line from your web browser and paste it into the terminal. Press *Enter*
+1. Use Leafpad to create a new file and save it to your Desktop
+2. Open up this page in your web browser
+3. Make a local copy of this website (called a *git repository*) onto your computer. First, open the terminal.  Then, copy the following line from your web browser and paste it into the terminal. Press *Enter*
 ```
 git clone https://github.com/CODE-at-TACC/summer-2015.git
 ```
-3. Use Leafpad to create a new file and save it to your Desktop
+
 
 #### What you learned
 
 1. How to access the web browser and go to a website.
 2. How to use the file browser to explore the contents of your SD card.
-3. How to open and safe files.
-2. Shut down, restart, or log out 
-4. How to access the terminal
+3. How to open and save files.
+2. Shut down, restart, or log out .
+4. How to access the terminal.
+5. How to use `git clone`.
 
 
 

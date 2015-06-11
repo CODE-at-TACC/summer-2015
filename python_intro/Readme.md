@@ -15,9 +15,7 @@ The purpose of this *Introduction* is so that you can understand and modify the 
 
 ## Let's start at the very beginning
 
-When learning a new language, the first word learned is often “Hello”.  Similarly, when learning a new computer language, the first computer program written is “Hello world!” This is a computer program that, when run, will print to the screen the words “Hello world!”
-
-![Hello world!](images/HelloWorld.png)
+When learning a new language, the first word learned is often “Hello”.  Similarly, when learning a new computer language, the first computer program written is “Hello world!” This is a computer program that, when run, will print to the screen `Hello world!`.  
 
 In Python, writing this first program is very simple and a very good place to start. It uses the keyword **print**
 
@@ -25,19 +23,29 @@ In Python, writing this first program is very simple and a very good place to st
 
 ***Notice!*** Python recognizes the difference between uppercase and lowercase.  **print** is a keyword, however *Print* and *PRINT* are not keywords in Python.
 
+Let’s go ahead and run this first program.  Open a terminal window.  Type:
+
+```
+cd
+cd summer-2015/python_intro/python_examples
+python 1_hello_world.py
+```
+
+
 #### Challenge
 
-Use Python to say hello to the person on your right.  For convenience, you already have the scripts.  
+Use Python to say hello to the person on your right.    
 
-1. Open the file *1_hello_world.py* in Leafpad.
-2. Make you change and save the file.
-3. To run the script, type *python 1_hello_world.py* into the terminal
+1. For convenience, you already have the example scripts. Open the file *1_hello_world.py* in Leafpad.  First start Leafpad by finding *Text Editor* in the *Menu* under *Accessories*.  Then open the file by selecting *Open* under the *File* menu.  A file selection browser will pop-up.  Select on the left *pi* then select the *summer-2015* folder, then select the *python_intro* folder, then select the *python_examples* folder and finally select *1_hello_world.py*.
+2. Make your change and save the file.
+3. To run the script, type `python 1_hello_world.py` into the terminal.  Here is a time-saving tip!  If you type `python 1` and then press the *Tab* button on the left side of your keyboard, the terminal will type of rest of the filename for you.
 
 #### What you learned
 
 1. How to use the keyword **print**.
 2. How to view, edit, and run a Python script.
 3. Python is case-sensitive.
+4. How to use *Tab* in the terminal to automatically finish typing a filename or foldername.
 
 
 
@@ -59,6 +67,11 @@ salutation = greeting + " " + name + "!"
 print salutation
 ```
 
+***Notice!*** Computer scripts execute from top to bottom, just like we read text.  Importantly, variables should be assigned information before a script asks for the information with the variable.
+
+***Notice!*** Variable names can not have spaces.
+
+So here is how the script runs:
 
 *greeting* is assigned the information "Hello" using the **=** symbol.
 
@@ -72,12 +85,13 @@ Multiple strings can be combined into one string using the plus symbol, **+**
 
 Finally, the information in *salutation* is printed to the screen.
 
-***Notice!*** Computer scripts execute from top to bottom, just like we read text.  Importantly, variables should be assigned information before a script asks for the information with the variable.
+
+Go ahead and type `python 2_hello_world_again.py` into the terminal to see if it runs as expected.
 
 
 #### Challenge
 
-Use *2_hello_world_again.py* to say hello to the person on your left by changing the information stored in  *name*
+Update this script to say hello to the person on your left by changing the information stored in  *name*, then run again.
 
 #### What you learned
 
@@ -90,12 +104,15 @@ Use *2_hello_world_again.py* to say hello to the person on your left by changing
 
 ## Putting the “fun” into function
 
-When performing essentially the same set of actions repeatedly, you can create a *function* for these set of actions. Because computers are generally used to perform repeated tasks, we are almost always creating a lot of functions.
+When performing essentially the same set of actions repeatedly, you can create a *function* for these set of actions. Because computers are generally used to perform repeated tasks, we are almost always creating a lot of functions.  This results in less coding and less editing, which in turn is more reliable and efficient.
 
 ![Function meme](images/FunctionAllTheThings.jpg)
 
-Functions in Python always start with the keyword **def** which is short for define, followed by the name of the function.  Defining a function does not cause it to run.  It just lets Python know what to do when the function is run.  Functions have to be defined before being called upon to run.
+Functions in Python start with the keyword **def** which is short for define, followed by the name of the function, then a set of parentheses which may or many not have input variable names inside of them, and finally a colon **:**.  
 
+Input variables allow the actions of the function to be different, depending on the information sent to the function when it is used.
+
+Defining a function does not cause it to run.  It just lets Python know what to do when the function is run.  Functions have to be defined before being called upon to run.
 
 ```
 def greet( name ):
@@ -109,15 +126,19 @@ greet( "friend" )
 
 ***Notice!*** The print statements are part of the function *greet*, and they are indented using **4 spaces**.  Python relies on indenting to determine which lines are part of the function.  
 
-Now when the function *greet* is called with the input "world", the variable *name* is given the information "world".
+***Notice!*** Like variables, function names can not have spaces.
 
-Less coding, less editing, more reliable.
+Go ahead and type `python 3_function.py` into the terminal.
+
+What happened?  
+
+First the function *greet* is defined.  Next, the function *greet* is called with "world" as an input.  Because of this, the variable *name* is given the information "world".  Finally, the function *greet* is called with "friend" as an input.  
 
 #### Challenge
 
-Add "I look forward to seeing you tomorrow!" to the greeting.
+Add `print "I look forward to seeing you tomorrow!”` to the function *greet*.
 
-Also greet the people to your left and right.
+Update the script to greet the people sitting to your left and right by name.
 
 #### What you learned
 
@@ -127,21 +148,20 @@ Also greet the people to your left and right.
 4. Functions need to be defined before being called upon.
 
 
-
-
-
 ## I got a blank space and I’ll write your name
 
 Functions not only perform tasks, but can be used to **return** results.  Using the keyword **return** in a function will cause information to output from the function.  
 
 ![Function machine](images/FunctionMachine.png)
 
-In this example, the function *get_name* outputs the information of the variable *result*
+Go ahead and type `python 4_input.py` into the terminal.  When prompted, type in the answer to the question and *Enter*.
+
+Let’s look at the script.
 
 ```
 def get_name():
-    result = raw_input( "What is your name? ")
-    return result
+    typed_name = raw_input( "What is your name? ")
+    return typed_name
 
 def greet( name ):
     print "Hello " + name + "!"
@@ -150,6 +170,8 @@ your_name = get_name()
 
 greet( your_name )
 ```
+
+In this example, the function *get_name* outputs the information of the variable *typed_name*
 
 ***Notice!*** The keyword **return** will cause the function to stop.
 
@@ -161,8 +183,29 @@ The variable *result* is assigned the information that you type in when prompted
 
 #### Challenge
 
-1. Create a function called *get_favorite_color* that uses **raw_input** and returns a string.
-2. Incorporate this string into the function *greet*.
+1. Add a new function to the script called *get_favorite_color* that uses **raw_input** and returns a string.
+2. Add a line that calls your new function after the line that calls *get_name()*
+3. Incorporate the favorite color into the function *greet*.
+
+#### Example solution
+
+```
+def get_name():
+    typed_name = raw_input( "What is your name? ")
+    return typed_name
+
+def get_favorite_color():
+    typed_color = raw_input( "What is your favorite color? ")
+    return typed_color
+                            
+def greet( name, color ):
+    print "Hello " + name + "!"
+    print "I also like the color " + color + "."
+                            
+your_name = get_name()
+your_favorite_color = get_favorite_color()
+greet( your_name, your_favorite_color )
+```
 
 #### What you learned
 
@@ -173,9 +216,9 @@ The variable *result* is assigned the information that you type in when prompted
 
 ## Basic math
 
-Raspberry Pi is good at math.
+Raspberry Pi is can do math.
 
-Go ahead and run the script: *python 5_math.py*
+Go ahead and type `python 5_math.py` in the terminal.
 
 ```
 print ""
@@ -219,9 +262,9 @@ Enable the last 3 lines of the script and run it again.
 
 ![Calvin Hamlet](images/CalvinHamlet.png)
 
-Sometimes you just need a *yes* or a *no* answer to a question.  
+Sometimes you just need a *yes* or a *no* answer to a question.  In Python, *yes* is represented as **True**, while *no* is represented as **False**.  
 
-Run the script: *python 6_comparisons.py*
+Go ahead and type `python 6_compare.py` into the terminal.
 
 ```
 print ""
@@ -234,7 +277,7 @@ print "4 >= 3 is " + str( 4 >= 3 )      # 4 greater than or equal to 3
 print "4 <= 3 is " + str( 4 <= 3 )      # 4 less than or equal to 3
 print "4 != 3 is " + str( 4 != 3 )	# 4 not equal to 3
 print ""
-print "Boolean Operators - not, and, or"
+print "Combining comparisons"
 print ""
 print "not True is " + str( not True )
 print "not False is " + str( not False )
@@ -252,19 +295,46 @@ print "not ( False or (False and True) ) is " + str( not ( False or (False and T
 
 ***Notice!*** Capitalize the first letter of **True** and **False**.
 
+We see in this example the basic ways to compare two numbers.
+
+At times, we need to take an action only if the comparison is **False**.  We can turn **False** into **True** with **not**.
+
+Sometimes, we need to do more than one comparison, and only take action if both comparisons are **True**.  To do this, we use the operator **and**.
+
+Other times, we may need to take an action if either comparison is **True**.  To do this, we use the operator **or**.
+
 Knowing if something is **True** or **False** can be useful when making decisions, as we will see in the next section.
 
 ####  What you learned
 
 1. Using **>**, **<**, **==**, **>=**, **<=**, and **!=** to perform comparisons.
-2. Boolean operators **and**, **or**, and **not** and boolean operators evaluate.
+2. Operators **and**, **or**, and **not**.
 
 
 ## If, elif, else
 
-Now that we know how to compare, we can evaluate situations and take different actions accordingly.
+Now that we know how to compare, we can evaluate situations and take different actions accordingly.  To do this, we ask the question **if**.  
 
-In this example, we use the built-in function **len** that returns the number of characters in a string.
+```
+if comparison:
+    do something if comparison was True	
+else:
+    do something different if comparison was False
+```
+
+Sometimes you want to have more than two possible options.  You can use **elif** (which means *else if*) with **if** to do this.  
+
+
+```
+if first_comparison:
+    do something if first_comparison was True	
+elif second_comparison:
+    do something if first_comparison was False and second_comparison was True	
+else:
+    do something different if first_comparison was False and second_comparison was False
+```
+
+In the example that follows, the built-in function **len** that returns the number of characters in a string.  
 
 ```
 my_name = "Raspberry Pi"
@@ -287,6 +357,8 @@ else:
     print "Your name is the same length as my name"
 ```
 
+Go ahead and type `python 7_if.py` into the terminal.  See what result you get when you type in your name.
+
 ***Notice!*** You can have up to 1 **else** with an **if**. You can have as many **elif** as your need.
 
 #### What you learned
@@ -301,28 +373,50 @@ Computers can do the same task over and over and never get bored.  Python has tw
 
 ![Rollercoaster](images/Rollercoaster.gif)
 
+A **for** loop takes a list of information, and assigns the information in the list one at a time to the variable.  A shopping list is an example of this.  A shopper could go through the list from top to bottom, and one at a time find the items on the list.
+
+Here is the basic syntax of a **for** loop.  The keywords are **for** and **in**.  Note the use of the colon. 
 
 ```
-# range( ) creates a list of integers starting at 0
-print range( 10 )
+for item in list:
+    do something
+    do something else
+```
+
+Lists are represented using brackets, **[]**, and commas between the different informations.
+
+A convenient way to create a list of numbers is to use the built-in function **range**.
+
+Go ahead and type `python 8a_for_loop.py` into the terminal.
+
+```
+shopping_list=["apple","orange","eggplant","avocado"] 
+
+for item in shopping_list:
+   print "I am looking for an " + item
+
+print ""
+print "range( 5 ) is = " + str( range( 5 ) )
 print ""
 
 # 'for' sets a variable to each value in a list
 for x in range( 5 ):
-    print "x = " + str(x)
+    print "x is now " + str(x)
+```
 
-print ""
+***Notice!*** The function **range** creates a list of numbers starting at 0.  The final number is one less than the input to range.
 
-# 'while' will repeat as long as its condition is True
-x = 5
-while x > 0:
-    print "x = " + str(x)
-    x = x - 1
+A **while** loop
 
-print ""
+```
+while this_is_True:
+    do something
+    do something else
+```
 
-# Putting it together
+Take a look at the following script.  What will it do?
 
+```
 haters_gonna_hate = True
 
 shakes=0
@@ -336,11 +430,13 @@ while haters_gonna_hate:
         haters_gonna_hate = False
 ```
 
+Go ahead and type `python 8b_while_loop.py` into the terminal.
+
 ***Notice!*** The last line of script had a double indent, so 8 spaces.  Why? The line is inside an **if**, which is inside a **while**.
 
 #### Challenge 
 
-Python treats strings as a list of characters.  What would you expect the following script to do?
+Python treats strings as a **list** of individual characters.  What would you expect the following script to do?
 
 ```
 your_name = raw_input( "What is your name? ")
@@ -357,9 +453,35 @@ for each_character in your_name:
 
 ## The end is near
 
-While Python has many built-in functions like **range** and **len**, one can using keyword **import** to bring in even more functions. The keyword **from** can be used with **import**.
+![The End is Near](images/the_end_is_near.png)
 
-Functions have different *methods* that you can access, as seen in the script below.
+While Python has many built-in functions like **range** and **len**, one can using keyword **import** to bring in even more functions. 
+
+```
+import time                 # imports functions from a library called time
+
+print "Going to sleep for 5 seconds....Zzzzzzz"
+
+start_time = time.time()    # time.time() returns the number of seconds since Jan 1, 1970
+time.sleep(5)               # waits 5 seconds
+stop_time = time.time()
+
+nap_time = stop_time - start_time
+
+print "I actually slept for " + str( nap_time ) + " seconds."
+```
+
+Go ahead and type `python 9_import.py` into the terminal.  How accurate was the length of the nap?  Why was it not measured as exactly 5 seconds?
+
+You may see **import** used in other ways, but they basically do the same thing, with minor changes in syntax.
+
+```
+import time
+from time import time
+import time.time as time
+```
+
+Final point. You may see functions accessing *methods* using a period. What do you think the script below does?
 
 ```
 # get direct access to the datetime library
@@ -373,19 +495,6 @@ print "The day is " + str( current_time.day )
 print "The hour is " + str( current_time.hour )
 print "The minute is " + str( current_time.minute )
 print "The second is " + str( current_time.second )
-
-# you can *import* with this style that does not use *from*
-import time
-
-print "Going to sleep for 5 seconds....Zzzzzzz"
-
-start_time = time.time()    # time.time() returns the number of seconds since Jan 1, 1970
-time.sleep(5)               # waits 5 seconds
-stop_time = time.time()
-
-nap_time = stop_time - start_time
-
-print "I actually slept for " + str( nap_time ) + " seconds."
 ```
 
 #### What you learned
@@ -393,8 +502,6 @@ print "I actually slept for " + str( nap_time ) + " seconds."
 1. Accessing more functions using **import**
 2. How to measure time elapsed
 3. How to add a delay to your script
-
-![The End is Near](images/the_end_is_near.png)
 
 ## Go forth with confidence
 
