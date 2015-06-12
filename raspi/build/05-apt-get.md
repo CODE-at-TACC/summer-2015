@@ -10,7 +10,9 @@ Getting Started with Raspberry Pi
 
 # Updating and installing Raspberry Pi software
 
-All computers (even the cute little Raspberry Pi) have an *operating system* which is composed of hundreds or thousands of separate pieces of computer code. Whenever you want to add new abilities to a computer, you have to install even more code. It's important to keep your software up-to-date in order to get access to the latest features :star:, avoid security problems :imp:, and fix bugs :ant: but how to keep it all straight?
+All computers (even the cute little Raspberry Pi) have an *operating system* which is composed of hundreds or thousands of separate pieces of computer code. Whenever you want to add new abilities to a computer, you have to install even more code. It's important to keep your software up-to-date in order to get access to the latest features :star:, avoid security problems :imp:, and fix bugs :ant:.
+
+But how to keep it all straight?
 
 ![Sad Keanu](images/sadkeanu.jpg)
 
@@ -18,7 +20,7 @@ All computers (even the cute little Raspberry Pi) have an *operating system* whi
 
 ## Updating your software
 
-Every so often (starting today) it's essential to refresh the list of available software, compare it to what's currently installed, and automatically update everything where possible. The command-line tool for interacting with installed software is **apt** (short for Advanced Packaging Manager).
+Every so often (starting today) it's essential to refresh the list of available software, compare it to what's currently installed, and automatically update everything where possible. The command-line tool for interacting with installed software is `apt` (short for Advanced Packaging Tool).
 
 * Start by entering this command in a Terminal: `sudo apt-get update`
 
