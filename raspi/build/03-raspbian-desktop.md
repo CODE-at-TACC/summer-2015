@@ -45,7 +45,7 @@ You can create and edit text files using the *Text Editor* called Leafpad.  To a
 
 ![Leafpad](images/leafpad.png)
 
-Turning on *Line Numbers* can be helpful when working with computer code.  You can turn it on through the *Option* menu in Leafpad.
+Turning on *Line Numbers* can be helpful when working with computer code.  You can turn it on through the *Options* menu in Leafpad.
 
 #### Turning off
 
