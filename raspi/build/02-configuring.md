@@ -20,7 +20,7 @@ When you first boot up, the system will launch **raspi-config**
 
 **Raspi-config** is a text-based application, so you can't use your mouse to navigate. Instead, use the **Arrow** and **Tab** keys to move between fields, **Enter** to select, and use **Esc** to cancel. You can always get back to the main page by tapting Esc a couple of times!
 
-:star: You can access this screen in the future to make other changes by typing `sudo raspi-config` in any Terminal window (more on Terminals later...)
+:star: You can access this screen in the future to make other changes by typing `sudo raspi-config` in any Terminal window (more on [Terminals](03-raspbian-desktop.md#terminal) later...)
 
 ### Expand the file system
 
@@ -47,7 +47,7 @@ Raspberry Pis are British computers and as such default to Greenwich Mean Time (
 	* Keyboard layout: English (US)
 	* Key to function as AltGr: The default for the keyboard layout
 	* Compose key: No compose key
-	* Use Control+Alt+Backspace to termine the X server: Yes
+	* Use Control+Alt+Backspace to terminate the X server: Yes
 
 ### Renaming your Pi
 
@@ -61,6 +61,7 @@ Out of the box, all Pis are named **raspberrypi** on the network. This COULD get
 1. You can only use the characters a-z, 0-9, and the hyphen
 2. Try to keep your names short because you and others will have to type them
 3. :exclamation: All names used in our workshop have to be appropriate for a classroom setting
+   * e.g. some variant of your name: `charles-xavier-pi`
 
 ### Enabling SPI
 
@@ -80,11 +81,11 @@ I2C is a special interface that will be used later in the workshop. We need to t
 
 * Go to **8 Advanced Options**, tap **Enter**, select **A4 SSH**, and tap **Enter** again. When asked "Would you like the SSH server enabled or disabled?" select **Enabled**, please.
 
-:star: If a Raspberry Pi computer is connected to the Internet and has SSH turned on, anyone who knows a username and password for that computer can log into it and run commands. Good safety practices for operating an SSH server include [changing the password](http://www.tldp.org/LDP/lame/LAME/linux-admin-made-easy/changing-user-passwords.html) for the pi (or other) user before making it available over the Internet.
+:star: If a Raspberry Pi computer is connected to the Internet and has SSH turned on, anyone who knows a username and password for that computer can log into it and run commands. Good safety practices for operating an SSH server include [changing the password](http://www.tldp.org/LDP/lame/LAME/linux-admin-made-easy/changing-user-passwords.html) for the pi (or other) user before making it available over the Internet. You can change your password in a [terminal](03-raspbian-desktop.md#terminal).
 
 ### Disabling the Serial Console
 
-Normally, one can log into a Raspberry Pi by connecting two wires on its main board to a USB connection on another computer via a **serial** connection. However, we need this function to be turned off for another project later in the workshop to work correctly.
+One common way you can log into a Raspberry Pi is by connecting two wires on its main board to a [USB connection](https://learn.adafruit.com/adafruits-raspberry-pi-lesson-5-using-a-console-cable) on another computer via a **serial** connection. However, we need this function to be turned off for another project later in the workshop to work correctly.
 
 * Go to **8 Advanced Options**, tap **Enter**, select **A8 Serial**, and tap **Enter** again. When asked if you would you like a login shell to be accessible over serial, select **No**
 
@@ -104,7 +105,7 @@ Most of the changes you made won't take effect until the computer restarts. So, 
 
 ## Connecting to Wifi
 
-There's a lot of corners to explore on the Raspbian desktop, but the first thing most folks want to do is connect to the Internet. If you have access to a wired, or **Ethernet**, network you can connect to it via the **Ethernet Port** on the Raspi using a cable. Most of us use wireless, or **Wifi** connections and so shall we in our workshop.
+There's a lot of corners to explore on the Raspbian desktop, but the first thing most folks want to do is connect to the Internet. If you have access to a wired, or **Ethernet**, network you can connect to it via the **Ethernet Port** on the Raspi using a cable. However, most of the time a wireless, or **Wifi**, connection is more convenient and that's what we'll use in our workshop.
 
 * In the top right corner of the screen, click on the networking icon. It will either look like a pair of computers or a common "Wifi" signal icon.
 
@@ -132,3 +133,10 @@ There's a lot of corners to explore on the Raspbian desktop, but the first thing
 ## Resources
 
 * [Raspberry Pi raspi-config page](https://www.raspberrypi.org/documentation/configuration/raspi-config.md)
+
+#### Next Objective
+1. [x] [Build a tiny computer](01-build.md)
+2. [x] [Set it up just so](02-configuring.md)
+3. **[Explore the Raspbian desktop](03-raspbian-desktop.md)**
+4. [Learn a little Linux](04-linux-101.md)
+5. [Update and install software](05-apt-get.md)
