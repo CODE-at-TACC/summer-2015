@@ -26,9 +26,7 @@ Anyone can build a simple circuit, but not everyone can make it work using a Ras
 
 ### Introducing your prototyping kit
 
-Each student has been issued with a ziploc bag containing various components needed to complete this project. 
-
-![Annotated Photo of Prototyping Kit](images/prototyping.jpg)
+Each student has been issued with a ziploc bag containing various components needed to complete today's project. 
 
 | Part | Notes |
 |------|-------|
@@ -38,7 +36,6 @@ Each student has been issued with a ziploc bag containing various components nee
 | LEDs | Light emitting diodes emit single-wavelength light and are available in many colors and form factors |
 | Resistors | Components that reduce voltage and current flow through a circuit |
 | Momentary switch | Basically, a push button |
-| Pulsox bits | We may want to include all the pulsox bits here as well |
 
 #### Breadboard
 
@@ -70,7 +67,7 @@ To use a breadboard, you need 22 gauge solid-core (not stranded) wires that have
 
 [Resistors](http://en.wikipedia.org/wiki/Resistor) are good at one thing: *resisting* the flow of electricity (otherwise known as current). This allows you, as a circuit designer, control where and how fast current flows.
 
-A helpful way of thinking about electrical current and resistance is to think of it in terms of water pressure in a tube. If you have water flowing in a tube and you put a smaller pipe in line, there will be more resistance to water flow. On the other hand, attaching a larger pipe will lead to less resistance to water flow.
+A helpful way of conceptualizing electrical current and resistance is to think of it in terms of water pressure in a tube. If you have water flowing in a tube and you put a smaller pipe in line, there will be more resistance to water flow. On the other hand, attaching a larger pipe will lead to less resistance to water flow.
 
 **Reading Resistor Codes**
 
@@ -136,7 +133,8 @@ To turn the LED on and off we need to control it using one of the Raspberry Pi's
 * The purpose of common electronics components like breadboards, LEDs, and resistors
 * How to read resistor codes
 * Technique for cutting and preparing jumper wires
-* How to follow a circuit diagram to create a functioning circuit
+* How to use a breadboard to prototype wired circuits
+* How to follow a simple circuit diagram
 
 # Challenges
 :sparkle: Try briefly moving the wire from **#25** to **3V3** - What happens? Don't forget to plug back into **#25** when you are done playing :-)
@@ -149,4 +147,9 @@ To turn the LED on and off we need to control it using one of the Raspberry Pi's
 
 # Acknowledgements
 1. Lady Ada for images and inspiration pertaining to the breadboarding tutorial
+
+#### Next Objective
+1. [x] [Build a programmable LED light](01-led.md)
+2. **[Make your light blink using Python](02-programming.md)**
+3. [Add a pushbutton switch to your circuit](03-switch.md)
 

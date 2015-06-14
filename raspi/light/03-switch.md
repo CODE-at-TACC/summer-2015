@@ -138,3 +138,9 @@ while True:
 * [O'Reilly Raspberry Pi Cookbook](http://razzpisampler.oreilly.com/ch07.html)
 * [Physical computing with Raspberry Pi](https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/robot/buttons_and_switches/) courtesy of the [University of Cambridge Computer Laboratory](https://www.cl.cam.ac.uk/)
 * [Make: Tutorial: Raspberry Pi GPIO Pins and Python](http://makezine.com/projects/tutorial-raspberry-pi-gpio-pins-and-python/)
+
+#### Next Objective
+1. [x] [Build a programmable LED light](01-led.md)
+2. [x] [Make your light blink using Python](02-programming.md)
+3. [x] [Add a pushbutton switch to your circuit](03-switch.md)
+4. **[Day 1 Schedule](../../README.md#day-1)**

@@ -90,7 +90,7 @@ Open the blink.py file in nano by entering the following command in a Terminal w
 # Challenges
 :sparkle: Change the number of times the LED flashes
 
-:sparkle: Increase the resistor value to 1000 Ohms - what happens?
+:sparkle: Increase the resistor value to 1000 Ohms (1 kilo-Ohm) - what happens?
 
 :sparkle: Make the LED flash faster or slower
 
@@ -102,3 +102,8 @@ Open the blink.py file in nano by entering the following command in a Terminal w
 * [Nano manual](http://mintaka.sdsu.edu/reu/nano.html)
 * [GPIO Pin Diagram](images/GPIO_Pi2.png)
 * [Adafruit Industries Wearables Central](http://www.adafruit.com/category/65)
+
+#### Next Objective
+1. [x] [Build a programmable LED light](01-led.md)
+2. [x] [Make your light blink using Python](02-programming.md)
+3. **[Add a pushbutton switch to your circuit](03-switch.md)**
