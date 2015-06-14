@@ -12,13 +12,9 @@ You have made a circuit for the Pi to control, but how do we tell the Pi what to
 
 ## Create a simple blink program in Python
 
-To make sure this works for everyone, we're going to cut and paste a program instead of typing it all in. Feel free to start with this program in the future when you make your own projects!
+To make sure this works for everyone, we will cut and paste a program instead of typing it all in. Feel free to start with this program in the future when you make your own projects!
 
-* Open LXTerminal and start the **nano** text editor by typing `nano` followed by tapping the **Return** key.
-
-![Nano starting display](images/nano-blank.png)
-
-Like **raspi-config**, the **nano** program is a text-based program. You can use code editor like IDLE or a text editor like Leafpad to write your code but we're doing it this way to get you more familiar with the text-based way of getting around. It might seem old-fashioned but the most powerful computers on the planet (like the one down the hall that you have toured) speak this language. 
+* Open LeafPad, then copy and paste the following text into a new file. Save the file as **blink.py** in **/home/pi**
 
 **blink.py**
 
@@ -56,12 +52,8 @@ for i in range(0,10):
 GPIO.cleanup()
 ```
 
-* Copy and paste in this source code from a web browser into **nano**. Your screen should look like this:
-
-![Python code pasted into nano](images/nano.png)
-
-* Save this pasted text to a file named **blink.py** by entering **Control-O**, specifying the name of the file. Then, then quit **nano** by entering **Control-X**.
-* List your local directory (by typing *ls* in LXterminal) to verify that blink.py was saved in it
+* Open a new LXTerminal window so that you can type in the commands to run your new Python program. 
+* Before we run the program, let's make sure we know where it is. In the Termina window, list the local directory (by typing *ls* in LXterminal). In the list of files returned, you should see one callled **blink.py**. Let an instructor know if you don't see that file name. 
 
 ## Running the blink.py program
 
@@ -76,10 +68,6 @@ Let's throw a class-wide disco party of blinking lights:
 **Did your LED light blink?** If so, you've taken your first steps towards building this...
 
 ![Daft Punk Helmet](images/daft.gif)
-
-## Editing the blink.py program
-
-Open the blink.py file in nano by entering the following command in a Terminal window `nano blink.py`. Move around within the file using the arrow keys. Delete characters with the **Delete** key and insert characters by putting the cursor at the location you want to modify. Save the file using **Control-O** and quit **nano** with **Control-X**. Feel free to explore other command in nano (there's a link to a quick tutorial in the Resources section)
 
 # What you learned
 * How to define Raspberry Pi GPIO pins as outputs
@@ -99,7 +87,6 @@ Open the blink.py file in nano by entering the following command in a Terminal w
 :sparkle: Update the circuit and code to add a second LED controlled by another GPIO pin
 
 # Resources
-* [Nano manual](http://mintaka.sdsu.edu/reu/nano.html)
 * [GPIO Pin Diagram](images/GPIO_Pi2.png)
 * [Adafruit Industries Wearables Central](http://www.adafruit.com/category/65)
 

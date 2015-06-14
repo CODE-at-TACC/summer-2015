@@ -44,7 +44,7 @@ In the top figure, a **pull-up resistor** connects the GPIO pin via a 10kΩ resi
 
 To make sure this works for everyone, we will cut and paste in the program instead of typing it all in. Feel free to start with this code in the future when you make your own projects!
 
-* Open Leafpad (or other text editor) then copy and paste this code from your browser into the editor window.
+* Open LeafPad then copy and paste this code from your browser into the editor window.
 
 **[button.py](other-materials/button.py)**
 ```python
@@ -79,7 +79,7 @@ while True:
 
 ## Run the button.py program
 
-* Enter the following command into the Terminal: `sudo python button.py`. :star: Make sure you current directory is the same as where you saved **button.py**.
+* Enter the following command into the Terminal: `sudo python button.py`. :star: Make sure your current directory is the same as where you saved **button.py**.
 
 :question: Why do we need to put **sudo** in front of the **python** command?
 
