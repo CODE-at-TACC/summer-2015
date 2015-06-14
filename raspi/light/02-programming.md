@@ -8,50 +8,52 @@ Physical Computing with Raspberry Pi
 
 # Make your light blink using Python
 
-Overview
-
-## Introducing Python
+You have made a circuit for the Pi to control, but how do we tell the Pi what to do? :snake:Python to the rescue!
 
 ## Create a simple blink program in Python
 
-* Open LXTerminal and start the **nano** text editor by typing `nano` followed by tapping **Return**
+To make sure this works for everyone, we will cut and paste a program instead of typing it all in. Feel free to start with this program in the future when you make your own projects!
 
-![Nano starting display](images/nano-blank.png)
+* Open LeafPad, then copy and paste the following text into a new file. Save the file as **blink.py** in **/home/pi**
 
-* Copy and paste in the following code from a web browser into **nano**
+**blink.py**
 
 ```python
 #!/bin/env python
 
+# Bring in some functions from Python libraries
 import RPi.GPIO as GPIO
 import time
 
-# blinking function
+# Define a blink function
 def blink(pin):
+    # Send 3.3V out of the pin (turn it on)
     GPIO.output(pin,GPIO.HIGH)
+    # Wait a second
     time.sleep(1)
+    # Send 0V out of the pin (turn it off)
     GPIO.output(pin,GPIO.LOW)
+    # Wait again
     time.sleep(1)
 return
 
-# to use Raspberry Pi board pin numbers
+# Configure things to use Raspberry Pi board pin numbers
 GPIO.setmode(GPIO.BOARD)
-# set up GPIO25 output channel
+# Tell the Pi that GPIO25 should be an output channel
 GPIO.setup(22, GPIO.OUT)
 
-# blink GPIO25 10 times
+# Blink GPIO25 10 times using a loop
 for i in range(0,10):
     blink(22)
+    # Print to the screen so we can confirm things should be functioning
     print 'blink #' + str(i + 1)
+
+# At the end, reset the GPIO system to how we found it    
 GPIO.cleanup()
 ```
 
-Your screen should look like this:
-
-![Python code pasted into nano](images/nano.png)
-
-* Save this pasted text to a file named **blink.py** by entering **Cntl-O**, specifying the name of the file. Then, then quit **nano** by entering **Cntl-X**.
-* List your local directory (by typing *ls* in LXterminal) to verify that blink.py was saved in it
+* Open a new LXTerminal window so that you can type in the commands to run your new Python program. 
+* Before we run the program, let's make sure we know where it is. In the Termina window, list the local directory (by typing *ls* in LXterminal). In the list of files returned, you should see one callled **blink.py**. Let an instructor know if you don't see that file name. 
 
 ## Running the blink.py program
 
@@ -59,19 +61,36 @@ Your screen should look like this:
 
 Let's throw a class-wide disco party of blinking lights:
 
-* Enter the following words into the Terminal and keep an eye on your prototype board: `sudo python blink.py`
+* Enter the following words into the Terminal and keep an eye on your prototyped circuit: `sudo python blink.py`
 
-:star: The word `sudo` means run Python as a **super-user** instead of the regular "pi" user. The super-user is the boss of other users on the system. We need to do this because not just any user is allowed to control the GPIO pins on a Raspberry pi.
+:star: The word `sudo` means run Python as a **super-user** instead of the regular "pi" user. The super-user is the boss of other users on a Linux system. We need to do this because not just any user is allowed to control the GPIO pins on a Raspberry pi. 
 
 **Did your LED light blink?** If so, you've taken your first steps towards building this...
 
 ![Daft Punk Helmet](images/daft.gif)
 
+# What you learned
+* How to define Raspberry Pi GPIO pins as outputs
+* How to use a function to turn a GPIO pin on and off
+* Why we need to preface some commands with **sudo**
+* How to reset the GPIO system at the end of a program
+
 # Challenges
-* Change the number of times the LED flashes
-* Increase the resistor value to 1000 Ohms - what happens?
-* Make the LED flash faster or slower
-* Update the circuit and code so the LED is controlled by another GPIO pin
+:sparkle: Change the number of times the LED flashes
+
+:sparkle: Increase the resistor value to 1000 Ohms (1 kilo-Ohm) - what happens?
+
+:sparkle: Make the LED flash faster or slower
+
+:sparkle: Update the circuit and code so the LED is controlled by another GPIO pin
+
+:sparkle: Update the circuit and code to add a second LED controlled by another GPIO pin
 
 # Resources
+* [GPIO Pin Diagram](images/GPIO_Pi2.png)
+* [Adafruit Industries Wearables Central](http://www.adafruit.com/category/65)
 
+#### Next Objective
+1. [x] [Build a programmable LED light](01-led.md)
+2. [x] [Make your light blink using Python](02-programming.md)
+3. **[Add a pushbutton switch to your circuit](03-switch.md)**

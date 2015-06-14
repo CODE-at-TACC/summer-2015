@@ -1,0 +1,9 @@
+*.idea
+*.pyc
+.DS_Store
+*.gz
+*.tgz
+*.zip
+*.bzip
+*.bz2
+*/tmp

@@ -6,6 +6,7 @@ Getting Started with Raspberry Pi
 2. [Set it up just so](02-configuring.md)
 3. [Explore the Raspbian desktop](03-raspbian-desktop.md)
 4. [Learn a little Linux](04-linux-101.md)
+5. [Update and install software](05-apt-get.md)
 
 # Building a tiny computer
 
@@ -17,13 +18,13 @@ The Raspberry Pi is a low cost, credit-card sized computer that plugs into a com
 
 ## Overview of your Raspberry Pi kit
 
-![Photograph of the kit issued to each student](images/kit-annotated.png)
+![Photograph of the kit issued to each student](images/kit-annotated.jpg)
 
 | Part | Notes |
 |------|-------|
 | Raspberry Pi Model 2 | A tiny machine made just for tinkering |
-| HDMI cable | In addition to computer monitors, you may use any TV that has HDMI or composite input as a screen |
-| mini-USB Power Supply & Cable | If you have your own Raspi, any mini-USB can be used as long as its specs are XXX |
+| HDMI cable | In addition to computer monitors, you may use any TV that has HDMI input as a screen |
+| Micro-USB Power Supply & Cable | A Micro USB charger can be used as long as its specs are 5v and at least 1.2A |
 | Ourlink Wifi Adapter | There are many USB Wifi adapters but this is widely considered to be the best for Raspi |
 | Keyboard and Mouse | You can use any USB keyboard and mouse, but you may need to update the Raspi's keyboard configuration |
 | MicroSD card | This card has been formatted to contain a Raspberry Pi operating system |
@@ -45,10 +46,20 @@ The Raspberry Pi is a low cost, credit-card sized computer that plugs into a com
 
 **On the monitor, you will see a lot of text scroll by. This is the computer "booting up"**
 
-# Challenges
+#### What you learned
+* What the various connection ports are for on a Raspberry Pi computer
+* Assembling and powering up a Raspberry Pi computer
+
+## Challenges
 * None
 
-# Resources
+## Resources
 * [What is Raspberry Pi](https://www.raspberrypi.org/help/what-is-a-raspberry-pi/)
 * [Shop for Raspberry Pi and accessories](http://www.adafruit.com/category/105)
 
+#### Next Objective
+1. [x] [Build a tiny computer](01-build.md)
+2. **[Set it up just so](02-configuring.md)**
+3. [Explore the Raspbian desktop](03-raspbian-desktop.md)
+4. [Learn a little Linux](04-linux-101.md)
+5. [Update and install software](05-apt-get.md)
