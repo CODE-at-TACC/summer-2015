@@ -515,6 +515,10 @@ If you want to take it your Python knowledge to the next level, I highly recomme
 
 [Python at Code Academy](http://www.codecademy.com/en/tracks/python)
 
+#### Next
+
+[**Day 1 Schedule**](../README.md#day-1)
+
 
 
 

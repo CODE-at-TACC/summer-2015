@@ -1,6 +1,10 @@
 # Parallel computing
 
-Typically, whenever software is written, it is made for serial execution. This means that commands are exectuted sequentially and on a single processor. However, processor clock rates have stopped increasing due to the limits of silicon.
+Software is typically written for sequential execution, where tasks are completed one-by-one and in order. If you're like me and can't multitask, your typical homework workflow may look like this.
+
+![sequential homework](images/sequential_homework.png)
+
+This is pretty inefficient and a homework deadline may interfere with your more important cat-liking. To make sure this doesn't happen, you can increase your cat-likes per minute (clpm) and homework problems per minute. However, you'll eventually hit the limit of your bandwidth or learning rate. Processor clock rates have already topped out and will not be going any faster due to the physical limits of silicon.
 
 ![Clock rates](images/clock.png)
 
