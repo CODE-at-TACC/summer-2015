@@ -19,6 +19,7 @@ This is the online material for TACC's summer high school program "CODE@TACC" in
 * Hadley Vaughn
 * Joon Yee Chuah
 * Cyrus Proctor
+* Makeda Easter
 
 ## Day 1
 |Time           | Topic                                                        |
@@ -41,29 +42,40 @@ This is the online material for TACC's summer high school program "CODE@TACC" in
 |Time           | Topic                                                        |
 |---------------|--------------------------------------------------------------|
 | 9:00 -  10:00 | Creating a professional online presence |
-| 10:00 - 10:45 | Session |
+| 10:00 - 10:45 | Building a Pulse Meter (1) |
 | 10:45 - 11:00 | Break |
-| 11:00 - 12:00 | Session|
+| 11:00 - 12:00 | Building a Pulse Meter (2)|
 | 12:00 -  1:00 | Lunch, Questions, and Challenges |
-|  1:00 -  2:00 | Session |
+|  1:00 -  2:00 | Building a Pulse Meter (3) |
 |  2:00 -  2:15 | Questions |
 |  2:15 -  2:30 | Break |
-|  2:30 -  3:45 | Activity |
+|  2:30 -  3:45 | Using your new Pulse Meter |
 |  3:45 -  4:00 | Questions and closing activities |
 
 ## Day 3
 |Time           | Topic                                                        |
 |---------------|--------------------------------------------------------------|
 | 9:00 -   9:30 | Questions and overview of the day |
-|  9:30 - 10:45 | Session |
+|  9:30 - 10:45 | Networking and Graphics Using Processing (1) |
 | 10:45 - 11:00 | Break |
-| 11:00 - 12:00 | Session|
+| 11:00 - 12:00 | Networking and Graphics Using Processing (2) |
 | 12:00 -  1:00 | Lunch, Questions, and Challenges |
-|  1:00 -  2:00 | Session |
+|  1:00 -  2:00 | Networking and Graphics Using Processing (3) |
 |  2:00 -  2:15 | Questions |
 |  2:15 -  2:30 | Break |
-|  2:30 -  3:45 | Graph 500 |
+|  2:30 -  3:45 | Running the Graph 500 |
 |  3:45 -  4:00 | Questions and closing activities |
+
+
+## Day 4
+|Time           | Topic                                                        |
+|---------------|--------------------------------------------------------------|
+| All Day       | Visit and learn at the TACC Vislab |
+
+## Day 5
+|Time           | Topic                                                        |
+|---------------|--------------------------------------------------------------|
+| All Day       | Visit and learn at the TACC Vislab / UT WEP Tour |
 
 ---
 ---
