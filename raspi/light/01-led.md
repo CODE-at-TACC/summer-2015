@@ -117,15 +117,19 @@ The Cobbler is a utility header board and ribbon cable that makes it really easy
 
 To turn the LED on and off we need to control it using one of the Raspberry Pi's GPIO pins. We'll worry about the programming later - for now, we will just wire up the circuit and hope for the best!
 
-1. If you have not already, install the Cobbler on the solderless breadboard. Make sure the first row of pins are seated in breadboard row **1**. Then, connect the ribbon cable from the Cobbler to the Pi.
+1. If you have not already, install the Cobbler on the solderless breadboard. Make sure the first row of pins are seated in breadboard row **1**.
 2. Connect one jumper wire from the **GND** pin to the **-** rail on the breadboard
 3. Connect another jumper wire from **#25** to an open row on the breadboard
-4. Put a **Red-Red-Brown-Gold** resistor on the same row, connecting to another row :question: What is the value in Ohms of this resistor?
+4. Put a **220 Ohm** (Red-Red-Brown-Gold) resistor on the same row, connecting to another row :question: What is the value in Ohms of this resistor?
 5. Connect the **Anode (+)** of any Red, Green, or Yellow LED downstream of the resistor
 6. Connect the **Cathode (-)** of the LED to the common **GND** rail
-7. Your connections should resemble the ones in this diagram:
+7. Finally, connect the ribbon cable from the Cobbler to the Pi.
+8. Your connections should resemble the ones in this diagram:
 
 ![Fritzing diagram of the circuit](images/led-101_bb.png)
+
+# Challenge
+:sparkle: Try briefly moving the wire from **#25** to **3V3** - What happens? Don't forget to plug back into **#25** when you are done playing :-)
 
 **:boom: Make sure  the LED is in the correct orientation or it will not light when we power it up.**
 
@@ -135,9 +139,6 @@ To turn the LED on and off we need to control it using one of the Raspberry Pi's
 * Technique for cutting and preparing jumper wires
 * How to use a breadboard to prototype wired circuits
 * How to follow a simple circuit diagram
-
-# Challenges
-:sparkle: Try briefly moving the wire from **#25** to **3V3** - What happens? Don't forget to plug back into **#25** when you are done playing :-)
 
 # Resources
 * [Graphical Resistor Chart](http://resistor.cherryjourney.pt)

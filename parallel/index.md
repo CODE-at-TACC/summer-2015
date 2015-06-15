@@ -13,3 +13,5 @@
   * add new rules
   * add paddles
   * different shapes
+
+https://computing.llnl.gov/tutorials/mpi/
