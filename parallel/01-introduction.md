@@ -68,8 +68,8 @@ Everyone should each have a bag with 20 numbers. Pick a person to be your parent
 
 # What you learned
 
-1. You learned how to gather values from separate processes.
-2. You learned how to broadcase values to all processes, and only when necessary. You should have noticed that while the parent process had to pay closer attention to what everyone said, this was quicker than the initial gather.
+1. You learned how to [gather](https://computing.llnl.gov/tutorials/mpi/#Collective_Communication_Routines) values from separate processes.
+2. You learned how to [broadcast](https://computing.llnl.gov/tutorials/mpi/#Collective_Communication_Routines) values to all processes, and only when necessary. You should have noticed that while the parent process had to pay closer attention to what everyone said, this was quicker than the initial gather.
 
 # Next
 
