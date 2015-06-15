@@ -63,6 +63,17 @@ All super computers, like Stampede here at TACC, are collections of computers ne
 
 Compute the max value from an array of numbers. Communication will happen in the following ways.
 
+<table><tbody><tr id="activity1"><td>1</td></tr></tbody></table>
+<script type="text/javascript">
+var t=document.getElementById("activity1");
+var cellVal;
+for(var i=0; i<10; i++){
+  cellVal=Math.floor(Math.random()*1000+1);
+  console.log(cellVal);
+  t.innerHTML+='<td>'+cellVal+'</td>';
+}
+</script>
+
 1. 1 person passes all numbers out in clockwise fashion. Everyone will return the maximum of their numbers to the original. Original person will then find the largest of those numbers.
 2. 1 person passes all numbers out in clockwise fashion. Everyone will tell their largest number to everyone. Original person gets the largest number fom the person that has it.
 3. Think of more ways.
