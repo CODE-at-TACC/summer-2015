@@ -49,11 +49,10 @@ Lets make a really simple first sketch.
 rect(25,25,50,50);
 ````
 
-<img src="images/play.png" height="100" align="left">  
-&nbsp;&nbsp;Now run the program by pressing play!
-</br>
-</br>
-</br>
+Now run the program by pressing play!  
+
+<img src="images/play.png" height="100">  
+
 After waiting a few seconds, a window that looks like the image below should appear.
 
 ![square](images/first_program.png)
