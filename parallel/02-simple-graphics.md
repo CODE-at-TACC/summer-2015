@@ -132,6 +132,58 @@ After recreating all examples, take a look at the "2D Primatives" in the [Proces
 
 # Simple Animation
 
+Now that you can make simple shapes and understand how to draw them to different parts of the canvas, you're ready to make your first animation. Fist, lets learn about two important sections in processing code: [setup](https://processing.org/reference/setup_.html) and [draw](https://processing.org/reference/draw_.html).
+
+## Setup
+
+Processing automatically looks for and call the `setup()` function when a program starts. `setup()` is used to define initial environment properties like:
+
+#### Canvas size
+The canvas size can be specified with the [`size()`](https://processing.org/reference/size_.html) command, which takes the two arguments: width and height. Processing defaults to a 100 by 100 pixel canvas. If we wanted to create a canvas that was 300 pixels wide and 200 pixels tall, we could use the command
+
+```processing
+void setup() {
+  size(300,200);
+}
+```
+#### Background color
+You can set the background of your canvas to either a specific color or an image using the `background()` function in your `setup()` initialization. The default background is the light gray you saw behind your white shapes, but you can change that color 4 main ways:
+
+* background(rgb)
+* background(gray)
+* background(v1, v2, v3)
+* background(image)
+
+| Parameter | Type | Description |
+|:----:|:----:|:---|
+| rgb | int | Any value of the color datatype or a hex code|
+| gray | float | Specifies a value between white and black [0,255]|
+| v1 | float | Red or hue value (depending on the current color mode)|
+| v2 | float | Green or saturation value (depending on the current color mode)|
+| v3 | float | Blue or brightness value (depending on the current color mode)|
+| image | PImage | PImage to set as background (must be same size as the sketch window)|
+
+Lets be extra interesting and make a light blue background.
+
+```processing
+void setup() {
+  background(#99CCFF);
+}
+```
+
+You can also pick a different color from http://www.w3schools.com/tags/ref_colorpicker.asp.
+
+#### Execution rate
+
+When we finally make our animation, we can specify the framerate to render the animation at with the `frameRate()` command. By default, Processing tries to render at 60 frames per second (fps), so lets change it to a sane 30 fps for the Pis with the code:
+
+```processing
+void setup() {
+  frameRate(30);
+}
+```
+
+Just make sure that whatever you do, you keep it all in the same `setup()` function because there can only be one per program, and any extras won't be called.
 
 
 Now that you can draw basic shapes to the Processing canvas, we're going to make our f
