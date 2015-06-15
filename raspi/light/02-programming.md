@@ -21,34 +21,30 @@ To make sure this works for everyone, we will cut and paste a program instead of
 ```python
 #!/bin/env python
 
-# Bring in some functions from Python libraries
 import RPi.GPIO as GPIO
 import time
 
-# Define a blink function
+# blinking function
 def blink(pin):
-    # Send 3.3V out of the pin (turn it on)
+    # Send 3.3V out of the pin    
     GPIO.output(pin,GPIO.HIGH)
-    # Wait a second
     time.sleep(1)
-    # Send 0V out of the pin (turn it off)
+    # Set the pin to 0V
     GPIO.output(pin,GPIO.LOW)
-    # Wait again
     time.sleep(1)
-return
+    return
 
-# Configure things to use Raspberry Pi board pin numbers
-GPIO.setmode(GPIO.BOARD)
-# Tell the Pi that GPIO25 should be an output channel
-GPIO.setup(22, GPIO.OUT)
+# Use BCM pin numbers
+GPIO.setmode(GPIO.BCM)
+# Set up GPIO25 output channel
+GPIO.setup(25, GPIO.OUT)
 
-# Blink GPIO25 10 times using a loop
-for i in range(0,10):
-    blink(22)
-    # Print to the screen so we can confirm things should be functioning
+# Blink GPIO25 5 times
+for i in range(0,5):
+    blink(25)
     print 'blink #' + str(i + 1)
 
-# At the end, reset the GPIO system to how we found it    
+# Reset all the pins when we are done
 GPIO.cleanup()
 ```
 
@@ -78,7 +74,7 @@ Let's throw a class-wide disco party of blinking lights:
 # Challenges
 :sparkle: Change the number of times the LED flashes
 
-:sparkle: Increase the resistor value to 1000 Ohms (1 kilo-Ohm) - what happens?
+:sparkle: Increase the resistor value to 1000 Ohms (1 kilo-Ohm). Is the light more or less bright than before?
 
 :sparkle: Make the LED flash faster or slower
 

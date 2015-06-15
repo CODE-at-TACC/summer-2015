@@ -73,6 +73,7 @@ while True:
         # switch re-open after being pushed
         print('Button Pressed')
         time.sleep(0.2)
+
 ```
 
 * Save the pasted text to a file named **button.py**
@@ -108,26 +109,27 @@ while True:
 import RPi.GPIO as GPIO
 import time
 
-# Define the blinking function
+# Blinking function
 def blink(pin):
     GPIO.output(pin,GPIO.LOW)
-    time.sleep(0.10)
+    time.sleep(0)
     GPIO.output(pin,GPIO.LOW)
     return
 
 # Use BCM pin numbers
 GPIO.setmode(GPIO.BCM)
 
-# Set up a pin for input
-GPIO.setup(24, GPIO.IN)
-# Set up an output channel to control the LED
-GPIO.setup(21, GPIO.OUT)
+# Set up GPIO #18 for input
+GPIO.setup(18, GPIO.IN)
+# Set up GPIO #25 output channel
+GPIO.setup(25, GPIO.OUT)
 
 while True:
-    input_state = GPIO.input(18)
-    if input_state == True:
+    input_state = GPIO.input(12)
+    if input_state == False:
         print('Button Pressed')
-        blink(25)
+        blink(22)
+
 ```
 
 :sparkle: List 3-4 other things you could do in response to a button press. What if you had multiple buttons - what could you do then?
