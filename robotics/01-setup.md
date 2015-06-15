@@ -64,3 +64,6 @@ The BrickPi software and Python libraries are now installed.
 * None
 
 ## Resources
+* [Example SimpleBot #1](https://vimeo.com/130701689)
+* [Example SimpleBot #2](https://vimeo.com/130701689)
+* [Dexter Industries BrickPi Forums](http://www.dexterindustries.com/forum/?forum=brickpi)

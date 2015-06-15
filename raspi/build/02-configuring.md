@@ -18,7 +18,7 @@ When you first boot up, the system will launch **raspi-config**
 
 ![Raspberry Pi Software Configuration Tool](images/raspi-config.png)
 
-**Raspi-config** is a text-based application, so you can't use your mouse to navigate. Instead, use the **Arrow** and **Tab** keys to move between fields, **Enter** to select, and use **Esc** to cancel. You can always get back to the main page by tapting Esc a couple of times!
+**Raspi-config** is a text-based application, so you don't use your mouse to navigate. Instead, use the **Arrow** and **Tab** keys to move between fields, **Enter** to select, and use **Esc** to cancel. You can always get back to the main page by tapting Esc a couple of times!
 
 :star: You can access this screen in the future to make other changes by typing `sudo raspi-config` in any Terminal window (more on [Terminals](03-raspbian-desktop.md#terminal) later...)
 

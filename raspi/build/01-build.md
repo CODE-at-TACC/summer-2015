@@ -12,7 +12,7 @@ Getting Started with Raspberry Pi
 
 [What is a Raspberry Pi?](https://vimeo.com/90103691) from the [Raspberry Pi Foundation](https://vimeo.com/raspberrypi)
 
-The Raspberry Pi is a low cost, credit-card sized computer that plugs into a computer monitor or TV, and uses a standard keyboard and mouse. It is a capable little device that enables people of all ages to explore computing, and to learn how to program in languages like Scratch and Python. It’s capable of doing everything you’d expect a desktop computer to do, from browsing the internet and playing high-definition video, to making spreadsheets, word-processing, and playing games. What’s more, the Raspberry Pi  has the ability to interact with the outside world, and has been  used in a wide array of digital maker projects, from music machines and parent detectors to weather stations and tweeting birdhouses with infra-red cameras!
+The Raspberry Pi is a low cost, credit-card sized computer that plugs into a computer monitor or TV, and uses a standard keyboard and mouse. It is a capable little device that enables people of all ages to explore computing, and to learn how to program in languages like Scratch and Python. It’s capable of doing everything you’d expect a desktop computer to do, from browsing the internet and playing high-definition video, to making spreadsheets, word-processing, and playing games. What’s more, the Raspberry Pi  has the ability to interact with the outside world, and has been used in a [wide array of digital maker projects](http://www.pcworld.com/article/2895874/10-insanely-innovative-incredibly-cool-raspberry-pi-projects.html), from music machines and parent detectors to weather stations and tweeting birdhouses with infra-red cameras!
 
 :star: You're going to build one today and use it for the next two weeks!
 
@@ -24,7 +24,7 @@ The Raspberry Pi is a low cost, credit-card sized computer that plugs into a com
 |------|-------|
 | Raspberry Pi Model 2 | A tiny machine made just for tinkering |
 | HDMI cable | In addition to computer monitors, you may use any TV that has HDMI input as a screen |
-| Micro-USB Power Supply & Cable | A Micro USB charger can be used as long as its specs are 5v and at least 1.2A |
+| Micro-USB Power Supply & Cable | A Micro USB charger can be used as long as its specs are 5V and at least 1.0A |
 | Ourlink Wifi Adapter | There are many USB Wifi adapters but this is widely considered to be the best for Raspi |
 | Keyboard and Mouse | You can use any USB keyboard and mouse, but you may need to update the Raspi's keyboard configuration |
 | MicroSD card | This card has been formatted to contain a Raspberry Pi operating system |
