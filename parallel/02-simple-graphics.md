@@ -53,6 +53,8 @@ rect(25,25,50,50);
 &nbsp;&nbsp;Now run the program by pressing play!
 </br>
 </br>
+</br>
+After waiting a few seconds, a window that looks like the image below should appear.
 
 ![square](images/first_program.png)
 
