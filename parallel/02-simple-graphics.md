@@ -49,9 +49,10 @@ Lets make a really simple first sketch.
 rect(25,25,50,50);
 ````
 
-| Press Play! |
-|---|
-|![play](images/play.png)|
+<img src="images/play.png" height="100" align="left">  
+&nbsp;&nbsp;Now run the program by pressing play!
+</br>
+</br>
 
 ![square](images/first_program.png)
 
@@ -110,7 +111,7 @@ Now that you how shapes are drawn on the canavs, we can experiment with the rect
 | w | width of the rectangle |
 | h | height of the rectangle |
 
-## Explore
+## Activity
 
 Take some time and try to replicate these examples from what we learned about the `rect()` command.
 
@@ -121,6 +122,19 @@ Take some time and try to replicate these examples from what we learned about th
 | Draw a rectangle | ![rectangle](images/rectangle.png) |
 | Draw multiple rectangles | ![more rectangles](images/two_rect.png) |
 
-After recreating all examples, take a look at the documentation and try making something on your own. The next lesson will cover color and animation.
+After recreating all examples, take a look at the "2D Primatives" in the [Processing documentation](https://processing.org/reference/) and try making other shapes. A good start would be using `ellipse()` to make a circle.
 
-[:arrow_right: Animation](05-animation.md)
+## What you learned
+
+1. You learned how to draw rectangles of different sizes all around your Processing canvas.
+2. You learned how to read the documentation to draw different shapes we didn't cover in this lesson.
+
+# Simple Animation
+
+
+
+Now that you can draw basic shapes to the Processing canvas, we're going to make our f
+
+:white_check_mark: [Learn about sequential and parallel computation](01-introduction.md)  
+:white_check_mark: [Make simple graphics](02-simple-graphics.md)  
+[:arrow_right: Make distributed graphics](03-distributed-graphics.md)
