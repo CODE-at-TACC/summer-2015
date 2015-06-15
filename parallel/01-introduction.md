@@ -61,28 +61,21 @@ All super computers, like Stampede here at TACC, are collections of computers ne
 
 # Activity
 
-Compute the max value from an array of numbers. Communication will happen in the following ways.
+Everyone should each have a bag with 20 numbers. Pick a person to be your parent (main) process. After each activity, give your bag to the person to your left so you have new numbers each time. Compute the ***maximum*** number for your table of 8 using the following methods:
 
-<table><tbody><tr id="activity1"><td>1</td></tr></tbody></table>
-<script type="text/javascript">
-var t=document.getElementById("activity1");
-var cellVal;
-for(var i=0; i<10; i++){
-  cellVal=Math.floor(Math.random()*1000+1);
-  console.log(cellVal);
-  t.innerHTML+='<td>'+cellVal+'</td>';
-}
-</script>
+1. Find the highest number in your bag and hand it to your parent process. The parent process writes down that number and hands it back. The largest number is then reported.
+2. Find the highest number in your bag and say it outloud. If someone already said a number higher than yours, don't report your own. The parent process listens and writes down the largest number and reports it.
 
-1. 1 person passes all numbers out in clockwise fashion. Everyone will return the maximum of their numbers to the original. Original person will then find the largest of those numbers.
-2. 1 person passes all numbers out in clockwise fashion. Everyone will tell their largest number to everyone. Original person gets the largest number fom the person that has it.
-3. Think of more ways.
+# What you learned
+
+1. You learned how to gather values from separate processes.
+2. You learned how to broadcase values to all processes, and only when necessary. You should have noticed that while the parent process had to pay closer attention to what everyone said, this was quicker than the initial gather.
 
 Now that you've physically performed a parallel computation, we're going to learn about ways to make visualizations before we implement one.
 
 :white_check_mark: Learn about sequential and parallel computation
 
-:arrow_right: Make simple graphics
+:arrow_right: [Make simple graphics](02-simple-graphics.md)
 
 # Citations
 
