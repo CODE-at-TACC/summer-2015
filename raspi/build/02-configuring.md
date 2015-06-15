@@ -121,6 +121,10 @@ There's a lot of corners to explore on the Raspbian desktop, but the first thing
 
 ![CODE@TACC connected](images/03-connected-wifi.jpg)
 
+* Test out your browser by going to the CODE@TACC Github page:
+  * [https://github.com/CODE-at-TACC/summer-2015](https://github.com/CODE-at-TACC/summer-2015)
+  * Join the Etherpad to chat or ask questions: [https://etherpad.mozilla.org/code-at-tacc](https://etherpad.mozilla.org/code-at-tacc)
+
 #### What you learned
 * Navigating inside a "screen-based" application
 * Finding and configuring various options inside **raspi-config**

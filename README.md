@@ -7,6 +7,8 @@ CODE@TACC: Real-World Raspberry Pi
 ### Texas Advanced Computing Center
 **June 15-June 26**
 
+[Chat and ask questions on our Etherpad](https://etherpad.mozilla.org/code-at-tacc)
+
 This is the online material for TACC's summer high school program "CODE@TACC" in which students will build a Linux computer then learn how to connect it to the world and create their own inventions.
 
 **CODE@TACC Team**
