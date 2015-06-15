@@ -46,10 +46,12 @@ IDE stands for *Integrated Development Environment* and usually allows code edit
 Lets make a really simple first sketch.
 
 ```processing
-rectangle(25,25,50,50);
+rect(25,25,50,50);
 ````
 
-Now press play!
+| Press Play! |
+|---|
+|![play](images/play.png)|
 
 ![square](images/first_program.png)
 
