@@ -47,11 +47,11 @@ sudo p2_A2D_converter.py
 ## Challenges
 * In the current setup, we measure the voltage between the phototransistor and ground.  This is called a common emitter topology.  
 
-![common emitter](images/NPN_common_emitter.svg)
+![common emitter](images/NPN_common_emitter.jpg)
 
 What would happen if we had the resistor and transistor switch places, and we instead measured the voltage across the resistor (called a common collector setup)?
 
-![common emitter](images/NPN_emitter_follower.svg)
+![common emitter](images/NPN_emitter_follower.jpg)
 
 Which one of these setups will make the measured voltage go up when we cover up the phototransistor?  Why?
 
