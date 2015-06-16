@@ -3,5 +3,5 @@
 sudo apt-get install python-numpy -y
 sudo apt-get install python-dev -y
 sudo apt-get install python-setuptools -y
-sudo easy_install spidev -y
+sudo easy_install spidev
 sudo apt-get install python-matplotlib -y

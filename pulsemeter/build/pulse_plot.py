@@ -7,7 +7,6 @@ import sys
 import os
 import numpy as np
 import matplotlib
-matplotlib.use('TKAgg')
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
@@ -26,7 +25,7 @@ class voltReader:
 		volts = volts*-1.0+3.3
 		return round(volts,places)
 	def getVolts(self):
-		level = self._ReadChannel()
+		level = self._readChannel()
 		volts = self._convertVolts(level, 3)
 		return volts
 
@@ -70,10 +69,11 @@ class rtPlot:
 			self.y = self.y[minOver:]
 		self.blinkInd()
 		if len(self.x) > len(self.window):
-			self.line.set_data(curTime-self.x, self.smoothedY())
+			self.line.set_data(curTime-self.x, self.y)
+			#self.line.set_data(curTime-self.x, self.smoothedY())
 		else:
 			self.line.set_data(curTime-self.x, self.y)
-		return self.line
+		return self.line,
 
 if __name__ == "__main__":
 	try:
@@ -82,11 +82,15 @@ if __name__ == "__main__":
 		spi.open(0,0)
 		# setup GPIO
 		GPIO.setmode(GPIO.BCM)
-		rtp = rtPlot()
+		rtp = rtPlot(seconds=10)
 		# start animation
-		ani = animation.FuncAnimation(rtp.fig, rtp.updatePlot, init_func=rtp.initPlot, interval=1)
-		plt.show()
+		ani = animation.FuncAnimation(rtp.fig, rtp.updatePlot, init_func=rtp.initPlot, interval=1, blit=True)
+		try:
+			plt.show()
+		except:
+			spi.close()
+			GPIO.cleanup()
 	except KeyboardInterrupt:
 		spi.close()
 		plt.close()
-		sys.exit()
+		GPIO.cleanup()

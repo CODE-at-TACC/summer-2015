@@ -9,13 +9,13 @@ Raspberry Pi Pulsemeter
 6. [Maker Success!](04_Data.md)
 
 ## Housekeeping
-Before we get too far, we should install the Python NumPy, SciPy, and Matplotlib packages.  We'll need them later.
+Before we get too far, we should install the Python NumPy and Matplotlib packages.  We'll need them later.
 
 ```
 sudo apt-get install python-numpy -y
 sudo apt-get install python-dev -y
 sudo apt-get install python-setuptools -y
-sudo easy_install spidev -y
+sudo easy_install spidev
 sudo apt-get install python-matplotlib -y
 ```
 You can type these in individually or you can run the matplotlib_install Bash script. Either way, this process will take a few minutes to complete. To verify that everything has installed properly, try running:
