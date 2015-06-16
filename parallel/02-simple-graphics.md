@@ -49,9 +49,9 @@ Lets make a really simple first sketch.
 rect(25,25,50,50);
 ````
 
-Now run the program by pressing play!  
+Now run the program by pressing play!
 
-<img src="images/play.png" height="100">  
+<img src="images/play.png" height="100">
 
 After waiting a few seconds, a window that looks like the image below should appear.
 
@@ -60,19 +60,19 @@ After waiting a few seconds, a window that looks like the image below should app
 While a simple square on a window may not seem very impressive, take a look at your single line transformed into real Java code.
 
 ```java
-import processing.core.*; 
-import processing.data.*; 
-import processing.event.*; 
-import processing.opengl.*; 
+import processing.core.*;
+import processing.data.*;
+import processing.event.*;
+import processing.opengl.*;
 
-import java.util.HashMap; 
-import java.util.ArrayList; 
-import java.io.File; 
-import java.io.BufferedReader; 
-import java.io.PrintWriter; 
-import java.io.InputStream; 
-import java.io.OutputStream; 
-import java.io.IOException; 
+import java.util.HashMap;
+import java.util.ArrayList;
+import java.io.File;
+import java.io.BufferedReader;
+import java.io.PrintWriter;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.IOException;
 
 public class first extends PApplet {
   public void setup() {
@@ -123,7 +123,7 @@ Take some time and try to replicate these examples from what we learned about th
 | Draw a rectangle | ![rectangle](images/rectangle.png) |
 | Draw multiple rectangles | ![more rectangles](images/two_rect.png) |
 
-After recreating all examples, take a look at the "2D Primatives" in the [Processing documentation](https://processing.org/reference/) and try making other shapes. A good start would be using `ellipse()` to make a circle.
+After recreating all examples, take a look at the "2D Primitives" in the [Processing documentation](https://processing.org/reference/) and try making other shapes. A good start would be using `ellipse()` to make a circle.
 
 ## What you learned
 
@@ -136,10 +136,10 @@ Now that you can make simple shapes and understand how to draw them to different
 
 ## [Setup](https://processing.org/reference/setup_.html)
 
-Processing automatically looks for and call the `setup()` function when a program starts. `setup()` is used to define initial environment properties like:
+Processing automatically looks for and call the `setup()` function when a program starts. Your Processing sketch can have only one `setup()` function. It is used to define initial environment properties like:
 
 #### Canvas size
-The canvas size can be specified with the [`size()`](https://processing.org/reference/size_.html) command, which takes the two arguments: width and height. Processing defaults to a 100 by 100 pixel canvas. If we wanted to create a canvas that was 300 pixels wide and 200 pixels tall, we could use the command
+The canvas size can be specified with the [`size()`](https://processing.org/reference/size_.html) command, which takes the two arguments: width and height. Processing defaults to a 100 by 100 pixel canvas. If we wanted to create a canvas that was 300 pixels wide and 200 pixels tall, we would define `setup()` like so:
 
 ```processing
 void setup() {
@@ -183,11 +183,11 @@ void setup() {
 }
 ```
 
-Just make sure that whatever you do, you keep it all in the same `setup()` function because there can only be one per program, and any extras won't be called. The other main function besides `setup()` is `draw()`.
+**Just make sure that whatever you do, you keep it all in the same `setup()` function because there can only be one per program, and any extras won't be called. You will get "duplicate method setup()..." errors if you try to include more than one**.
 
 ## [Draw](https://processing.org/reference/draw_.html)
 
-`draw()` is called directly after `setup()` and continuously loops over the code inside it until the sketch is killed. Because `draw()` is called automatically, you never have to call it yourself. Just like with `setup()`, there can only be a single `draw()` function per sketch.
+The other main function besides `setup()` is `draw()`. It is called directly after `setup()` and continuously loops over the code inside it until the sketch is killed. Because `draw()` is called automatically, you never have to call it yourself. **Just like with `setup()`, there can only be a single `draw()` function per sketch.**
 
 All the fun happens inside `draw()` and since it loops, we can update each of the objects that we're drawing. Lets give it a try with
 
@@ -199,7 +199,7 @@ void draw() {
 
 Nothing moved! *Hopefully this wasn't disappointing.*
 
-You should see that while we are drawing the rectangle in a loop, we never update **where** it is drawn. We can fix this by using variables to specify where the rectangle is drawn. Lets use `xPos` for the x-position and `yPos` for the y-position, and make them a floating point number (float), otherwise known as a decimal.
+You should see that while we are drawing the rectangle in a loop, we never update **where** it is drawn. We can fix this by using variables to specify where the rectangle is drawn. Let's use `xPos` for the x-position and `yPos` for the y-position, and make them a floating point number (float), otherwise known as a decimal.
 
 ```processing
 float xPos = 0.0;
@@ -330,6 +330,6 @@ You're officially off to a good start with animations in processing. If you want
 
 to learn how to do more things like color and input. We however will be moving on to making animations distributed across multiple Raspberry Pis.
 
-:white_check_mark: [Learn about sequential and parallel computation](01-introduction.md)  
-:white_check_mark: [Make simple graphics](02-simple-graphics.md)  
+:white_check_mark: [Learn about sequential and parallel computation](01-introduction.md)
+:white_check_mark: [Make simple graphics](02-simple-graphics.md)
 [:arrow_right: Make distributed graphics](03-distributed-graphics.md)
