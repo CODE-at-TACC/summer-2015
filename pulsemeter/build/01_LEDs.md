@@ -15,7 +15,7 @@ Before we get too far, we should install the Python NumPy, SciPy, and Matplotlib
 sudo apt-get install python-numpy -y
 sudo apt-get install python-dev -y
 sudo apt-get install python-setuptools -y
-sudo easy_install spidev -y
+sudo easy_install spidev
 sudo apt-get install python-matplotlib -y
 ```
 You can type these in individually or you can run the matplotlib_install Bash script. Either way, this process will take a few minutes to complete. To verify that everything has installed properly, try running:
