@@ -97,7 +97,7 @@ This pile of Java is why Processing was developed. You don't start with the trad
 
 # The Processing Canvas
 
-The processing canvas sits on a coordinate system. When the square was drawn to the canvas we drew it to point (25,25). If we were drawing the square on a calculator or a graph, (25,25) would be in the upper-right corner. However, (0,0) is the upper-left and (inf,inf) is the lower-right on a processing canvas.
+The processing canvas sits on a coordinate system. When the square was drawn to the canvas we drew it to point (25,25). If we were drawing the square on a calculator or a graph, (25,25) would be in the upper-right corner. However, (0,0) is the upper-left and (&infin;,&infin;) is the lower-right on a processing canvas.
 
 | Graph | Processing |
 |-------|------------|
@@ -107,8 +107,8 @@ Now that you how shapes are drawn on the canavs, we can experiment with the rect
 
 | Parameter | Description |
 |---|:---|
-| x | x-coordinate of the rectangle |
-| y | y-coordinate of the rectangle |
+| x | x-coordinate of the top-left corner |
+| y | y-coordinate of the top-left corner |
 | w | width of the rectangle |
 | h | height of the rectangle |
 
@@ -119,7 +119,7 @@ Take some time and try to replicate these examples from what we learned about th
 | Objective | Example |
 |:--|---|
 | Draw the square in the lower-left corner | ![lower left](images/lower_left.png) |
-| Draw the square half on the screen | ![half left](images/half_left.png) |
+| Draw the square half off the screen | ![half left](images/half_left.png) |
 | Draw a rectangle | ![rectangle](images/rectangle.png) |
 | Draw multiple rectangles | ![more rectangles](images/two_rect.png) |
 
@@ -134,7 +134,7 @@ After recreating all examples, take a look at the "2D Primatives" in the [Proces
 
 Now that you can make simple shapes and understand how to draw them to different parts of the canvas, you're ready to make your first animation. Fist, lets learn about two important sections in processing code: [setup](https://processing.org/reference/setup_.html) and [draw](https://processing.org/reference/draw_.html).
 
-## Setup
+## [Setup](https://processing.org/reference/setup_.html)
 
 Processing automatically looks for and call the `setup()` function when a program starts. `setup()` is used to define initial environment properties like:
 
@@ -183,8 +183,74 @@ void setup() {
 }
 ```
 
-Just make sure that whatever you do, you keep it all in the same `setup()` function because there can only be one per program, and any extras won't be called.
+Just make sure that whatever you do, you keep it all in the same `setup()` function because there can only be one per program, and any extras won't be called. The other main function besides `setup()` is `draw()`.
 
+## [Draw](https://processing.org/reference/draw_.html)
+
+`draw()` is called directly after `setup()` and continuously loops over the code inside it until the sketch is killed. Because `draw()` is called automatically, you never have to call it yourself. Just like with `setup()`, there can only be a single `draw()` function per sketch.
+
+All the fun happens inside `draw()` and since it loops, we can update each of the objects that we're drawing. Lets give it a try with
+
+```processing
+void draw() {
+  rect(25,25,50,50);
+}
+```
+
+Nothing moved! *Hopefully this wasn't disappointing.*
+
+You should see that while we are drawing the rectangle in a loop, we never update **where** it is drawn. We can fix this by using variables to specify where the rectangle is drawn. Lets use `xPos` for the x-position and `yPos` for the y-position, and make them a floating point number (float), otherwise known as a decimal.
+
+```processing
+float xPos = 0.0;
+float yPos = 0.0;
+
+void draw() {
+  rect(xPos, yPos, 50, 50);
+}
+```
+
+The square now starts in the top-left corner of the canvas, but it still doesn't move. We just need to use some physics and give it a velocity, or a rate the position changes at. In this case, lets change both the x and y positions at 0.5 pixels per frame, making the rectangle move towards the lower-right corner.
+
+```processing
+float xPos = 0.0;
+float yPos = 0.0;
+
+void draw() {
+  rect(xPos,yPos,50,50);
+  xPos+=0.5;
+  yPos+=0.5;
+}
+```
+
+It moves!
+
+Lets finish up this example by cleaning up the path of old rectangles by redrawing the background (grayscale 204) before drawing a new rectangle.
+
+```processing
+float xPos = 0.0;
+float yPos = 0.0;
+
+void draw() {
+  background(204);
+  rect(xPos,yPos,50,50);
+  xPos+=0.5;
+  yPos+=0.5;
+}
+```
+
+Watch out Pixar, CODE@TACC is moving boxes!
+
+## Activity
+
+Now that you can make a shape move across your Processing canvas, try to do the following exercises.
+
+1. Make a square move from the top-left to the top-right.
+2. Make a circle move from the bottom-right to the top-right.
+
+## What you learned
+
+1. You learned to 
 
 Now that you can draw basic shapes to the Processing canvas, we're going to make our f
 
