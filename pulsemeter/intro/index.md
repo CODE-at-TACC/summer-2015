@@ -2,12 +2,11 @@ Raspberry Pi Pulsemeter
 =======================
 
 #### Objectives
-1. **[How can our finger tell us our pulse?](01-background.md)**
-2. [Starting with blinky lights... and testing]()
-3. [The analog-to-digital (A/D) converter]() 
-4. [Signal amplification Pt. 1]()
-5. [Signal amplification Pt. 2]()
-6. [Putting it all together]()
+1. **[How can our finger tell us our pulse?](index.md)**
+2. [Starting with blinky lights... and testing](../build/01_LEDs.md)
+3. [The analog-to-digital (A/D) converter](../build/02_A2D_converter.md)
+4. [Signal amplification](../build/03_OpAmps.md)
+6. [Maker Success!](../build/04_Data.md)
 
 # Let us think this through...
 ##How can we detect our heartbeat using only our finger?
@@ -54,3 +53,5 @@ Before moving on, think about a few things:
 * [A really nice blogpost on a DIY pulsemeter circuit](http://embedded-lab.com/blog/?p=5508)
 * [Newark online store for buying components](http://www.newark.com/)
 
+----
+[Starting with blinky lights... and testing :Next>>](../build/01_LEDs.md)

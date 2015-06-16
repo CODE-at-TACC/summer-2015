@@ -17,7 +17,11 @@ sudo apt-get install python-dev
 sudo apt-get install python-setuptools
 sudo apt-get install python-pip
 sudo easy_install -U distribute
+sudo apt-get python-numpy
+sudo apt-get python-scipy
+sudo apt-get python-matplotlib
 ```
+This will take a while to load.
 
 ## Tools of the trade
 Before we start plugging things in, let's looks at the new stuff we have to play with today:

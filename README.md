@@ -44,14 +44,15 @@ This is the online material for TACC's summer high school program "CODE@TACC" in
 |Time           | Topic                                                        |
 |---------------|--------------------------------------------------------------|
 | 9:00 -  10:00 | Creating a professional online presence |
-| 10:00 - 10:45 | Building a Pulse Meter (1) |
+| 10:00 - 10:15 | [Pulse Meter Intro](pulsemeter/intro/index.md) |
+| 10:15 - 10:45 | [Step 1: LEDs](pulsemeter/build/01_LEDs.md) |
 | 10:45 - 11:00 | Break |
-| 11:00 - 12:00 | Building a Pulse Meter (2)|
+| 11:00 - 12:00 | [Step 2: A/D Converter](pulsemeter/build/02_A2D_converter.md)|
 | 12:00 -  1:00 | Lunch, Questions, and Challenges |
-|  1:00 -  2:00 | Building a Pulse Meter (3) |
+|  1:00 -  2:00 | [Step 3: Amplification](pulsemeter/build/03_OpAmps.md)|
 |  2:00 -  2:15 | Questions |
 |  2:15 -  2:30 | Break |
-|  2:30 -  3:45 | Using your new Pulse Meter |
+|  2:30 -  3:45 | [Using your new Pulse Meter](pulsemeter/build/04_Data.md) |
 |  3:45 -  4:00 | Questions and closing activities |
 
 ## Day 3
