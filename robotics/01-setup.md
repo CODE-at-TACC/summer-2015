@@ -25,31 +25,20 @@ Intro text
   * SPI **Enable**
   * I2C **Enable**
   * Shell messages on a serial connection **Disable**
-* Now reboot the Pi
 
 ### Install the BrickPi software
 
-Copy and paste the following commands into a Terminal window:
-
 ```shell
-git clone https://github.com/DexterInd/BrickPi.git
-cd BrickPi/Setup\ Files
-sudo bash install.sh
+cd /home/pi/code-at-tacc/robotics
+sudo bash setup1.sh
 ```
 
-After this set of commands finishes running, the Pi will restart.
-
-### Installing the BrickPi Python Library
-
-Copy and paste the following commands into a Terminal window:
+* After this set of commands finishes running, the Pi will restart. When that finishes, open a new Terminal and enter the following commands
 
 ```shell
-git clone https://github.com/DexterInd/BrickPi_Python.git
-cd BrickPi_Python
-sudo python setup.py install
+cd /home/pi/code-at-tacc/robotics
+sudo bash setup2.sh
 ```
-
-The BrickPi software and Python libraries are now installed.
 
 ## Test the BrickPi system
 ## Build your first robot
