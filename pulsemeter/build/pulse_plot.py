@@ -7,13 +7,13 @@ import sys
 import os
 import numpy as np
 import matplotlib
-matplotlib.use('TKAgg')
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
 class voltReader:
 	def __init__(self, channel=0, red=26):
-		self.red=red	# GPIO pin of the red LED that is our light source
+		self.red=red
+		# GPIO pin of the red LED that is our light source
 		GPIO.setup(red, GPIO.OUT)
 		GPIO.output(red,1)
 		self.channel = channel
@@ -23,10 +23,10 @@ class voltReader:
 		return data
 	def _convertVolts(self, level, places):
 		volts = level*3.3/1023.0
-		volts = volts*-1.0+3.3
+		#volts = volts*-1.0+3.3
 		return round(volts,places)
 	def getVolts(self):
-		level = self._ReadChannel()
+		level = self._readChannel()
 		volts = self._convertVolts(level, 3)
 		return volts
 
@@ -36,9 +36,10 @@ def DetectPeaks(data):
 	return np.sum(np.abs(signs[:-1]- signs[1:]) == 2)
 
 class rtPlot:
-	def __init__(self, seconds=10, windowSize=10, pulseLED=20):
+	def __init__(self, seconds=10, windowSize=10, pulseLED=21):
 		self.xlim = seconds
 		self.fig = plt.figure()
+		#self.ax = plt.axes(xlim=(0,seconds), ylim=(1.0,2.5))
 		self.ax = plt.axes(xlim=(0,seconds), ylim=(0,3.3))
 		self.ax.set_ylabel("Voltage")
 		self.ax.set_xlabel("Seconds Elapsed")
@@ -52,28 +53,31 @@ class rtPlot:
 	def initPlot(self):
 		self.line.set_data([],[])
 		return self.line,
-	def smoothedY(self, windowSize=50):
+	def smoothedY(self, windowSize=10):
 		return np.convolve(self.window, self.y,'same')
 	def blinkInd(self):
-		if self.y[-1] > (np.min(self.y)+np.max(self.y))/2.0:
+		if self.y[-1] > np.median(self.y):
 			GPIO.output(self.pulseLED,1)
 		else:
 			GPIO.output(self.pulseLED,0)
 	def updatePlot(self,i):
-		curTime = time.time()
-		self.x = np.append(self.x, [curTime])
-		self.y = np.append(self.y, [self.vr.getVolts()])
+		for i in range(30):
+			curTime = time.time()
+			self.x = np.append(self.x, [curTime])
+			self.y = np.append(self.y, [self.vr.getVolts()])
+			self.blinkInd()
+			time.sleep(0.01)
 		whereOver = np.where(curTime-self.x > self.xlim)[0]
 		if np.any(whereOver):
 			minOver = whereOver[0]
 			self.x = self.x[minOver:]
 			self.y = self.y[minOver:]
-		self.blinkInd()
 		if len(self.x) > len(self.window):
-			self.line.set_data(curTime-self.x, self.smoothedY())
+			self.line.set_data(curTime-self.x, self.y)
+			#self.line.set_data(curTime-self.x, self.smoothedY())
 		else:
 			self.line.set_data(curTime-self.x, self.y)
-		return self.line
+		return self.line,
 
 if __name__ == "__main__":
 	try:
@@ -82,11 +86,15 @@ if __name__ == "__main__":
 		spi.open(0,0)
 		# setup GPIO
 		GPIO.setmode(GPIO.BCM)
-		rtp = rtPlot()
+		rtp = rtPlot(seconds=5)
 		# start animation
-		ani = animation.FuncAnimation(rtp.fig, rtp.updatePlot, init_func=rtp.initPlot, interval=1)
-		plt.show()
+		ani = animation.FuncAnimation(rtp.fig, rtp.updatePlot, init_func=rtp.initPlot, interval=0.1, blit=True)
+		try:
+			plt.show()
+		except:
+			spi.close()
+			GPIO.cleanup()
 	except KeyboardInterrupt:
 		spi.close()
 		plt.close()
-		sys.exit()
+		GPIO.cleanup()

@@ -56,7 +56,7 @@ If you turn the Pi on and everything works as expected, that is fantastic, and a
 Our RasPi can see!  Let's take a look again at the code in LeafPad that will bring things to life.  The file is called ```pulse_plot.py```.  We will talk through it in class.  After that, we'll run it.
 
 ```
-sudo pulse_plot.py
+sudo ./pulse_plot.py
 ```
 
 ## Challenges
