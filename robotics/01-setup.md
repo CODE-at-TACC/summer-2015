@@ -41,6 +41,17 @@ sudo bash setup2.sh
 ```
 
 ## Test the BrickPi system
+
+1. Connect a LEGO Mindstorms motor to BrickPi Motor Port B
+2. Open a Terminal window and run the following commands
+
+```shell
+cd /home/pi/code-at-tacc/robotics
+python test1.py
+```
+
+The motor should begin spinning and run for about 15 seconds.
+
 ## Build your first robot
 
 #### What you learned
