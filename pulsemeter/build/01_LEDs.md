@@ -9,7 +9,17 @@ Raspberry Pi Pulsemeter
 6. [Maker Success!](04_Data.md)
 
 ## Housekeeping
-Before we get too far, we should install the Python NumPy, SciPy, and Matplotlib packages.  We'll need them later.
+Before we get too far, we should update your local git repository.  Git is version control, and since you have been editing scripts (hopefully!) all yestereday, it probably won't update unless you "stash" your edits.
+
+```
+cd ~/summer-2015
+git stash
+git pull
+```
+
+If that does not work for you, please put a sticky note up.
+
+We must also install some Python packages.  We'll need them later.
 
 ```
 sudo apt-get install libblas-dev       -y
