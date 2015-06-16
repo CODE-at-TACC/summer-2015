@@ -13,7 +13,7 @@
 First, you need to install processing on your Raspberry Pi 2. There is no official ARM version of processing available, but luckily it runs in java, making it (mostly) platform independent. Processing 2.2.1 (stable) requires Oracle Java 7, so we'll need to download and install that from the Raspbian repositories.
 
 ```shell
-sudo apt-get install oracle-java7-jdk
+sudo apt-get -y install oracle-java7-jdk
 ```
 Now that we have java, we can download and un-tar processing.
 
