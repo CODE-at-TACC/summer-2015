@@ -9,26 +9,13 @@ Raspberry Pi Pulsemeter
 6. [Maker Success!](04_Data.md)
 
 ## Housekeeping
-Before we get too far, we should update your local git repository.  Git is version control, and since you have been editing scripts (hopefully!) all yestereday, it probably won't update unless you "stash" your edits.
+Before we get too far, we should install the Python NumPy, SciPy, and Matplotlib packages.  We'll need them later.
 
 ```
-cd ~/summer-2015
-git stash
-git pull
-```
-
-If that does not work for you, please put a sticky note up.
-
-We must also install some Python packages.  We'll need them later.
-
-```
-sudo apt-get install libblas-dev       -y
-sudo apt-get install liblapack-dev     -y
-sudo apt-get install python-dev        -y
-sudo apt-get install libatlas-base-dev -y
-sudo apt-get install gfortran          -y
-sudo apt-get install python-setuptool  -y
-sudo easy_install scipy                -y
+sudo apt-get install python-numpy -y
+sudo apt-get install python-dev -y
+sudo apt-get install python-setuptools -y
+sudo easy_install spidev -y
 sudo apt-get install python-matplotlib -y
 ```
 You can type these in individually or you can run the matplotlib_install Bash script. Either way, this process will take a few minutes to complete. To verify that everything has installed properly, try running:
