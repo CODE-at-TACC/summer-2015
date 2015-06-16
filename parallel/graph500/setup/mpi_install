@@ -1,0 +1,40 @@
+#!/bin/bash
+#
+# W. Cyrus Proctor
+# 2015-06-11
+
+if [ $# -eq 0 ]; then
+  echo "No arguments supplied!"
+  echo "Must provide IP address for info transfer!"
+  exit -1
+fi
+
+if [ "${install}" = true ]; then
+  echo "Beginning Install..."
+  sleep 3
+  sudo apt-get update -y
+  sudo apt-get upgrade -y
+  sudo apt-get install build-essential -y
+  sudo apt-get install gfortran -y
+  sudo apt-get install openmpi-dev -y
+  sudo apt-get install openmpi-bin -y
+  sudo apt-get install vim -y
+  sudo apt-get install nmon -y
+  sudo apt-get install apt-transport-https ca-certificates -y
+  sudo wget http://goo.gl/rsel0F -O /etc/apt/sources.list.d/rpimonitor.list
+  sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 2C0D3C0F 
+  sudo apt-get update -y
+  sudo apt-get install rpimonitor -y
+  sudo apt-get update -y
+  sudo apt-get upgrade -y
+  sudo /usr/share/rpimonitor/scripts/updatePackagesStatus.pl
+fi
+
+cp id_rsa* ~/.ssh
+cp bashrc ~/.bashrc
+cp vimrc ~/.vimrc
+
+hostname -s > ../hello/myhostfile
+infofile=`hostname -s`.info
+printf "`hostname -I` `hostname -s`" > ${infofile}
+scp ${infofile} $1:~/hosts

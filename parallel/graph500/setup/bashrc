@@ -1,0 +1,48 @@
+
+
+# Source global definitions
+if [ -f /etc/bash.bashrc ]; then
+	. /etc/bash.bashrc
+fi
+
+
+#=#=#=#=#=#=#=#=#=#
+#                 #
+#    Variables    #
+#                 #
+#=#=#=#=#=#=#=#=#=#
+
+export PS1='\[\e[36;1m\]\u@\[\e[32;1m\]\h:\[\e[35;1m\]\W\[\e[30;1m\]>\[\e[0m\]'
+ulimit -s unlimited
+myHostName=$(hostname -s)
+
+
+#=#=#=#=#=#=#=#=#
+#               #
+#    Aliases    #
+#               #
+#=#=#=#=#=#=#=#=#
+
+alias ls="ls --color=auto"
+
+#=#=#=#=#=#=#=#=#=#
+#                 #
+#    Functions    #
+#                 #
+#=#=#=#=#=#=#=#=#=#
+
+
+# Function show_func:
+# Take a colon separated list and line break on each instance.
+# input $1 colon separated list (e.g. $PATH or $LD_LIBRARY_PATH).
+# input $2 string to search on that will be highlighted in output if found.
+show(){ 
+    echo $1 | sed -e "s/:/\n/g" | grep -E "^|$2" --color
+} 
+#=#=#=#=#=#=#=#=#=#=#=#
+#                     #
+#    Host Specific    #
+#                     #
+#=#=#=#=#=#=#=#=#=#=#=#
+
+

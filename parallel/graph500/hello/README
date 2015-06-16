@@ -1,0 +1,2 @@
+mpif90 mpi_hello.F90 -o hello
+mpirun -np 4 --hostfile myhostfile ./hello
