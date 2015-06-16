@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" width="180.0px" height="270.0px" viewBox="0 0 120 180"
+    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>NPN emitter follower circuit diagram</title>
+  <desc>An svg diagram of an NPN common collector amplifier</desc>
+  <defs>
+    <g id="npn">
+      <circle r="18" cx="32" cy="0"/>
+      <path d="M0,0 l26,0"/>
+      <path d="M26,-6 l13,-9 l0,-10"/>
+      <path d="M26,6 l13,9 l0,10"/>
+      <path d="M33.4,13.2 l4.1,1.0 l-2.5,-3.9z"/>
+      <path stroke-width="4" d="M25,-10 l0,20"/>
+      <g font-size="12" stroke="none" fill="black">
+        <text y="-3" x="4"> B </text>
+        <text y="-16" x="43"> E </text>
+        <text y="24" x="43"> C </text>
+      </g>
+    </g>
+    <g stroke-linejoin="bevel" id="rstr">
+      <path d="M0,0 l0,6 l-4,2.2 l8,4.4 l-8,4.4 l8,4.4 l-8,4.4 l8,4.4 l-4,2.2 l0,6"/>
+    </g>
+    <g id="node">
+      <circle r="3.5" fill="#FFFFFF" stroke-width="1.5"/>
+    </g>
+    <g id="grnd">
+      <path d="M0,0 v6"/>
+      <path d="M-14,6 h28 M-9,11 h18 M-4,16 h8"/>
+    </g>
+  </defs>
+  <g stroke="black" stroke-width="2.5" font-family="Times" fill="none">
+    <g id="npn1" transform="translate(33,58)">
+      <circle r="18" cx="32" cy="0"/>
+      <path d="M0,0 l26,0"/>
+      <path d="M26,-6 l13,-9 l0,-10"/>
+      <path d="M26,6 l13,9 l0,10"/>
+      <path d="M33.4,13.2 l4.1,1.0 l-2.5,-3.9z"/>
+      <path stroke-width="4" d="M25,-10 l0,20"/>
+      <g font-size="12" stroke="none" fill="black">
+        <text y="-3" x="4"> B </text>
+        <text y="-16" x="43"> C </text>
+        <text y="24" x="43"> E </text>
+      </g>
+    </g>
+    <path d="M60,23 h24"/>
+    <path d="M72,23 v10"/>
+    <path d="M72,83 v25"/>
+    <g stroke-linejoin="bevel" id="rstr1" transform="translate(72,108)">
+      <path d="M0,0 l0,6 l-4,2.2 l8,4.4 l-8,4.4 l8,4.4 l-8,4.4 l8,4.4 l-4,2.2 l0,6"/>
+    </g>
+    <g id="grnd1" transform="translate(72,143)">
+      <path d="M0,0 v6"/>
+      <path d="M-14,6 h28 M-9,11 h18 M-4,16 h8"/>
+    </g>
+    <path d="M26,58 h7"/>
+    <g id="node1" transform="translate(26,58)">
+      <circle r="3.5" fill="#FFFFFF" stroke-width="1.5"/>
+    </g>
+    <path d="M72,93 h25"/>
+    <g id="node2" transform="translate(97,93)">
+      <circle r="3.5" fill="#FFFFFF" stroke-width="1.5"/>
+    </g>
+    <circle cx="72" cy="23" r="3" stroke="none" fill="black"/>
+    <circle cx="72" cy="93" r="3" stroke="none" fill="black"/>
+    <g font-size="15" font-style="italic" stroke="none" fill="black">
+      <text y="16" x="62"> V </text>
+      <text y="73" x="10"> V </text>
+      <text y="112" x="90"> V </text>
+      <text y="132" x="47"> R </text>
+    </g>
+    <g font-size="8" font-style="normal" stroke="none" fill="black">
+      <text y="19" x="69"> + </text>
+      <text y="76" x="17"> in </text>
+      <text y="115" x="97"> out </text>
+      <text y="135" x="56"> E </text>
+    </g>
+  </g>
+</svg>
