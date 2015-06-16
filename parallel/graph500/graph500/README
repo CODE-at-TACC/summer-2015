@@ -1,0 +1,2 @@
+Local Run:
+mpirun -np 4 ./graph500_mpi_one_sided 1

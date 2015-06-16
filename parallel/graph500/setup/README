@@ -1,0 +1,3 @@
+install=true ./mpi_install <ip-address of reference pi>
+The password on the reference pi is "raspberry".
+source ~/.bashrc
