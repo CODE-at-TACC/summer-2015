@@ -250,9 +250,85 @@ Now that you can make a shape move across your Processing canvas, try to do the 
 
 ## What you learned
 
-1. You learned to 
+1. You learned to move a square along the x-axis.
+2. You learned to first reposition a circle since it is drawn from the center and then move it along the y-axis.
 
-Now that you can draw basic shapes to the Processing canvas, we're going to make our f
+# Reactive Animation
+
+To put the finishing touches on the animation we made, we're going to use conditional (if) statements to make changes to our velocity based on the position of the shape. Lets change our basic case, to a rectangle that moves from the top-left to the top-right side of the canvas and have it bounce off the right boundary of the 100 by 100 pixel canvas without going past it by reversing its x-veolocity.
+
+```processing
+float xPos = 0.0;
+float xVel = 0.5;
+float yPos = 0.0;
+
+void draw() {
+  background(204);
+  rect(xPos,yPos,50,50);
+  if(xPos > 100) {
+    xVel = xVel * -1.0;
+  }
+  xPos += xVel;
+}
+```
+
+While the code above makes the rectangle bounce back from the right side, it does so *after* moving past the edge. We can fix this by changing the bound to 100 minus the width of the rectangle (50).
+
+```processing
+float xPos = 0.0;
+float xVel = 0.5;
+float yPos = 0.0;
+
+void draw() {
+  background(204);
+  rect(xPos,yPos,50,50);
+  if(xPos > 100-50) {
+    xVel = xVel * -1.0;
+  }
+  xPos += xVel;
+}
+```
+
+Now we just need to make the rectangle bounce off the left side as well.
+
+```processing
+float xPos = 0.0;
+float xVel = 0.5;
+float yPos = 0.0;
+
+void draw() {
+  background(204);
+  rect(xPos,yPos,50,50);
+  if(xPos > 100-50) {
+    xVel = xVel * -1.0;
+  }
+  if(xPos < 0) {
+    xVel = xVel * -1.0;
+  }
+  xPos += xVel;
+}
+```
+
+Your rectangle should now be infinitely bouncing back and forth forever!
+
+## Activity
+
+1. Have a circle bounce back and forth without going past the edge.
+2. Add a y-velocity (yVel) and make the rectangle bounce back from the edges of the y-axis.
+
+## What you learned
+
+1. You calculated the radius of your cicle and changed the bound of your bounce to make sure it happend at the edge of the circle.
+2. You added a y-velocity to the rectangle example and made it bounce back from the y-axis bounds.
+
+# Next
+
+You're officially off to a good start with animations in processing. If you want to learn more and have time, take a look at
+
+* [Processing reference](https://processing.org/reference/)
+* [Processing examples](https://processing.org/examples/)
+
+to learn how to do more things like color and input. We however will be moving on to making animations distributed across multiple Raspberry Pis.
 
 :white_check_mark: [Learn about sequential and parallel computation](01-introduction.md)  
 :white_check_mark: [Make simple graphics](02-simple-graphics.md)  
