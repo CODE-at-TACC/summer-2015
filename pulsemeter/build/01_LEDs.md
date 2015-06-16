@@ -9,19 +9,23 @@ Raspberry Pi Pulsemeter
 6. [Maker Success!](04_Data.md)
 
 ## Housekeeping
-Before we get too far, we should install the Python spi-dev package.  We'll need it later.
+Before we get too far, we should install the Python NumPy, SciPy, and Matplotlib packages.  We'll need them later.
 
 ```
-sudo apt-get install python
-sudo apt-get install python-dev
-sudo apt-get install python-setuptools
-sudo apt-get install python-pip
-sudo easy_install -U distribute
-sudo apt-get python-numpy
-sudo apt-get python-scipy
-sudo apt-get python-matplotlib
+sudo apt-get install libblas-dev       -y
+sudo apt-get install liblapack-dev     -y
+sudo apt-get install python-dev        -y
+sudo apt-get install libatlas-base-dev -y
+sudo apt-get install gfortran          -y
+sudo apt-get install python-setuptool  -y
+sudo easy_install scipy                -y
+sudo apt-get install python-matplotlib -y
 ```
-This will take a while to load.
+You can type these in individually or you can run the matplotlib_install Bash script. Either way, this process will take a few minutes to complete. To verify that everything has installed properly, try running:
+```
+python demo.py
+```
+and you should see a colorful scatter plot window appear after a few seconds.
 
 ## Tools of the trade
 Before we start plugging things in, let's looks at the new stuff we have to play with today:

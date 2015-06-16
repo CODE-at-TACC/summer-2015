@@ -1,0 +1,10 @@
+#!/bin/bash                              
+                                         
+sudo apt-get install libblas-dev       -y
+sudo apt-get install liblapack-dev     -y
+sudo apt-get install python-dev        -y
+sudo apt-get install libatlas-base-dev -y
+sudo apt-get install gfortran          -y
+sudo apt-get install python-setuptool  -y
+sudo easy_install scipy                -y
+sudo apt-get install python-matplotlib -y
