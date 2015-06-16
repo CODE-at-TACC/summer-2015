@@ -57,7 +57,7 @@ When you think you are ready, try running a test script.  Open up terminal, and 
 
 ```
 cd summer-2015/pulsemeter/build/
-sudo p1_LEDs.py
+sudo ./p1_LEDs.py
 ```
 
 ## Challenges

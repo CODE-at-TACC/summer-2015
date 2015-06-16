@@ -41,7 +41,7 @@ As the last step before we test things with code, we are going to plug in the ph
 Take a look at the code first in LeafPad.  The file is called ```p2_A2D_converter.py```.  We will talk through it in class.  After that, we'll run it.
 
 ```
-sudo p2_A2D_converter.py
+sudo ./p2_A2D_converter.py
 ```
 
 ## Challenges
