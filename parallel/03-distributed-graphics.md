@@ -57,7 +57,15 @@ all encoded as a string.
 
 The only problem with this is that we won't be able to handle different sizes.
 
-# Compute Pi
+## Add Click
+
+## Challenge
+
+Make the balls slow down
+Make the balls bounce off eachother
+Make add an accellerator
+
+As long as you're not changing the structure of the ball, you can do whatever you want on your end.
 
 # Next
 
