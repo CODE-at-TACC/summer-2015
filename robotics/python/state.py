@@ -1,4 +1,9 @@
+import time
+
+state = None
+
 def waiting():
+    global state
     print "Waiting"
     if touched():
         state = going
@@ -11,9 +16,10 @@ def touched():
         return False
 
 def going():
+    global state
     print "Going"
     if hitTheWall():
-        state = waiting()
+        state = waiting
 
 def hitTheWall():
     if True:
@@ -22,8 +28,8 @@ def hitTheWall():
     else:
         return False
 
-
 state = waiting
 
 while True:
     state()
+    time.sleep(1)

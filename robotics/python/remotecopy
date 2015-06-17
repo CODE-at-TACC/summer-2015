@@ -1,0 +1,2 @@
+#!/bin/sh
+scp $1 pi@strikereureka.local:~/summer-2015/robotics/python/$1

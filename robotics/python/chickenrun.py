@@ -9,13 +9,16 @@ BrickPiSetup()  # setup the serial port for communication
 BrickPi.MotorEnable[PORT_B] = 1 #Enable the left motor
 BrickPi.MotorEnable[PORT_C] = 1 #Enable the right motor
 BrickPi.SensorType[PORT_1] = TYPE_SENSOR_ULTRASONIC_CONT
-BrickPi.SensorType[PORT_4] = TYPE_SENSOR_TOUCH
+BrickPi.SensorType[PORT_4] = TYPE_SENSOR_EV3_TOUCH_DEBOUNCE
 BrickPiSetupSensors()   #Send the properties of sensors to BrickPi
 
+state = None
+
 def waiting():
+    global state
     print "Waiting"
-    BrickPi.Motor[PORT_B] = 0
-    BrickPi.Motor[PORT_C] = 0
+    BrickPi.MotorSpeed[PORT_B] = 0
+    BrickPi.MotorSpeed[PORT_C] = 0
     BrickPiUpdateValues()
     if touched():
         state = going
@@ -28,12 +31,13 @@ def touched():
         return False
 
 def going():
+    global state
     print "Going"
-    BrickPi.Motor[PORT_B] = 255
-    BrickPi.Motor[PORT_C] = 255
+    BrickPi.MotorSpeed[PORT_B] = 255
+    BrickPi.MotorSpeed[PORT_C] = 255
     BrickPiUpdateValues()
     if hitTheWall():
-        state = waiting()
+        state = waiting
 
 def hitTheWall():
     if Read_NXT_Ultrasonic(PORT_1) < 25:
@@ -47,3 +51,4 @@ state = waiting
 
 while True:
     state()
+    time.sleep(0.1)

@@ -16,8 +16,8 @@ BrickPiSetupSensors()   #Send the properties of sensors to BrickPi
 while True:
     distance = Read_NXT_Ultrasonic(PORT_1)
     if distance > 100:
-        BrickPi.Motor[PORT_B] = 255
+        BrickPi.MotorSpeed[PORT_B] = 255
     else:
-        BrickPi.Motor[PORT_B] = 0
+        BrickPi.MotorSpeed[PORT_B] = 0
     BrickPiUpdateValues()
     time.sleep(0.1)

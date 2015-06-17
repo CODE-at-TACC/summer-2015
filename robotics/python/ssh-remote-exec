@@ -1,2 +1,0 @@
-#!/bin/sh
-cat $2 | ssh -t $1 /usr/bin/python
