@@ -2,9 +2,9 @@ import processing.net.*;
 
 Server me;
 Client partner;
-String partnerIP = "10.0.1.39";
+String partnerIP = "N.N.N.N"; //write your partner's ip here
 int port = 5204;
-String myMessage = "fewfew";
+String myMessage = ""; //write a message to send
 String partnerMessage = "";
 boolean connected = false;
 
@@ -12,12 +12,9 @@ void setup() {
   me = new Server(this, port);
   println("Server Running");
   while( !connected ){
-    try {
-      partner = new Client(this, partnerIP, port);
-    } finally {
-      //if(partner.active()){
-        connected = true;
-      //}
+    partner = new Client(this, partnerIP, port);
+    if( partner.active() ) {
+      connected = true;
     }
   }
   println("Connected to partner at "+partnerIP);
