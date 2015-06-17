@@ -21,7 +21,7 @@ BrickPi.MotorSpeed[PORT_C] = 255
 
 BrickPiUpdateValues()
 
-time.sleep(5)
+BrickPiWait(5)
 
 BrickPi.MotorSpeed[PORT_B] = 0
 BrickPi.MotorSpeed[PORT_C] = 0

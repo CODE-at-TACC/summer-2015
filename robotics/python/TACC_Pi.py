@@ -11,6 +11,12 @@ def log( message ):
     if TACC_DEBUG == 1:
         print message
 
+def BrickPiWait(duration):
+        ot = time.time()
+        while (time.time() - ot < duration):
+                BrickPiUpdateValues()
+                time.sleep(.1)
+
 def Read_Sensor_Robustly(port, default=0, delay=POLL_DELAY):
     if BrickPi.SensorType[port] in range(TYPE_SENSOR_TOUCH,TYPE_SENSOR_COLOR_NONE):
         return Read_NXT_Sensor_Robustly(port, default=0, delay=POLL_DELAY)
