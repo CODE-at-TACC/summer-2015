@@ -6,7 +6,6 @@ As everyone at TACC already knows, the world depends on parallel code to drive t
 
 1. Send a message between computers
 2. Send a ball between computers
-3. Compute Pi
 4. Construct cluster for Graph500
 
 # Send a message
