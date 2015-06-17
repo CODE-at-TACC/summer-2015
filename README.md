@@ -66,7 +66,7 @@ This is the online material for TACC's summer high school program "CODE@TACC" in
 |  1:00 -  2:00 | [Step 4: Distributed Graphics](parallel/03-distributed-graphics.md) |
 |  2:00 -  2:15 | Questions |
 |  2:15 -  2:30 | Break |
-|  2:30 -  3:45 | Running the Graph 500 |
+|  2:30 -  3:45 | [Running the Graph 500 Benchmark](parallel/graph500/01-graph500.md) |
 |  3:45 -  4:00 | Questions and closing activities |
 
 
