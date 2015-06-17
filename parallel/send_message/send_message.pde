@@ -3,8 +3,8 @@ import processing.net.*;
 Server me;
 Client partner;
 String partnerIP = "N.N.N.N"; //write your partner's ip here
-int port = 5204;
-String myMessage = ""; //write a message to send
+int port = 5204;              //port isn't special
+String myMessage = "";        //write a message to send
 String partnerMessage = "";
 boolean connected = false;
 
