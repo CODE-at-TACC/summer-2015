@@ -10,7 +10,26 @@
 
 # Installation
 
-First, you need to install processing on your Raspberry Pi 2. There is no official ARM version of processing available, but luckily it runs in java, making it (mostly) platform independent. Processing 2.2.1 (stable) requires Oracle Java 7, so we'll need to download and install that from the Raspbian repositories.
+First, you need to install processing on your Raspberry Pi 2. There is no official ARM version of processing available, but luckily it runs in java, making it (mostly) platform independent. Install processing by first pulling the latest version of the summer-2015 git repository and then running `install_processing.sh`.
+
+```shell
+cd ~/summer-2015 # or where you checked out this reposoitory
+git pull
+cd parallel
+sudo ./install_processing.sh
+```
+
+Launche the Processing IDE using the command
+
+```shell
+processing
+```
+
+### Manual installation
+
+***Disregard if you did an automatic install***
+
+You can also do a manual installation if you would like to learn how to install software without using apt-get. First, Processing 2.2.1 (stable) requires Oracle Java 7, so we'll need to download and install that from the Raspbian repositories.
 
 ```shell
 sudo apt-get -y install oracle-java7-jdk
@@ -22,7 +41,7 @@ wget http://download.processing.org/processing-2.2.1-linux32.tgz
 tar -xzf processing-2.2.1-linux32.tgz
 ```
 
-The -xzf parameters tell tar to e(x)tract, un(z)ip, the (f)ile: processing-2.2.1-linux32.tgz. The gz in tgz denotes a gzipped tarball. Now, we just need to link in our new Java to make it functional.
+The -xzf parameters tell tar to e(x)tract and un(z)ip the (f)ile: processing-2.2.1-linux32.tgz. The gz in tgz denotes a gzipped tarball. Now, we just need to link in our new Java to make it functional.
 
 ```shell
 cd processing-2.2.1
@@ -35,7 +54,10 @@ The ln command makes a [symbolic link](http://en.wikipedia.org/wiki/Symbolic_lin
 ```shell
 ./processing
 ```
-After some messages on your console, the graphical IDE pictured below should appear.
+
+## Processing IDE
+
+After launching processing and some messages are printed to your console, the graphical IDE pictured below should appear.
 
 ![processing IDE](images/processing.png)
 
