@@ -6,7 +6,6 @@ As everyone at TACC already knows, the world depends on parallel code to drive t
 
 1. Send a message between computers
 2. Send a ball between computers
-3. Compute Pi
 4. Construct cluster for Graph500
 
 # Send a message
@@ -28,7 +27,23 @@ Server Running
 Connected to partner at N.N.N.N
 ```
 
-If you don't see the "connected" message, make sure your partner launched their program and then verify that the IP address you filled in before trying again. If you did, hit any key while the small sketch window is selected to send your message to their server. This is done with the `keyPressed()` block of code.
+If you don't see the "connected" message, make sure your partner launched their program and then verify that the IP address you filled in before trying again. The setup portion of the code is somewhat complicated but necessary because processing doesn't like to automatically establish a connection when there wasn't one.
+
+```processing
+void setup() {
+  me = new Server(this, port);
+  println("Server Running");
+  while( !connected ){
+    partner = new Client(this, partnerIP, port);
+    if( partner.active() ) {
+      connected = true;
+    }
+  }
+  println("Connected to partner at "+partnerIP);
+}
+```
+
+I force the program to wait until it has an "active" connection to your partners computer. After you get the "Connectect" status message, try hitting any key to send your message, which triggers the `keyPressed()`.
 
 ```processing
 void keyPressed() {
@@ -37,9 +52,11 @@ void keyPressed() {
 }
 ```
 
-All types of networked communication works though interactions of this manner. Internet browsers are clients asking servers for files residing in a specific location at an internet addresss. Open MPI passes messages between programs on a network to coordinate work because separate nodes have no shared memory. Welcome to the world of distributed computing! This was your first step, but this will be the first test we run after assembling the cluster for Graph500.
+All types of networked communication works though interactions of this manner. Internet browsers are clients asking servers for files residing in a specific location at an internet addresss. [Open MPI](https://en.wikipedia.org/wiki/Open_MPI) passes messages between programs on a network to coordinate work because separate nodes have no shared memory. Welcome to the world of distributed computing! This was your first step, but this will also be the first test we run after assembling the cluster for Graph500.
 
-While I'm sure you're really impressed that you got a sentence to your partner's computer, I bet you're wondering how you could send a graphic over there.
+I know you're impressed with the messages we just sent, so lets work on shoving a bouncing ball through our wireless connection. If hackerman can hack anything through time, we can do this.
+
+<img src="http://i.imgur.com/YRBRRRI.png" height="200">
 
 # Send a ball
 
@@ -55,15 +72,59 @@ all encoded as a string.
 
 "x-coordinate,y-coordinate,x-velocity,y-velocity"
 
-The only problem with this is that we won't be able to handle different sizes.
+Right now position and velocity are the only things that can change on a ball, but feel free to work with your partnet to incorporate something new. After you get the two balls bouncing back and forth between your two monitors, I have a series of challenges for you to try out.
 
-## Add Click
+# Challenges
 
-## Challenge
+#### 1. Click to add
+Add a new ball wherever you click on the canvas. Take a look at the section
+```processing
+void mouseClicked() {
+  // mouseX and mouseY are handy
+  // random(lower, upper) is cool too
+}
+```
+#### 2. Create obstacles
+Add a new object to the screen that the balls either bounce off of or speed up over. I'd insert this change in the update method of the bag function.
+```processing
+  void update() {
+    if(balls == null){return;}
+    for(i=balls.size()-1; i>=0; i--) {
+      b = balls.get(i);
+      if( b.ret(0) < radius ) {
+        if( leftIP != "" ) {
+          println("sending left");
+          left.write(b.toStr());
+          balls.remove(i);
+        } else {
+          b.flop(2);
+          b.update();
+        }
+      } else if ( b.ret(0) > width-radius ) {
+        if( rightIP != "" ) {
+          println("sending right");
+          right.write(b.toStr());
+          balls.remove(i);
+        } else {
+          b.flop(2);
+          b.update();
+        }
+      } else if ( b.ret(1) > height-radius || b.ret(1) < radius ) {
+        b.flop(3);
+        b.update();
+      } else { b.update(); }
+    }
+    // Think about adding a new else if to check whether balls have collided
+  }
+```
+#### 3. Add more monitors
+You have a left and a right, so try to make a ring around your table and see how crazy it gets.
+#### 4. Add color
+Assign a random color to each of your balls and render them that way on your screen. This would be achieved in the inital `ball()` constructor and with the `fill()` command in `ball.draw()`.
+#### 5. Make the balls ricochet
+Again, this would be achieved inside the `bag.update()` function, and you'll need to add another for loop to make a pairwise comparison between all balls.
 
-Make the balls slow down
-Make the balls bounce off eachother
-Make add an accellerator
+You and your partner don't even need to complete the same goals and have the same code, as long as your changes don't affect the structure of the ball.
 
 As long as you're not changing the structure of the ball, you can do whatever you want on your end.
 
