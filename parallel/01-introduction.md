@@ -57,23 +57,15 @@ This increasing core-count trend is present in all aspects of computing: our pho
 
 # Super Computers
 
-All super computers, like Stampede here at TACC, are collections of computers networked together to facilitate efficient cooporative work on a single problem or separate work on lots of little problems. Work that is distributed across multiple computers requrires communication between the computers over the network so they know how to coordinate on a problem. To help you understand this, we'll do a quick activity in groups. Not only will this help you understand distributed parallelism, you'll also see different types of communication.
+All super computers, like Stampede here at TACC, are collections of computers networked together to facilitate efficient cooporative work on a single problem or separate work on lots of little problems. Work that is distributed across multiple computers requrires communication between the computers over the network so they know how to coordinate on a problem. At home, you probably have ethernet connections. At TACC we have ethernet, fiber, and a technology called [InfiniBand](https://en.wikipedia.org/wiki/InfiniBand), by Mellanox, designed for low-latency at short distances.
 
-# Activity
+![IB](http://cdn2.bigcommerce.com/n-nr1m3w/uxkkta8o/products/2759/images/5292/CBL_00190_96901__02925.1431463153.220.290.jpg)
 
-Everyone should each have a bag with 20 numbers. Pick a person to be your parent (main) process. After each activity, give your bag to the person to your left so you have new numbers each time. Compute the ***maximum*** number for your table of 8 using the following methods:
-
-1. Find the highest number in your bag and hand it to your parent process. The parent process writes down that number and hands it back. The largest number is then reported.
-2. Find the highest number in your bag and say it outloud. If someone already said a number higher than yours, don't report your own. The parent process listens and writes down the largest number and reports it.
-
-# What you learned
-
-1. You learned how to [gather](https://computing.llnl.gov/tutorials/mpi/#Collective_Communication_Routines) values from separate processes.
-2. You learned how to [broadcast](https://computing.llnl.gov/tutorials/mpi/#Collective_Communication_Routines) values to all processes, and only when necessary. You should have noticed that while the parent process had to pay closer attention to what everyone said, this was quicker than the initial gather.
+You won't get ultra-fast streaming from netflix on a protocol like this, but stampede will be able to predict where [Bill will be going](http://earth.nullschool.net/). 
 
 # Next
 
-Now that you've physically performed a parallel computation, we're going to learn about ways to make visualizations before we implement one.
+Now that you have an idea of what parallel computation can be, lets learn about graphics in Processing so we can eventually make some parallel visualizations today.
 
 #### Objectives
 
