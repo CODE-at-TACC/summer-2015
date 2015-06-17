@@ -31,11 +31,13 @@ if [ "${install}" = true ]; then
 fi
 
 mkdir -p ~/.ssh
+myhostname=`hostname -s`
+sed -i -- "s/cypy/${myhostname}/g" id_rsa.pub
 cp id_rsa* ~/.ssh
 cp bashrc ~/.bashrc
 cp vimrc ~/.vimrc
 
-hostname -s > ../hello/myhostfile
-infofile=`hostname -s`.info
-printf "`hostname -I` `hostname -s`" > ${infofile}
+echo ${myhostname} > ../hello/myhostfile
+infofile=${myhostname}.info
+printf "`hostname -I` ${myhostname}" > ${infofile}
 scp ${infofile} $1:~/hosts
