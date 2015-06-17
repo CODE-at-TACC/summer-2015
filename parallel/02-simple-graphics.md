@@ -352,6 +352,6 @@ You're officially off to a good start with animations in processing. If you want
 
 to learn how to do more things like color and input. We however will be moving on to making animations distributed across multiple Raspberry Pis.
 
-:white_check_mark: [Learn about sequential and parallel computation](01-introduction.md)
-:white_check_mark: [Make simple graphics](02-simple-graphics.md)
+:white_check_mark: [Learn about sequential and parallel computation](01-introduction.md)  
+:white_check_mark: [Make simple graphics](02-simple-graphics.md)  
 [:arrow_right: Make distributed graphics](03-distributed-graphics.md)
