@@ -11,17 +11,23 @@ boolean connected = false;
 void setup() {
   me = new Server(this, port);
   println("Server Running");
-  partner = new Client(this, partnerIP, port);
-  while( !partner.active() ){}
-  println("Connected to partner at "+partnetIP);
+  while( !connected ){
+    partner = new Client(this, partnerIP, port);
+    if( partner.active() ) {
+      connected = true;
+    }
+  }
+  println("Connected to partner at "+partnerIP);
 }
 
 void draw() {
   if( partner.available() > 0 ) {
     partnerMessage = partner.readString();
-    println(partnetMessage);
+    println("Recieved: "+partnerMessage);
+  }
 }
 
 void keyPressed() {
-  partner.write(message);
+  println("Sending my message");
+  me.write(myMessage);
 }
