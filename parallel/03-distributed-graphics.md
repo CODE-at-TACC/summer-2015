@@ -21,14 +21,14 @@ You'll see that you need your partner's IP address, so your program knows *where
 $ hostname -I
 ```
 
-Exchange ip addresses with your neighbor to fill in the `partnerIP` variable in the `send_mesage` sketch. Now, you just need to fill in a message to send to your partner by modifying `myMessage`. After you've both modified these variables, run your sketch and you should see output that looks like:
+Exchange ip addresses with your neighbor to fill in the `partnerIP` variable in the `send_mesage` sketch. Now, you just need to make in a message to send to your partner by modifying `myMessage`. After you've both modified these variables, run both of your sketch and you Pis connect to eachother you should see the following output:
 
 ```
 Server Running
 Connected to partner at N.N.N.N
 ```
 
-If you don't see the connected message, make sure your partner launched their program and then verify that the IP address you filled in before trying again. If you did, hit any key while the small sketch window is selected to send your message to their server. This is done with the `keyPressed()` block of code.
+If you don't see the "connected" message, make sure your partner launched their program and then verify that the IP address you filled in before trying again. If you did, hit any key while the small sketch window is selected to send your message to their server. This is done with the `keyPressed()` block of code.
 
 ```processing
 void keyPressed() {
@@ -37,7 +37,25 @@ void keyPressed() {
 }
 ```
 
+All types of networked communication works though interactions of this manner. Internet browsers are clients asking servers for files residing in a specific location at an internet addresss. Open MPI passes messages between programs on a network to coordinate work because separate nodes have no shared memory. Welcome to the world of distributed computing! This was your first step, but this will be the first test we run after assembling the cluster for Graph500.
+
+While I'm sure you're really impressed that you got a sentence to your partner's computer, I bet you're wondering how you could send a graphic over there.
+
 # Send a ball
+
+Take a look at the base example `bouncing_network/bouncing_network.pde`. Depending on how you and your partner are seated, we want to send a message whenever the ball hits the edge that you share. If you're on the left, this means your right edge. If you're seated on the right, your left edge.
+
+**[ L ] [ R ]**
+
+The message that Processing will send from each computer will be the parameters for the ball, and not an actual graphic. Since we assume that the incoming message will be for a ball, we only need to send the
+
+(x-coordinate, y-coordinate, x-velocity, and y-velocity)
+
+all encoded as a string.
+
+"x-coordinate,y-coordinate,x-velocity,y-velocity"
+
+The only problem with this is that we won't be able to handle different sizes.
 
 # Compute Pi
 
