@@ -54,7 +54,9 @@ void keyPressed() {
 
 All types of networked communication works though interactions of this manner. Internet browsers are clients asking servers for files residing in a specific location at an internet addresss. [Open MPI](https://en.wikipedia.org/wiki/Open_MPI) passes messages between programs on a network to coordinate work because separate nodes have no shared memory. Welcome to the world of distributed computing! This was your first step, but this will also be the first test we run after assembling the cluster for Graph500.
 
-I know you're impressed with the messages we just sent, so lets work on shoving a bouncing ball through our wireless connection.
+I know you're impressed with the messages we just sent, so lets work on shoving a bouncing ball through our wireless connection. If hackerman can hack anything through time, we can do this.
+
+<img src="http://i.imgur.com/YRBRRRI.png" height="200">
 
 # Send a ball
 
