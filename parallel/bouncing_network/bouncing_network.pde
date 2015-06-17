@@ -2,8 +2,8 @@ import processing.net.*;
 
 Server sMe;
 
-String leftIP = "";
-String rightIP = "";
+String leftIP = "N.N.N.N";
+String rightIP = "N.N.N.N";
 Client left, right;
 
 int port = 2342;
@@ -21,8 +21,8 @@ bag b1 = new bag();
 void setup() {
   size(500, 500);
   fill(0);
-  sMe = new Server(this, port);
-  while ( !connLeft || !connRight ) {
+  sMe = new Server(this, port);       // start server
+  while ( !connLeft || !connRight ) { // set up neighbors
       if( leftIP != "" && !connLeft) {
         left = new Client(this, leftIP, port);
         if( left.active() ) { connLeft = true; }
@@ -34,7 +34,6 @@ void setup() {
   }
   background(255);
   b1.addBall(25,25,1,2);
-  println(b1.balls.get(0).ret(0));
 }
 
 void mouseClicked() {
@@ -54,10 +53,10 @@ void draw() {
     for(j = 0; j<4; j++) {
       fList[j] = float(bList[j]);
     }
-    if(fList[2] < 0) {
-      b1.addBall(width+radius, fList[1], fList[2], fList[3]);
+    if(fList[0] < radius) {
+      b1.addBall(width-radius, fList[1], fList[2], fList[3]);
     } else {
-      b1.addBall(-radius, fList[1], fList[2], fList[3]);
+      b1.addBall(radius, fList[1], fList[2], fList[3]);
     }
   }
 }
@@ -81,7 +80,6 @@ class bag {
           left.write(b.toStr());
           balls.remove(i);
         } else {
-          println("left flop");
           b.flop(2);
           b.update();
         }
@@ -91,12 +89,10 @@ class bag {
           right.write(b.toStr());
           balls.remove(i);
         } else {
-          println("right flop");
           b.flop(2);
           b.update();
         }
       } else if ( b.ret(1) > height-radius || b.ret(1) < radius ) {
-        println("flop y");
         b.flop(3);
         b.update();
       } else { b.update(); }
@@ -138,6 +134,6 @@ class ball {
     return ballAr[i];
   }
   void flop(int i) {
-    ballAr[i] *= -1;
+    ballAr[i] *= -1.0;
   }
 }
