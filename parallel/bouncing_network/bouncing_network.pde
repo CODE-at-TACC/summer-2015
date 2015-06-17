@@ -37,7 +37,8 @@ void setup() {
 }
 
 void mouseClicked() {
-  b1.addBall(float(mouseX), float(mouseY), random(0.5,5), random(0.5,5));
+  // mouseX and mouseY are handy
+  // random(lower, upper) is cool too
 }
 
 void draw() {
@@ -97,6 +98,7 @@ class bag {
         b.update();
       } else { b.update(); }
     }
+    // Think about adding a new else if to check whether balls have collided
   }
   void draw() {
     for(i=0; i<balls.size(); i++) {
@@ -119,7 +121,10 @@ class ball {
     ballAr[2] = xv;
     ballAr[3] = yv;
   }
+  // It would be cool if the balls sped up when they were
+  // over a certain area.
   void update() {
+    // Maybe have balls slow down
     ballAr[0] += ballAr[2];
     ballAr[1] += ballAr[3];
   }
