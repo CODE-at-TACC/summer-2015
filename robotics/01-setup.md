@@ -50,7 +50,7 @@ cd /home/pi/code-at-tacc/robotics
 python test1.py
 ```
 
-The motor should begin spinning and run for about 15 seconds.
+The LEGO motor should begin spinning and run for 15 seconds. Then, it will reverse for another 15 seconds.
 
 ## Build your first robot
 
@@ -64,6 +64,6 @@ The motor should begin spinning and run for about 15 seconds.
 * None
 
 ## Resources
-* [Example SimpleBot #1](https://vimeo.com/130701689)
-* [Example SimpleBot #2](https://vimeo.com/130701689)
+* [Example SimpleBot #1](https://youtu.be/fT6j4trNEJ0)
+* [Example SimpleBot #2](https://youtu.be/cWeCJrZRjJ0)
 * [Dexter Industries BrickPi Forums](http://www.dexterindustries.com/forum/?forum=brickpi)
