@@ -1,0 +1,214 @@
+graph_generation:               10.325583 s
+construction_time:              0.874371 s
+Running BFS 0
+Time for BFS 0 is 4.851234
+Validating BFS 0
+Validate time for BFS 0 is 0.000002
+TEPS for BFS 0 is 54036.6 cyrus 262144
+Running BFS 1
+Time for BFS 1 is 5.299365
+Validating BFS 1
+Validate time for BFS 1 is 0.000003
+TEPS for BFS 1 is 49467.1 cyrus 262144
+Running BFS 2
+Time for BFS 2 is 5.221754
+Validating BFS 2
+Validate time for BFS 2 is 0.000002
+TEPS for BFS 2 is 50202.3 cyrus 262144
+Running BFS 3
+Time for BFS 3 is 5.621875
+Validating BFS 3
+Validate time for BFS 3 is 0.000003
+TEPS for BFS 3 is 46629.3 cyrus 262144
+Running BFS 4
+Time for BFS 4 is 5.170565
+Validating BFS 4
+Validate time for BFS 4 is 0.000002
+TEPS for BFS 4 is 50699.3 cyrus 262144
+Running BFS 5
+Time for BFS 5 is 4.280513
+Validating BFS 5
+Validate time for BFS 5 is 0.000002
+TEPS for BFS 5 is 61241.3 cyrus 262144
+Running BFS 6
+Time for BFS 6 is 4.610360
+Validating BFS 6
+Validate time for BFS 6 is 0.000002
+TEPS for BFS 6 is 56859.8 cyrus 262144
+Running BFS 7
+Time for BFS 7 is 3.990579
+Validating BFS 7
+Validate time for BFS 7 is 0.000002
+TEPS for BFS 7 is 65690.7 cyrus 262144
+Running BFS 8
+Time for BFS 8 is 4.350489
+Validating BFS 8
+Validate time for BFS 8 is 0.000003
+TEPS for BFS 8 is 60256.2 cyrus 262144
+Running BFS 9
+Time for BFS 9 is 4.310275
+Validating BFS 9
+Validate time for BFS 9 is 0.000002
+TEPS for BFS 9 is 60818.4 cyrus 262144
+Running BFS 10
+Time for BFS 10 is 4.270388
+Validating BFS 10
+Validate time for BFS 10 is 0.000002
+TEPS for BFS 10 is 61386.5 cyrus 262144
+Running BFS 11
+Time for BFS 11 is 4.200296
+Validating BFS 11
+Validate time for BFS 11 is 0.000003
+TEPS for BFS 11 is 62410.8 cyrus 262144
+Running BFS 12
+Time for BFS 12 is 4.050408
+Validating BFS 12
+Validate time for BFS 12 is 0.000002
+TEPS for BFS 12 is 64720.4 cyrus 262144
+Running BFS 13
+Time for BFS 13 is 4.380327
+Validating BFS 13
+Validate time for BFS 13 is 0.000003
+TEPS for BFS 13 is 59845.8 cyrus 262144
+Running BFS 14
+Time for BFS 14 is 4.390317
+Validating BFS 14
+Validate time for BFS 14 is 0.000003
+TEPS for BFS 14 is 59709.6 cyrus 262144
+Running BFS 15
+Time for BFS 15 is 4.760428
+Validating BFS 15
+Validate time for BFS 15 is 0.000002
+TEPS for BFS 15 is 55067.3 cyrus 262144
+Running BFS 16
+Time for BFS 16 is 4.550431
+Validating BFS 16
+Validate time for BFS 16 is 0.000003
+TEPS for BFS 16 is 57608.6 cyrus 262144
+Running BFS 17
+Time for BFS 17 is 4.410485
+Validating BFS 17
+Validate time for BFS 17 is 0.000003
+TEPS for BFS 17 is 59436.5 cyrus 262144
+Running BFS 18
+Time for BFS 18 is 4.330205
+Validating BFS 18
+Validate time for BFS 18 is 0.000003
+TEPS for BFS 18 is 60538.5 cyrus 262144
+Running BFS 19
+Time for BFS 19 is 4.140340
+Validating BFS 19
+Validate time for BFS 19 is 0.000003
+TEPS for BFS 19 is 63314.6 cyrus 262144
+Running BFS 20
+Time for BFS 20 is 4.350529
+Validating BFS 20
+Validate time for BFS 20 is 0.000003
+TEPS for BFS 20 is 60255.7 cyrus 262144
+Running BFS 21
+Time for BFS 21 is 4.400646
+Validating BFS 21
+Validate time for BFS 21 is 0.000002
+TEPS for BFS 21 is 59569.4 cyrus 262144
+Running BFS 22
+Time for BFS 22 is 4.290323
+Validating BFS 22
+Validate time for BFS 22 is 0.000003
+TEPS for BFS 22 is 61101.2 cyrus 262144
+Running BFS 23
+Time for BFS 23 is 4.330437
+Validating BFS 23
+Validate time for BFS 23 is 0.000002
+TEPS for BFS 23 is 60535.2 cyrus 262144
+Running BFS 24
+Time for BFS 24 is 4.420467
+Validating BFS 24
+Validate time for BFS 24 is 0.000002
+TEPS for BFS 24 is 59302.3 cyrus 262144
+Running BFS 25
+Time for BFS 25 is 4.060183
+Validating BFS 25
+Validate time for BFS 25 is 0.000002
+TEPS for BFS 25 is 64564.6 cyrus 262144
+Running BFS 26
+Time for BFS 26 is 2.930356
+Validating BFS 26
+Validate time for BFS 26 is 0.000002
+TEPS for BFS 26 is 89458.1 cyrus 262144
+Running BFS 27
+Time for BFS 27 is 2.840113
+Validating BFS 27
+Validate time for BFS 27 is 0.000002
+TEPS for BFS 27 is 92300.6 cyrus 262144
+Running BFS 28
+Time for BFS 28 is 2.930188
+Validating BFS 28
+Validate time for BFS 28 is 0.000002
+TEPS for BFS 28 is 89463.2 cyrus 262144
+Running BFS 29
+Time for BFS 29 is 2.870226
+Validating BFS 29
+Validate time for BFS 29 is 0.000003
+TEPS for BFS 29 is 91332.2 cyrus 262144
+Running BFS 30
+Time for BFS 30 is 3.000121
+Validating BFS 30
+Validate time for BFS 30 is 0.000003
+TEPS for BFS 30 is 87377.8 cyrus 262144
+Running BFS 31
+Time for BFS 31 is 3.030312
+Validating BFS 31
+Validate time for BFS 31 is 0.000003
+TEPS for BFS 31 is 86507.3 cyrus 262144
+Running BFS 32
+Time for BFS 32 is 2.960212
+Validating BFS 32
+Validate time for BFS 32 is 0.000002
+TEPS for BFS 32 is 88555.8 cyrus 262144
+Running BFS 33
+Time for BFS 33 is 3.030321
+Validating BFS 33
+Validate time for BFS 33 is 0.000002
+TEPS for BFS 33 is 86507 cyrus 262144
+Running BFS 34
+Time for BFS 34 is 3.130401
+Validating BFS 34
+Validate time for BFS 34 is 0.000003
+TEPS for BFS 34 is 83741.3 cyrus 262144
+Running BFS 35
+Time for BFS 35 is 3.090290
+Validating BFS 35
+Validate time for BFS 35 is 0.000002
+TEPS for BFS 35 is 84828.3 cyrus 262144
+Running BFS 36
+Time for BFS 36 is 3.140368
+Validating BFS 36
+Validate time for BFS 36 is 0.000002
+TEPS for BFS 36 is 83475.6 cyrus 262144
+Running BFS 37
+Time for BFS 37 is 3.160249
+Validating BFS 37
+Validate time for BFS 37 is 0.000002
+TEPS for BFS 37 is 82950.4 cyrus 262144
+Running BFS 38
+Time for BFS 38 is 3.160126
+Validating BFS 38
+Validate time for BFS 38 is 0.000002
+TEPS for BFS 38 is 82953.7 cyrus 262144
+Running BFS 39
+Time for BFS 39 is 3.130403
+Validating BFS 39
+Validate time for BFS 39 is 0.000002
+TEPS for BFS 39 is 83741.3 cyrus 262144
+Running BFS 40
+Time for BFS 40 is 3.040236
+Validating BFS 40
+Validate time for BFS 40 is 0.000003
+TEPS for BFS 40 is 86224.9 cyrus 262144
+Running BFS 41
+Time for BFS 41 is 3.170242
+Validating BFS 41
+Validate time for BFS 41 is 0.000003
+TEPS for BFS 41 is 82689 cyrus 262144
+Running BFS 42
+This benchmark was run on 32 MPI Processes, Scale 14, written output_32_14.log

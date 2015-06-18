@@ -1,0 +1,4 @@
+graph_generation:               35.505046 s
+construction_time:              3.169651 s
+Running BFS 0
+This benchmark was run on 32 MPI Processes, Scale 16, written output_32_16.log

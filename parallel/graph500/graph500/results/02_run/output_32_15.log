@@ -1,0 +1,34 @@
+graph_generation:               18.518780 s
+construction_time:              1.663952 s
+Running BFS 0
+Time for BFS 0 is 8.339007
+Validating BFS 0
+Validate time for BFS 0 is 0.000003
+TEPS for BFS 0 is 62871.8 cyrus 524288
+Running BFS 1
+Time for BFS 1 is 8.112037
+Validating BFS 1
+Validate time for BFS 1 is 0.000002
+TEPS for BFS 1 is 64630.9 cyrus 524288
+Running BFS 2
+Time for BFS 2 is 7.932247
+Validating BFS 2
+Validate time for BFS 2 is 0.000002
+TEPS for BFS 2 is 66095.8 cyrus 524288
+Running BFS 3
+Time for BFS 3 is 7.672284
+Validating BFS 3
+Validate time for BFS 3 is 0.000003
+TEPS for BFS 3 is 68335.3 cyrus 524288
+Running BFS 4
+Time for BFS 4 is 7.551478
+Validating BFS 4
+Validate time for BFS 4 is 0.000003
+TEPS for BFS 4 is 69428.5 cyrus 524288
+Running BFS 5
+Time for BFS 5 is 7.351801
+Validating BFS 5
+Validate time for BFS 5 is 0.000004
+TEPS for BFS 5 is 71314.2 cyrus 524288
+Running BFS 6
+This benchmark was run on 32 MPI Processes, Scale 15, written output_32_15.log
