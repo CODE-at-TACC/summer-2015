@@ -80,5 +80,15 @@ This is the online material for TACC's summer high school program "CODE@TACC" in
 |---------------|--------------------------------------------------------------|
 | All Day       | Visit and learn at the TACC Vislab / UT WEP Tour |
 
+## Day 6
+|Time           | Topic                                                        |
+|---------------|--------------------------------------------------------------|
+| All Day       | Learn the results of the Graph500 benchmark then depart for field trip |
+
+## Day 7
+|Time           | Topic                                                        |
+|---------------|--------------------------------------------------------------|
+| Morning       | [Raspberry Pi Robotics] |
+
 ---
 ---
