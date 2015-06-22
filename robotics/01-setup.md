@@ -14,7 +14,7 @@ You will work in teams of at least two (though you can add friends if you like).
 
 ## Configure the Raspberry Pi
 
-:star: You only need to follow these steps on the Pi unit destined for use in the BrickPi.
+:star: Follow these steps on the both the Pi unit destined for use in the BrickPi as well as the system used to control it.
 
 ### Basic settings
 
@@ -29,14 +29,14 @@ Intro text
 ### Install the BrickPi software
 
 ```shell
-cd /home/pi/code-at-tacc/robotics
+cd /home/pi/summer-2015/robotics
 sudo bash setup1.sh
 ```
 
 * After this set of commands finishes running, the Pi will restart. When that finishes, open a new Terminal and enter the following commands
 
 ```shell
-cd /home/pi/code-at-tacc/robotics
+cd /home/pi/summer-2015/robotics
 sudo bash setup2.sh
 ```
 
@@ -46,7 +46,7 @@ sudo bash setup2.sh
 2. Open a Terminal window and run the following commands
 
 ```shell
-cd /home/pi/code-at-tacc/robotics
+cd /home/pi/summer-2015/robotics
 python test1.py
 ```
 
@@ -60,10 +60,7 @@ The LEGO motor should begin spinning and run for 15 seconds. Then, it will rever
 * Testing whether the assembled BrickPi works
 * Building a Simple Robot with BrickPi
 
-## Challenges
-* None
-
 ## Resources
-* [Example SimpleBot #1](https://youtu.be/fT6j4trNEJ0)
-* [Example SimpleBot #2](https://youtu.be/cWeCJrZRjJ0)
+* [Example SimpleBot #1](https://youtu.be/cWeCJrZRjJ0)
+* [Example SimpleBot #2](https://youtu.be/fT6j4trNEJ0)
 * [Dexter Industries BrickPi Forums](http://www.dexterindustries.com/forum/?forum=brickpi)
