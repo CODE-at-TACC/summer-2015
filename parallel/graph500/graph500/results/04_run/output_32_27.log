@@ -1,0 +1,21 @@
+graph_generation:               481.203273 s
+realloc() failed for size 1073535488
+[Cupcake:05516] *** Process received signal ***
+[Cupcake:05516] Signal: Aborted (6)
+[Cupcake:05516] Signal code:  (-6)
+[Cupcake:05516] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 6 with PID 5516 on node Cupcake exited on signal 6 (Aborted).
+--------------------------------------------------------------------------
+realloc() failed for size 1084257600
+[Ninja:06417] *** Process received signal ***
+[Ninja:06417] Signal: Aborted (6)
+[Ninja:06417] Signal code:  (-6)
+[Ninja:06417] *** End of error message ***
+[PiMac][[45733,1],20][../../../../../../ompi/mca/btl/tcp/btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+[PiMac][[45733,1],20][../../../../../../ompi/mca/btl/tcp/btl_tcp_frag.c:124:mca_btl_tcp_frag_send] mca_btl_tcp_frag_send: writev failed: Connection reset by peer (104)
+[PiMac][[45733,1],20][../../../../../../ompi/mca/btl/tcp/btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+[PiMac][[45733,1],20][../../../../../../ompi/mca/btl/tcp/btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+[PiMac][[45733,1],20][../../../../../../ompi/mca/btl/tcp/btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+[PiMac][[45733,1],20][../../../../../../ompi/mca/btl/tcp/btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+This benchmark was run on 32 MPI Processes, Scale 27, written output_32_27.log
