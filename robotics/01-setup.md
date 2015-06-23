@@ -45,6 +45,8 @@ sudo bash setup2.sh
 
 ## Test the BrickPi system
 
+![BrickPi Motor Ports](images/motors.png)
+
 1. Connect a LEGO Mindstorms motor to BrickPi Motor Port B
 2. Open a Terminal window and run the following commands
 
@@ -69,4 +71,5 @@ You will now spend some time with your partner building a robot with two powered
 * After assembling a simple robot, head over to the [Lessons page](python/LESSONS.md)
 
 ## Additional Resources
+* [Dexter Industries: Getting Started with BrickPi](http://www.dexterindustries.com/BrickPi/getting-started/)
 * [Dexter Industries BrickPi Forums](http://www.dexterindustries.com/forum/?forum=brickpi)
