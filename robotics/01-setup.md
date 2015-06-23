@@ -1,5 +1,5 @@
-Raspberry Pi Robotics
-=====================
+Pi, Robot
+=========
 
 #### Objectives
 1. Assemble the BrickPi unit
@@ -11,6 +11,7 @@ You will work in teams of at least two (though you can add friends if you like).
 
 ## Assemble the BrickPi unit
 
+* Follow along with the instructors to learn how to assemble your group's BrickPi
 
 ## Configure the Raspberry Pi
 
@@ -18,7 +19,7 @@ You will work in teams of at least two (though you can add friends if you like).
 
 ### Basic settings
 
-Intro text
+We have already configured the Raspberry Pis with these settings. If you are setting up a new system, these are the **raspi-config** settings for connecting to a BrickPi.
 
 * Access **raspi-config** configuration GUI by running the command `sudo raspi-config`
 * Under the **8 Advanced Options** set the following
@@ -28,12 +29,14 @@ Intro text
 
 ### Install the BrickPi software
 
+The instructors have already done this for you on each Raspberry Pi. If we encounter problems, one possible route for troubleshooting them is to run these installer scripts again.
+
 ```shell
 cd /home/pi/summer-2015/robotics
 sudo bash setup1.sh
 ```
 
-* After this set of commands finishes running, the Pi will restart. When that finishes, open a new Terminal and enter the following commands
+* After this set of commands finishes running, the Pi will restart. When that finishes, open a new Terminal and enter the following commands:
 
 ```shell
 cd /home/pi/summer-2015/robotics
@@ -46,21 +49,24 @@ sudo bash setup2.sh
 2. Open a Terminal window and run the following commands
 
 ```shell
-cd /home/pi/summer-2015/robotics
+cd /home/pi/summer-2015/robotics/python
 python test1.py
 ```
 
-The LEGO motor should begin spinning and run for 15 seconds. Then, it will reverse for another 15 seconds.
+The LEGO motor should begin spinning and run for 10 seconds, reverse for another 10 seconds, then stop.
 
 ## Build your first robot
 
-#### What you learned
-* Assembling a BrickPi unit
-* Installing the software dependencies for BrickPi
-* Testing whether the assembled BrickPi works
-* Building a Simple Robot with BrickPi
+You will now spend some time with your partner building a robot with two powered wheels. You may implement your own design or take as much inspiration as you wish from these examples:
 
-## Resources
-* [Example SimpleBot #1](https://youtu.be/cWeCJrZRjJ0)
-* [Example SimpleBot #2](https://youtu.be/fT6j4trNEJ0)
+* [BrickPi SimpleBot #1](https://youtu.be/cWeCJrZRjJ0)
+* [BrickPi SimpleBot #2](https://youtu.be/fT6j4trNEJ0)
+
+:star: Both of these examples include an Ultrasonic sensor. There are many other types of LEGO sensors.
+
+## On to the fun stuff...
+
+* After assembling a simple robot, head over to the [Lessons page](python/LESSONS.md)
+
+## Additional Resources
 * [Dexter Industries BrickPi Forums](http://www.dexterindustries.com/forum/?forum=brickpi)

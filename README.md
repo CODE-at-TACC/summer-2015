@@ -85,10 +85,10 @@ This is the online material for TACC's summer high school program "CODE@TACC" in
 |---------------|--------------------------------------------------------------|
 | All Day       | Learn the results of the Graph500 benchmark then depart for field trip |
 
-## Day 7
+## Day 7,8,9
 |Time           | Topic                                                        |
 |---------------|--------------------------------------------------------------|
-| Morning       | [Raspberry Pi Robotics] |
+| Morning       | [Raspberry Pi Robotics](robotics/01-setup.md) |
 
 ---
 ---
