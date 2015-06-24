@@ -16,12 +16,19 @@ BrickPi.Timeout = 100   #Set timeout value for the time till which to run the mo
 BrickPiSetTimeout()     #Set the timeout
 
 
-BrickPi.MotorSpeed[PORT_B] = 255
-BrickPi.MotorSpeed[PORT_C] = 255
+def forward():
+    BrickPi.MotorSpeed[PORT_B] = 255
+    BrickPi.MotorSpeed[PORT_C] = 255
+
+forward()
 
 BrickPiUpdateValues()
 
 BrickPiWait(5)
+
+forward()
+
+BrickPiWait(3)
 
 BrickPi.MotorSpeed[PORT_B] = 0
 BrickPi.MotorSpeed[PORT_C] = 0

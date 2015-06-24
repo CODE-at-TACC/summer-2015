@@ -2,7 +2,7 @@ import time
 from BrickPi import *  
 
 TIMEOUT=5 # seconds
-BAD_RESPONSE=1000
+BAD_RESPONSE=1024
 POLL_DELAY=0.01
 TACC_DEBUG=0
 EV3_COLORNAMES = ['None', 'Black', 'Blue', 'Green', 'Yellow', 'Red', 'White', 'Brown']
@@ -28,7 +28,7 @@ def Read_NXT_Sensor_Robustly(port, default=0, delay=0.01):
     response = BAD_RESPONSE
     t1 = time.time()
     t2 = t1
-    while (( t2 - t1 ) <= TIMEOUT ) & ( response in [-1, BAD_RESPONSE] ):
+    while (( t2 - t1 ) <= TIMEOUT ) and ( response in [-1, BAD_RESPONSE] ):
         t2 = time.time()
         elapsed = t2 - t1
         result = BrickPiUpdateValues()
@@ -45,7 +45,7 @@ def Read_EV3_Sensor_Robustly(port, default=0, delay=POLL_DELAY):
     response = BAD_RESPONSE
     t1 = time.time()
     t2 = t1
-    while (( t2 - t1 ) <= TIMEOUT ) & ( response >= BAD_RESPONSE ):
+    while (( t2 - t1 ) <= TIMEOUT ) and ( response >= BAD_RESPONSE ):
         result = BrickPiUpdateValues()
         if not result:
             response = BrickPi.Sensor[port]
