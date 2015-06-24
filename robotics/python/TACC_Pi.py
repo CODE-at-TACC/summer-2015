@@ -98,7 +98,7 @@ def Read_NXT_Ultrasonic(port, default=0, delay=POLL_DELAY):
         return default
 
 def Read_NXT_Touch(port, default=0, delay=POLL_DELAY):
-    if BrickPi.SensorType[port] in [TYPE_SENSOR_TOUCH]:
+    if BrickPi.SensorType[port] in [TYPE_SENSOR_TOUCH, TYPE_SENSOR_TOUCH_DEBOUNCE]:
         return Read_Sensor_Robustly(port, default=0, delay=POLL_DELAY)
     else:
         print "S" + str(port) + " was not configured as an NXT touch sensor"
