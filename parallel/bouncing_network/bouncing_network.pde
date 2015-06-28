@@ -2,8 +2,8 @@ import processing.net.*;
 
 Server sMe;
 
-String leftIP = "N.N.N.N";
-String rightIP = "N.N.N.N";
+String leftIP = "70.113.97.242";
+String rightIP = "";
 Client left, right;
 
 int port = 2342;
@@ -11,8 +11,8 @@ int port = 2342;
 float radius = 25; // radius
 float diam = radius * 2;
 
-boolean connLeft = false;
-boolean connRight = false;
+boolean failLeft = true;
+boolean failRight = false;
 
 int j;
 
@@ -22,22 +22,22 @@ void setup() {
     size(500, 500);
     fill(0);
     sMe = new Server(this, port); // start server
-    while (!connLeft || !connRight) { // set up neighbors
-        if (leftIP != "" && !connLeft) {
+    while (failLeft || failRight) { // set up neighbors, while both are failing 
+        if (leftIP != "" && failLeft) {
             left = new Client(this, leftIP, port);
             if (left.active()) {
-                connLeft = true;
+                failLeft = false;
             }
         } else {
-            connLeft = true;
+            failLeft = false;
         }
-        if (rightIP != "" && !connRight) {
+        if (rightIP != "" && failRight) {
             right = new Client(this, rightIP, port);
             if (right.active()) {
-                connRight = true;
+                failRight = false;
             }
         } else {
-            connRight = true;
+            failRight = true;
         }
     }
     background(255);
