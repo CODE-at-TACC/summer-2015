@@ -106,7 +106,7 @@ class Ball {
 
   Ball(float x, float y, float xv, float yv, float radius) {
     this.x = x;
-    this.y = y;
+    this.y = y % height - radius;
     this.xv = xv;
     this.yv = yv;
     this.radius = radius;
