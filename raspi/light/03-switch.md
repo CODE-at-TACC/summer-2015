@@ -140,6 +140,7 @@ while True:
 * [O'Reilly Raspberry Pi Cookbook](http://razzpisampler.oreilly.com/ch07.html)
 * [Physical computing with Raspberry Pi](https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/robot/buttons_and_switches/) courtesy of the [University of Cambridge Computer Laboratory](https://www.cl.cam.ac.uk/)
 * [Make: Tutorial: Raspberry Pi GPIO Pins and Python](http://makezine.com/projects/tutorial-raspberry-pi-gpio-pins-and-python/)
+* [Materials List for "Physical Computing with Raspberry Pi"](10-materials.md)
 
 #### Next Objective
 1. [x] [Build a programmable LED light](01-led.md)

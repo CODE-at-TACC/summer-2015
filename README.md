@@ -5,7 +5,7 @@ CODE@TACC: Real-World Raspberry Pi
 =================================
 
 ### Texas Advanced Computing Center
-**June 15-June 26**
+**July 13-July 24**
 
 [Chat and ask questions on our Etherpad](https://etherpad.mozilla.org/code-at-tacc)
 
@@ -21,6 +21,7 @@ This is the online material for TACC's summer high school program "CODE@TACC" in
 * Hadley Vaughn
 * Joon Yee Chuah
 * Cyrus Proctor
+* David Carver
 * Makeda Easter
 
 ## Day 1
@@ -34,26 +35,28 @@ This is the online material for TACC's summer high school program "CODE@TACC" in
 | 11:15 - 11:20 | Questions |
 | 11:20 - 12:00 | [Welcome to the Linux command line](raspi/build/04-linux-101.md) |
 | 12:00 -  1:00 | Lunch, Questions, and Challenges |
-|  1:00 -  2:00 | [Getting started with Python](python_intro/Readme.md) |
+|  1:00 -  1:30 | [Welcome to the Linux command line](raspi/build/04-linux-101.md) |
+|  1:30 -  2:00 | [Getting started with Python](python_intro/Readme.md) |
 |  2:00 -  2:15 | Questions |
 |  2:15 -  2:30 | Break |
-|  2:30 -  3:45 | [Physical computing with Raspberry Pi](raspi/light/01-led.md) |
+|  2:30 -  3:00 | [Getting started with Python](python_intro/Readme.md) |
+|  3:00 -  3:45 | Creating a professional online presence |
 |  3:45 -  4:00 | Questions and closing activities |
 
+|  2:30 -  3:45 | [Physical computing with Raspberry Pi](raspi/light/01-led.md) |
+
 ## Day 2
-|Time           | Topic                                                        |
-|---------------|--------------------------------------------------------------|
-| 9:00 -  10:00 | Creating a professional online presence |
-| 10:00 - 10:15 | [Pulse Meter Intro](pulsemeter/intro/index.md) |
-| 10:15 - 10:45 | [Step 1: LEDs](pulsemeter/build/01_LEDs.md) |
-| 10:45 - 11:00 | Break |
-| 11:00 - 12:00 | [Step 2: A/D Converter](pulsemeter/build/02_A2D_converter.md)|
+
+|Time            | Topic                                                         |
+|----------------|---------------------------------------------------------------|
+|  9:00 -  10:00 | [Building a simple programmable LED](raspi/light/01-led.md) |
+| 10:00 -  10:45 | [Make your light blink using Python](raspi/light/02-programming.md) |
+| 10:45 -  11:00 | Break |
+| 11:00 - 12:00  | [Add a pushbutton switch to your circuit](raspi/03-switch.md) |
 | 12:00 -  1:00 | Lunch, Questions, and Challenges |
-|  1:00 -  2:00 | [Step 3: Amplification](pulsemeter/build/03_OpAmps.md)|
-|  2:00 -  2:15 | Questions |
-|  2:15 -  2:30 | Break |
-|  2:30 -  3:45 | [Using your new Pulse Meter](pulsemeter/build/04_Data.md) |
+|  1:00 -  3:45 | TBD |
 |  3:45 -  4:00 | Questions and closing activities |
+
 
 ## Day 3
 |Time           | Topic                                                        |
@@ -73,17 +76,17 @@ This is the online material for TACC's summer high school program "CODE@TACC" in
 ## Day 4
 |Time           | Topic                                                        |
 |---------------|--------------------------------------------------------------|
-| All Day       | Visit and learn at the TACC Vislab |
+| All Day       | Visit and explore the TACC Vislab |
 
 ## Day 5
 |Time           | Topic                                                        |
 |---------------|--------------------------------------------------------------|
-| All Day       | Visit and learn at the TACC Vislab / UT WEP Tour |
+| All Day       | Visit and explore the TACC Vislab; UT WEP Tour |
 
 ## Day 6
 |Time           | Topic                                                        |
 |---------------|--------------------------------------------------------------|
-| All Day       | Learn the results of the Graph500 benchmark then depart for field trip |
+| All Day       | Learn the results of the Graph500 benchmark; Depart for field trip |
 
 ## Day 7,8,9
 |Time           | Topic                                                        |
