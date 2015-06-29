@@ -145,7 +145,7 @@ To turn the LED on and off we need to control it using one of the Raspberry Pi's
 * [Sparkfun](http://www.sparkfun.com/)
 * [Adafruit Industries](http://www.adafruit.com/)
 * [Fritzing](http://fritzing.org/)
-* [Materials List for "Physical Computing with Raspberry Pi"](10-materials.md)
+* [Materials List for "Physical Computing with Raspberry Pi"](10-materials.md#materials-list-introduction-to-physical-computing)
 
 # Acknowledgements
 1. Lady Ada for images and inspiration pertaining to the breadboarding tutorial

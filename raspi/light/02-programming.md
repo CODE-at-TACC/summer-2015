@@ -85,7 +85,7 @@ Let's throw a class-wide disco party of blinking lights:
 # Resources
 * [GPIO Pin Diagram](images/GPIO_Pi2.png)
 * [Adafruit Industries Wearables Central](http://www.adafruit.com/category/65)
-* [Materials List for "Physical Computing with Raspberry Pi"](10-materials.md)
+* [Materials List for "Physical Computing with Raspberry Pi"](10-materials.md#materials-list-introduction-to-physical-computing)
 
 
 #### Next Objective

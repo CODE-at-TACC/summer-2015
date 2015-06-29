@@ -24,7 +24,7 @@ This is the online material for TACC's summer high school program "CODE@TACC" in
 * David Carver
 * Makeda Easter
 
-## Day 1
+## Day 1: Getting Started with Raspberry Pi
 |Time           | Topic                                                        |
 |---------------|--------------------------------------------------------------|
 |  9:00 -  9:45 | Welcome and team building |
@@ -43,9 +43,7 @@ This is the online material for TACC's summer high school program "CODE@TACC" in
 |  3:00 -  3:45 | Creating a professional online presence |
 |  3:45 -  4:00 | Questions and closing activities |
 
-|  2:30 -  3:45 | [Physical computing with Raspberry Pi](raspi/light/01-led.md) |
-
-## Day 2
+## Day 2: Physical Computing with Raspberry Pi
 
 |Time            | Topic                                                         |
 |----------------|---------------------------------------------------------------|
@@ -58,7 +56,7 @@ This is the online material for TACC's summer high school program "CODE@TACC" in
 |  3:45 -  4:00 | Questions and closing activities |
 
 
-## Day 3
+## Day 3: Networked Computing
 |Time           | Topic                                                        |
 |---------------|--------------------------------------------------------------|
 | 9:00 -   9:30 | [Step 1: Parallel Computing Introduction](parallel/01-introduction.md) |
