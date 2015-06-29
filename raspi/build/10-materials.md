@@ -12,3 +12,13 @@ Getting Started with Raspberry Pi
 * USB Mouse
 * HDMI Cable
 * HDMI Monitor
+
+# Sources
+
+* [Fry's](http://www.frys.com) **Offers in-store pickup of many common prototyping items**
+* [Sparkfun](http://www.sparkfun.com/)
+* [Adafruit](http://www.adafruit.com/)
+* [Digikey](http://www.digikey.com/)
+* [Mouser Electronics](http://www.mouser.com/)
+* [Newark element14](http://www.newark.com/)
+
