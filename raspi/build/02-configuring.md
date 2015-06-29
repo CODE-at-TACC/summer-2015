@@ -137,6 +137,8 @@ There's a lot of corners to explore on the Raspbian desktop, but the first thing
 ## Resources
 
 * [Raspberry Pi raspi-config page](https://www.raspberrypi.org/documentation/configuration/raspi-config.md)
+* [Materials List for "Getting Started with Raspberry Pi"](10-materials.md)
+
 
 #### Next Objective
 1. [x] [Build a tiny computer](01-build.md)

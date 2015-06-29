@@ -71,9 +71,11 @@ git clone https://github.com/CODE-at-TACC/summer-2015.git
 4. How to access the terminal.
 5. How to use `git clone`.
 
-## Additional Resources
+## Resources
 
-[Using Raspberry Pi 2 as a Desktop Computer](http://www.element14.com/community/docs/DOC-74513/l/can-the-raspberry-pi-2-replace-your-desktop-computer)
+* [Using Raspberry Pi 2 as a Desktop Computer](http://www.element14.com/community/docs/DOC-74513/l/can-the-raspberry-pi-2-replace-your-desktop-computer)
+* [Materials List for "Getting Started with Raspberry Pi"](10-materials.md)
+
 
 #### Next Objective
 1. [x] [Build a tiny computer](01-build.md)

@@ -82,9 +82,11 @@ Let's install **bsdgames**!
 2. You can upgrade all your installed software at once
 3. You can search for and install specific kinds of software
 
-## Additional Resources
+## Resources
 
 * [Raspberry Pi Official APT page](https://www.raspberrypi.org/documentation/linux/software/apt.md)
+* [Materials List for "Getting Started with Raspberry Pi"](10-materials.md)
+
 
 #### Next Objectives
 1. [x] [Build a tiny computer](01-build.md)

@@ -56,6 +56,7 @@ The Raspberry Pi is a low cost, credit-card sized computer that plugs into a com
 ## Resources
 * [What is Raspberry Pi](https://www.raspberrypi.org/help/what-is-a-raspberry-pi/)
 * [Shop for Raspberry Pi and accessories](http://www.adafruit.com/category/105)
+* [Materials List for "Getting Started with Raspberry Pi"](10-materials.md)
 
 #### Next Objective
 1. [x] [Build a tiny computer](01-build.md)
