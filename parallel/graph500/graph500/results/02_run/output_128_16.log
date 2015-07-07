@@ -1,8 +1,0 @@
-graph_generation:               41.232177 s
-construction_time:              2.586571 s
-Running BFS 0
-[Bobby7083][[44785,1],4][../../../../../../ompi/mca/btl/tcp/btl_tcp_endpoint.c:457:mca_btl_tcp_endpoint_recv_blocking] recv(138) failed: Connection reset by peer (104)
-[amber][[44785,1],64][../../../../../../ompi/mca/btl/tcp/btl_tcp_endpoint.c:457:mca_btl_tcp_endpoint_recv_blocking] recv(89) failed: Connection reset by peer (104)
-[ras1][[44785,1],21][../../../../../../ompi/mca/btl/tcp/btl_tcp_endpoint.c:457:mca_btl_tcp_endpoint_recv_blocking] recv(86) failed: Connection reset by peer (104)
-[ras1][[44785,1],21][../../../../../../ompi/mca/btl/tcp/btl_tcp_endpoint.c:457:mca_btl_tcp_endpoint_recv_blocking] recv(91) failed: Connection reset by peer (104)
-This benchmark was run on 128 MPI Processes, Scale 16, written output_128_16.log
