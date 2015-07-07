@@ -2,12 +2,8 @@
 #
 # W. Cyrus Proctor
 # 2015-06-11
+# 2015-07-07
 
-if [ $# -eq 0 ]; then
-  echo "No arguments supplied!"
-  echo "Must provide IP address for info transfer!"
-  exit -1
-fi
 
 if [ "${install}" = true ]; then
   echo "Beginning Install..."
@@ -32,12 +28,8 @@ fi
 
 mkdir -p ~/.ssh
 myhostname=`hostname -s`
-sed -i -- "s/cypy/${myhostname}/g" id_rsa.pub
+chmod go-rwx id_rsa
 cp id_rsa* ~/.ssh
 cp bashrc ~/.bashrc
 cp vimrc ~/.vimrc
-
 echo ${myhostname} > ../hello/myhostfile
-infofile=${myhostname}.info
-printf "`hostname -I` ${myhostname}" > ${infofile}
-scp ${infofile} $1:~/hosts
