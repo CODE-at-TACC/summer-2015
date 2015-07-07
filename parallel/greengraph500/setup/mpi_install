@@ -29,6 +29,7 @@ fi
 chmod go-rwx id_rsa
 mkdir -p ~/.ssh
 cp id_rsa* ~/.ssh
+cp authorized_keys ~/.ssh
 cp bashrc ~/.bashrc
 cp vimrc ~/.vimrc
 myhostname=`hostname -s`
