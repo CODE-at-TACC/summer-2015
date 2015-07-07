@@ -26,10 +26,10 @@ if [ "${install}" = true ]; then
   sudo /usr/share/rpimonitor/scripts/updatePackagesStatus.pl
 fi
 
-mkdir -p ~/.ssh
-myhostname=`hostname -s`
 chmod go-rwx id_rsa
+mkdir -p ~/.ssh
 cp id_rsa* ~/.ssh
 cp bashrc ~/.bashrc
 cp vimrc ~/.vimrc
+myhostname=`hostname -s`
 echo ${myhostname} > ../hello/myhostfile
