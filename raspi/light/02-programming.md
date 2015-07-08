@@ -6,50 +6,21 @@ Physical Computing with Raspberry Pi
 2. **[Make your light blink using Python](02-programming.md)**
 3. [Add a pushbutton switch to your circuit](03-switch.md)
 
-# Make your light blink using Python
+# Make your light blink and glow using Python
 
 You have made a circuit for the Pi to control, but how do we tell the Pi what to do? :snake:Python to the rescue!
 
-## Create a simple blink program in Python
+## Find the ```blink.py``` and ```glow.py``` Python scripts
 
-To make sure this works for everyone, we will cut and paste a program instead of typing it all in. Feel free to start with this program in the future when you make your own projects!
+Your ```summer-2015``` repository clone comes with some pre-written Python scripts we will use to make the LED blink and glow. Open up a Terminal and go to  the ```summer-2015/raspi/light``` directory. You can use these commands to do so:
 
-* Open LeafPad, then copy and paste the following text into a new file. Save the file as **blink.py** in **/home/pi**
-
-**blink.py**
-
-```python
-#!/bin/env python
-
-import RPi.GPIO as GPIO
-import time
-
-# blinking function
-def blink(pin):
-    # Send 3.3V out of the pin    
-    GPIO.output(pin,GPIO.HIGH)
-    time.sleep(1)
-    # Set the pin to 0V
-    GPIO.output(pin,GPIO.LOW)
-    time.sleep(1)
-    return
-
-# Use BCM pin numbers
-GPIO.setmode(GPIO.BCM)
-# Set up GPIO25 output channel
-GPIO.setup(25, GPIO.OUT)
-
-# Blink GPIO25 5 times
-for i in range(0,5):
-    blink(25)
-    print 'blink #' + str(i + 1)
-
-# Reset all the pins when we are done
-GPIO.cleanup()
+```
+cd ~
+cd summer-2015/raspi/light
 ```
 
-* Open a new LXTerminal window so that you can type in the commands to run your new Python program. 
-* Before we run the program, let's make sure we know where it is. In the Termina window, list the local directory (by typing *ls* in LXterminal). In the list of files returned, you should see one callled **blink.py**. Let an instructor know if you don't see that file name. 
+Remember - use the tab key instead of typing all the directory names by hand!
+
 
 ## Running the blink.py program
 
@@ -72,15 +43,19 @@ Let's throw a class-wide disco party of blinking lights:
 * How to reset the GPIO system at the end of a program
 
 # Challenges
-:sparkle: Change the number of times the LED flashes
 
-:sparkle: Increase the resistor value to 1000 Ohms (1 kilo-Ohm). Is the light more or less bright than before?
+:sparkle: Try running the ```glow.py``` script
+
+:sparkle: In ```blink.py``` Change the number of times the LED flashes
 
 :sparkle: Make the LED flash faster or slower
 
 :sparkle: Update the circuit and code so the LED is controlled by another GPIO pin
 
 :sparkle: Update the circuit and code to add a second LED controlled by another GPIO pin
+
+:sparkle: Modify your circuit and increase the resistor value to 1000 Ohms (1 kilo-Ohm). Is the light more or less bright than before?
+
 
 # Resources
 * [GPIO Pin Diagram](images/GPIO_Pi2.png)
