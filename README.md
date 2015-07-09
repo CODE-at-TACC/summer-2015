@@ -43,6 +43,7 @@ This is the online material for TACC's summer high school program "CODE@TACC" in
 |  3:00 -  3:45 | Creating a professional online presence |
 |  3:45 -  4:00 | Questions and closing activities |
 
+
 ## Day 2: Physical Computing with Raspberry Pi
 
 |Time            | Topic                                                         |
