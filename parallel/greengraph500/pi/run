@@ -10,6 +10,11 @@ if [[ $# -ne 2 ]]; then
   exit 1
 fi
 
+if [ ! -f ./myhostfile ]; then
+  printf "Creating \"myhostfile\"\n"
+  echo `hostname` > ./myhostfile
+fi
+
 if [ ! -f ./calc_pi ]; then
   make
 fi

@@ -1,3 +1,7 @@
+! W. Cyrus Proctor
+! 2015-07-09
+!
+
 module digits_mod
   use, intrinsic :: iso_fortran_env
   implicit none
