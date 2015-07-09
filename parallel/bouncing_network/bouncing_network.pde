@@ -1,6 +1,6 @@
 import processing.net.*;
-
-PApplet self;
+import java.net.*;
+import java.net.Socket;
 
 Server server;
 Computer left, right;
@@ -8,25 +8,14 @@ Computer left, right;
 Bag bag = new Bag();
 
 void setup() { // sets up server
-  self = this;
   size(500, 500);
   fill(0);
   server = new Server(this, 2342);
-  left = new Computer("N.N.N.N", 2342); // left computer's IP
-  right = new Computer("N.N.N.N", 2342); // right computer's IP
-
-  while (left.isFailing() || right.isFailing()) {
-    if (left.isFailing()) {
-      left.reconnect();
-    }
-
-    if (right.isFailing()) {
-      right.reconnect();
-    }
-  }
+  left = new Computer(this, "N.N.N.N", 2342); // left computer's IP
+  right = new Computer(this, "N.N.N.N", 2342); // right computer's IP
 
   background(255);
-  bag.add(25, 25, 1, 2, 25);
+  bag.add(50, 50, 1, 2, 25);
 }
 
 void mouseClicked() {
@@ -132,22 +121,17 @@ class Ball {
   }
 
   boolean goTo(Computer computer) {
-    if (computer.isConnected()) {
-      computer.send(this);
-      return true;
-    } else {
+    if(!computer.send(this)) {
       flipX();
       return false;
     }
+    return true;
   }
 
   // nf turns floats into strings
   // join turns arrays of strings into strings
   String toString() {
-    float[] points = {
-      x, y, xv, yv, radius
-    };
-
+    float[] points = {x, y, xv, yv, radius};
     return join(nf(points, 0, 0), ",");
   }
 
@@ -165,29 +149,51 @@ class Ball {
 }
 
 class Computer {
+  // custom class to handle dynamic connections
+  PApplet parent;
+  Socket soc;
   String ip;
   int port;
   Client conn;
 
-  Computer(String ip, int port) {
+  Computer(PApplet parent, String ip, int port) {
+    this.parent = parent;
     this.ip = ip;
     this.port = port;
-    reconnect();
+    if(pingable()) {
+      reconnect();
+    }
+  }
+  
+  boolean pingable() {
+    // catchable way to see if servers are on
+    try {
+      this.soc = new Socket(this.ip, this.port);
+      soc.close();
+      return true; 
+    } catch(UnknownHostException e) {
+      return false;
+    } catch(IOException e) {
+      return false;
+    }
   }
 
-  void reconnect() {
-    conn = new Client(self, ip, port);
+  boolean reconnect() {
+    this.conn = new Client(parent, ip, port);
+    return this.conn.active();
   }
 
-  boolean isConnected() {
-    return conn.active();
-  }
-
-  boolean isFailing() {
-    return !isConnected();
-  }
-
-  void send(Ball ball) {
-    conn.write(ball.toString());
+  boolean send(Ball ball) {
+    if(this.conn != null && this.conn.active()) {
+      //send ball if connection exists and is active
+      this.conn.write(ball.toString());
+      return true;
+    }
+    if(this.pingable() && this.reconnect()) {
+      //if pingable, reconnect and send
+      this.conn.write(ball.toString());
+      return true;
+    }
+    return false; //couldn't send
   }
 }
