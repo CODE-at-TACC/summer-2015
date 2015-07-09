@@ -31,7 +31,7 @@ void draw() {
   Client client = server.available();
 
   if (client != null) {
-    println("got message");
+    println("Got message");
     String message = client.readString();
     String[] nums = message.split(",");
 
@@ -41,9 +41,7 @@ void draw() {
     float yv = float(nums[3]);
     float radius = float(nums[4]);
 
-    Ball ball = new Ball(x < radius ? width - radius : radius, y, xv, yv, radius);
-
-    bag.add(ball);
+    bag.add(x, y, xv, yv, radius);
   }
 }
 
@@ -51,51 +49,38 @@ class Bag {
   ArrayList < Ball > balls;
 
   Bag() {
-    balls = new ArrayList < Ball > ();
+    this.balls = new ArrayList < Ball > ();
   }
 
-  // We can't remove items from a list when we're
-  // actively iterating over it. Instead of directly
-  // removing something from a list we add it to a
-  // 'remove List' which we clear from the bag after
-  // the iteration process is done.
   void update() {
     ArrayList < Ball > clearList = new ArrayList < Ball > ();
 
-    for (Ball ball: balls) {
+    for (Ball ball: this.balls) {
       if (ball.update()) {
         clearList.add(ball);
       }
     }
-
-    balls.removeAll(clearList);
+    this.balls.removeAll(clearList);
   }
 
   void draw() {
-    for (Ball ball: balls) {
+    for (Ball ball: this.balls) {
       ball.draw();
     }
   }
 
   void add(float x, float y, float xv, float yv, float radius) {
-    add(new Ball(x, y, xv, yv, radius));
-  }
-
-  void add(Ball ball) {
-    balls.add(ball);
+    this.balls.add(new Ball(x, y, xv, yv, radius));
   }
 }
 
 class Ball {
-  float x;
-  float y;
-  float xv;
-  float yv;
-  float radius;
+  float x, y, xv, yv, radius;
 
   Ball(float x, float y, float xv, float yv, float radius) {
-    this.x = x;
-    this.y = y % height - radius;
+    //assumes x and y will never be < 0
+    this.x = min(x, width - radius);
+    this.y = min(y, height - radius);
     this.xv = xv;
     this.yv = yv;
     this.radius = radius;
@@ -104,14 +89,14 @@ class Ball {
   // It would be cool if the balls sped up when they were
   // over a certain area.
   boolean update() {
-    x += xv;
-    y += yv;
+    this.x += this.xv;
+    this.y += this.yv;
 
-    if (x < radius) {
+    if (this.x < this.radius) {
       return goTo(left);
-    } else if (x > width - radius) {
+    } else if (this.x > width - this.radius) {
       return goTo(right);
-    } else if (y > height - radius || y < radius) {
+    } else if (this.y > height - this.radius || this.y < this.radius) {
       flipY();
     }
 
@@ -121,11 +106,11 @@ class Ball {
   }
 
   boolean goTo(Computer computer) {
-    if(!computer.send(this)) {
-      flipX();
-      return false;
+    if(computer.send(this)) {
+      return true;
     }
-    return true;
+    flipX();
+    return false;
   }
 
   // nf turns floats into strings
@@ -136,7 +121,8 @@ class Ball {
   }
 
   void draw() {
-    ellipse(x, y, radius * 2, radius * 2);
+    float diam = radius*2;
+    ellipse(x, y, diam, diam);
   }
 
   void flipX() {
