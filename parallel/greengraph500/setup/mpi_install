@@ -34,3 +34,4 @@ cp bashrc ~/.bashrc
 cp vimrc ~/.vimrc
 myhostname=`hostname -s`
 echo ${myhostname} > ../hello/myhostfile
+echo ${myhostname} > ../pi/myhostfile

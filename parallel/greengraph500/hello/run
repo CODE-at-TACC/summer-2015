@@ -1,0 +1,23 @@
+#!/bin/bash
+
+
+if [[ $# -ne 1 ]]; then
+  printf "ERROR! I need to one input argument!\n"
+  printf "  Argument #1: the number of MPI processes\n"
+  printf "For example, to run with 4 MPI processes\n"
+  printf "./run 4\n"
+  exit 1
+fi
+
+if [ ! -f ./myhostfile ]; then
+  printf "Creating \"myhostfile\"\n"
+  echo `hostname` > ./myhostfile
+fi
+
+if [ ! -f ./calc_pi ]; then
+  make
+fi
+
+
+
+mpirun --hostfile myhostfile -np $1 ./hello

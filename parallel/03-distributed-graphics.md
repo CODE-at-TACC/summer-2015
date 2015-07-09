@@ -128,9 +128,15 @@ You and your partner don't even need to complete the same goals and have the sam
 
 As long as you're not changing the structure of the ball, you can do whatever you want on your end.
 
+# More information
+
+https://github.com/shiffman/Most-Pixels-Ever-Processing
+
+This only distributes the view, and not the computation.
+
 # Next
 
 :white_check_mark: [Learn about sequential and parallel computation](01-introduction.md)  
 :white_check_mark: [Make simple graphics](02-simple-graphics.md)  
 :white_check_mark: [Make distributed graphics](03-distributed-graphics.md)  
-[:arrow_right: Graph500](04-grap500.md)
+[:arrow_right: Green Graph500](greengraph500/01-greengraph500.md)

@@ -1,39 +1,21 @@
 import processing.net.*;
+import java.net.*;
+import java.net.Socket;
 
-Server sMe;
+Server server;
+Computer left, right;
 
-String leftIP = "N.N.N.N";
-String rightIP = "N.N.N.N";
-Client left, right;
+Bag bag = new Bag();
 
-int port = 2342;
-
-float radius = 25; // radius
-float diam = radius*2;
-
-boolean connLeft = false;
-boolean connRight = false;
-
-int j;
-
-bag b1 = new bag();
-
-void setup() {
+void setup() { // sets up server
   size(500, 500);
   fill(0);
-  sMe = new Server(this, port);       // start server
-  while ( !connLeft || !connRight ) { // set up neighbors
-      if( leftIP != "" && !connLeft) {
-        left = new Client(this, leftIP, port);
-        if( left.active() ) { connLeft = true; }
-      } else { connLeft = true; }
-      if( rightIP != "" && !connRight) {
-        right = new Client(this, rightIP, port);
-        if( right.active() ) { connRight = true; }
-      } else { connRight = true; }
-  }
+  server = new Server(this, 2342);
+  left = new Computer(this, "N.N.N.N", 2342); // left computer's IP
+  right = new Computer(this, "N.N.N.N", 2342); // right computer's IP
+
   background(255);
-  b1.addBall(25,25,1,2);
+  bag.add(50, 50, 1, 2, 25);
 }
 
 void mouseClicked() {
@@ -43,102 +25,166 @@ void mouseClicked() {
 
 void draw() {
   background(255);
-  b1.update();
-  b1.draw();
-  Client fClient = sMe.available();
-  if ( fClient != null ) {
-    println("Got message");
-    String bString = fClient.readString();
-    String[] bList = bString.split(",");
-    float[] fList = new float[4];
-    for(j = 0; j<4; j++) {
-      fList[j] = float(bList[j]);
-    }
-    if(fList[0] < radius) {
-      b1.addBall(width-radius, fList[1], fList[2], fList[3]);
-    } else {
-      b1.addBall(radius, fList[1], fList[2], fList[3]);
-    }
+  bag.update();
+  bag.draw();
+
+  Client client = server.available();
+  if (client != null) {
+    // If a message is waiting to be read, add it to bag
+    String message = client.readString();
+    println("Got:",message,"Frome:",client.ip());
+    String[] nums = message.split(",");
+    // Convert strings to floats.
+    float x = float(nums[0]);
+    float y = float(nums[1]);
+    float xv = float(nums[2]);
+    float yv = float(nums[3]);
+    float radius = float(nums[4]);
+    // Create ball from parameters and make sure ball is put on this canvas.
+    bag.add(xv < 0 ? width-radius : radius, y, xv, yv, radius);
   }
 }
 
-
-
-class bag {
-  ArrayList<ball> balls;
-  int i;
-  ball b;
-  bag() {
-    balls = new ArrayList<ball>();
+class Bag {
+  // The Bag class keeps track of, updates, and draws balls
+  // around the screen. 
+  ArrayList < Ball > balls;
+  Bag() {
+    // Initialize the bag with an empty ArrayList of balls.
+    this.balls = new ArrayList < Ball > ();
   }
+
   void update() {
-    if(balls == null){return;}
-    for(i=balls.size()-1; i>=0; i--) {
-      b = balls.get(i);
-      if( b.ret(0) < radius ) {
-        if( leftIP != "" ) {
-          println("sending left");
-          left.write(b.toStr());
-          balls.remove(i);
-        } else {
-          b.flop(2);
-          b.update();
-        }
-      } else if ( b.ret(0) > width-radius ) {
-        if( rightIP != "" ) {
-          println("sending right");
-          right.write(b.toStr());
-          balls.remove(i);
-        } else {
-          b.flop(2);
-          b.update();
-        }
-      } else if ( b.ret(1) > height-radius || b.ret(1) < radius ) {
-        b.flop(3);
-        b.update();
-      } else { b.update(); }
+    // Update all balls and remove them if they're sent
+    // to another computer.
+    ArrayList < Ball > clearList = new ArrayList < Ball > ();
+    for (Ball ball: this.balls) {
+      if (ball.update()) {
+        clearList.add(ball);
+      }
     }
-    // Think about adding a new else if to check whether balls have collided
+    this.balls.removeAll(clearList);
   }
+
   void draw() {
-    for(i=0; i<balls.size(); i++) {
-      ball b = balls.get(i);
-      b.draw();
+    // Iterate over all balls and then draw them
+    for (Ball ball: this.balls) {
+      ball.draw();
     }
   }
-  void addBall(float x, float y, float xv, float yv) {
-    balls.add(new ball(x, y, xv, yv));
+
+  void add(float x, float y, float xv, float yv, float radius) {
+    this.balls.add(new Ball(x, y, xv, yv, radius));
   }
 }
 
+class Ball {
+  float x, y, xv, yv, radius;
 
-class ball {
-  //float[] ballAr = {25,25,2,3};
-  float[] ballAr = new float[4];
-  ball(float x, float y, float xv, float yv) {
-    ballAr[0] = x;
-    ballAr[1] = y;
-    ballAr[2] = xv;
-    ballAr[3] = yv;
+  Ball(float x, float y, float xv, float yv, float radius) {
+    //assumes y will never be < 0
+    this.x = x;
+    this.y = min(y, height - radius); // makes y fit different canvases
+    this.xv = xv;
+    this.yv = yv;
+    this.radius = radius;
+    println("Created:",this.x, this.y, this.xv, this.yv, this.radius);
   }
-  // It would be cool if the balls sped up when they were
-  // over a certain area.
-  void update() {
-    // Maybe have balls slow down
-    ballAr[0] += ballAr[2];
-    ballAr[1] += ballAr[3];
+
+  boolean update() {
+    this.x += this.xv;
+    this.y += this.yv;
+
+    if (this.x < this.radius) {
+      return goTo(left);
+    } else if (this.x > width - this.radius) {
+      return goTo(right);
+    } else if (this.y > height - this.radius || this.y < this.radius) {
+      flipY();
+    }
+
+    // It would be cool if the balls sped up when they were
+    // over a certain area.
+    
+    return false;
   }
-  String toStr() {
-    String[] sList = nf(ballAr, 0, 0);
-    return join(sList,",");
+
+  boolean goTo(Computer computer) {
+    // If there is no computer to send do, the ball just bounces.
+    if(computer.send(this)) {
+      return true;
+    }
+    flipX();
+    return false;
   }
+
+  // nf turns floats into strings
+  // join turns arrays of strings into strings
+  String toString() {
+    float[] points = {this.x, this.y, this.xv, this.yv, this.radius};
+    return join(nf(points, 0, 0), ",");
+  }
+
   void draw() {
-    ellipse(ballAr[0], ballAr[1], diam, diam);
+    float diam = this.radius*2;
+    ellipse(this.x, this.y, diam, diam);
   }
-  float ret(int i) {
-    return ballAr[i];
+
+  void flipX() {
+    this.xv *= -1.0;
   }
-  void flop(int i) {
-    ballAr[i] *= -1.0;
+
+  void flipY() {
+    this.yv *= -1.0;
+  }
+}
+
+class Computer {
+  // Class to handle dynamic connections
+  PApplet parent;
+  Socket soc;
+  String ip;
+  int port;
+  Client conn;
+
+  Computer(PApplet parent, String ip, int port) {
+    this.parent = parent;
+    this.ip = ip;
+    this.port = port;
+    if(pingable()) {
+      reconnect();
+    }
+  }
+  
+  boolean pingable() {
+    // catchable way to see if servers are on
+    try {
+      this.soc = new Socket(this.ip, this.port);
+      soc.close();
+      return true; 
+    } catch(UnknownHostException e) {
+      return false;
+    } catch(IOException e) {
+      return false;
+    }
+  }
+
+  boolean reconnect() {
+    this.conn = new Client(parent, ip, port);
+    return this.conn.active();
+  }
+
+  boolean send(Ball ball) {
+    if(this.conn != null && this.conn.active()) {
+      //send ball if connection exists and is active
+      this.conn.write(ball.toString());
+      return true;
+    }
+    if(this.pingable() && this.reconnect()) {
+      //if pingable, reconnect and send
+      this.conn.write(ball.toString());
+      return true;
+    }
+    return false; //couldn't send
   }
 }
