@@ -29,32 +29,35 @@ void draw() {
   bag.draw();
 
   Client client = server.available();
-
   if (client != null) {
-    println("Got message");
+    // If a message is waiting to be read, add it to bag
     String message = client.readString();
+    println("Got:",message,"Frome:",client.ip());
     String[] nums = message.split(",");
-
+    // Convert strings to floats.
     float x = float(nums[0]);
     float y = float(nums[1]);
     float xv = float(nums[2]);
     float yv = float(nums[3]);
     float radius = float(nums[4]);
-
-    bag.add(x, y, xv, yv, radius);
+    // Create ball from parameters and make sure ball is put on this canvas.
+    bag.add(xv < 0 ? width-radius : radius, y, xv, yv, radius);
   }
 }
 
 class Bag {
+  // The Bag class keeps track of, updates, and draws balls
+  // around the screen. 
   ArrayList < Ball > balls;
-
   Bag() {
+    // Initialize the bag with an empty ArrayList of balls.
     this.balls = new ArrayList < Ball > ();
   }
 
   void update() {
+    // Update all balls and remove them if they're sent
+    // to another computer.
     ArrayList < Ball > clearList = new ArrayList < Ball > ();
-
     for (Ball ball: this.balls) {
       if (ball.update()) {
         clearList.add(ball);
@@ -64,6 +67,7 @@ class Bag {
   }
 
   void draw() {
+    // Iterate over all balls and then draw them
     for (Ball ball: this.balls) {
       ball.draw();
     }
@@ -78,16 +82,15 @@ class Ball {
   float x, y, xv, yv, radius;
 
   Ball(float x, float y, float xv, float yv, float radius) {
-    //assumes x and y will never be < 0
-    this.x = min(x, width - radius);
-    this.y = min(y, height - radius);
+    //assumes y will never be < 0
+    this.x = x;
+    this.y = min(y, height - radius); // makes y fit different canvases
     this.xv = xv;
     this.yv = yv;
     this.radius = radius;
+    println("Created:",this.x, this.y, this.xv, this.yv, this.radius);
   }
 
-  // It would be cool if the balls sped up when they were
-  // over a certain area.
   boolean update() {
     this.x += this.xv;
     this.y += this.yv;
@@ -100,12 +103,14 @@ class Ball {
       flipY();
     }
 
-    // Think about adding a new else if to check whether balls have collided
-
+    // It would be cool if the balls sped up when they were
+    // over a certain area.
+    
     return false;
   }
 
   boolean goTo(Computer computer) {
+    // If there is no computer to send do, the ball just bounces.
     if(computer.send(this)) {
       return true;
     }
@@ -116,26 +121,26 @@ class Ball {
   // nf turns floats into strings
   // join turns arrays of strings into strings
   String toString() {
-    float[] points = {x, y, xv, yv, radius};
+    float[] points = {this.x, this.y, this.xv, this.yv, this.radius};
     return join(nf(points, 0, 0), ",");
   }
 
   void draw() {
-    float diam = radius*2;
-    ellipse(x, y, diam, diam);
+    float diam = this.radius*2;
+    ellipse(this.x, this.y, diam, diam);
   }
 
   void flipX() {
-    xv *= -1.0;
+    this.xv *= -1.0;
   }
 
   void flipY() {
-    yv *= -1.0;
+    this.yv *= -1.0;
   }
 }
 
 class Computer {
-  // custom class to handle dynamic connections
+  // Class to handle dynamic connections
   PApplet parent;
   Socket soc;
   String ip;
