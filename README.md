@@ -36,7 +36,7 @@ This is the online material for TACC's summer high school program "CODE@TACC" in
 | 11:20 - 12:00 | [Welcome to the Linux command line](raspi/build/04-linux-101.md) |
 | 12:00 -  1:00 | Lunch, Questions, and Challenges |
 |  1:00 -  1:30 | [Welcome to the Linux command line](raspi/build/04-linux-101.md) |
-|  1:30 -  2:00 | [Getting started with Python](python_intro/Readme.md) |
+|  1:30 -  2:00 | STEM Program Survey |
 |  2:00 -  2:15 | Questions |
 |  2:15 -  2:30 | Break |
 |  2:30 -  3:00 | [Getting started with Python](python_intro/Readme.md) |
@@ -48,11 +48,11 @@ This is the online material for TACC's summer high school program "CODE@TACC" in
 |Time            | Topic                                                         |
 |----------------|---------------------------------------------------------------|
 |  9:00 -  10:00 | [Building a simple programmable LED](raspi/light/01-led.md) |
-| 10:00 -  10:45 | [Make your light blink using Python](raspi/light/02-programming.md) |
+| 10:00 -  10:30 | [Make your light blink using Python](raspi/light/02-programming.md) |
 | 10:45 -  11:00 | Break |
 | 11:00 - 12:00  | [Add a pushbutton switch to your circuit](raspi/03-switch.md) |
 | 12:00 -  1:00 | Lunch, Questions, and Challenges |
-|  1:00 -  3:45 | TBD |
+|  1:00 -  3:45 | [Sewable Electronics](sewable/LESSON.md) |
 |  3:45 -  4:00 | Questions and closing activities |
 
 
@@ -86,10 +86,21 @@ This is the online material for TACC's summer high school program "CODE@TACC" in
 |---------------|--------------------------------------------------------------|
 | All Day       | Learn the results of the Graph500 benchmark; Depart for field trip |
 
-## Day 7,8,9
+## Day 7
 |Time           | Topic                                                        |
 |---------------|--------------------------------------------------------------|
-| Morning       | [Raspberry Pi Robotics](robotics/01-setup.md) |
+| All Day       | [Raspberry Pi Robotics](robotics/01-setup.md) |
+
+
+## Day 8
+|Time           | Topic                                                        |
+|---------------|--------------------------------------------------------------|
+| All Day       | Visit Hill Country Science Museum |
+
+## Day 9
+|Time           | Topic                                                        |
+|---------------|--------------------------------------------------------------|
+| All Day       | [Raspberry Pi Robotics Continued](robotics/01-setup.md) |
 
 ---
 ---
