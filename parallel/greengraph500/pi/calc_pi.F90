@@ -163,7 +163,7 @@ module mpi_mod
           end if mpihuge1
           err = .true.
         end if huge1
-        read(num_subintervals_str,'(i)',iostat=io_stat)num_subintervals
+        read(num_subintervals_str,'(i30)',iostat=io_stat)num_subintervals
         noint1: if (io_stat /= 0_SPI .and. .not. err) then
           mpinoint1: if (my_mpi_rank == 0_SPI) then
             flush(o_unit)
@@ -199,7 +199,7 @@ module mpi_mod
           end if mpihuge2
           err = .true.
         end if huge2
-        read(offload_threshold_str,'(i)',iostat=io_stat)offload_threshold
+        read(offload_threshold_str,'(i30)',iostat=io_stat)offload_threshold
         noint2: if (io_stat /= 0_SPI .and. .not. err) then
           mpinoint2: if ( my_mpi_rank == 0_SPI) then
             flush(o_unit)
