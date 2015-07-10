@@ -11,7 +11,7 @@ There are quite a few tutorials out there on how to set up a distributed cluster
 
 The setup would look something like
 
-<img src="http://youngindiainformation.com/wp-content/uploads/2011/06/modem-router-swtich-net-2.jpg" align="lefgt" width="400" height="400">
+<img src="http://www.practicallynetworked.com/img/cascade_ok.gif" align="lefgt" width="400" height="400">
 
 That is all the hardware you need to get a cluster up and running!
 
@@ -42,8 +42,8 @@ we will need to move your repository first!
 Once every has their repos located at ~/summer-2015, go ahead and navigate to the setup directory and run the mpi_install script like
 
 ```
-cd ~/summer-2015/parallel/graph500/setup
-install=true ./mpi_install 123.456.7.890
+cd ~/summer-2015/parallel/greengraph500/setup
+install=true ./mpi_install
 ```
 
 The install will take 5 to 10 minutes. Some of the software you all have already installed but this is everything that is needed
@@ -56,7 +56,6 @@ sudo apt-get install gfortran -y
 sudo apt-get install openmpi-dev -y
 sudo apt-get install openmpi-bin -y
 ```
-
 There are a few other cool tools installed too
 
 ```
@@ -89,31 +88,246 @@ RPi Monitor is a cool suite of tools to help asses the health and status of your
 Once our installation has completed, we are going to test out our MPI installation and make sure everything is happy and running. Try
 
 ```
-cd ~/summer-2015/parallel/graph500/hello
-mpif90 mpi_hello.F90 -o hello
-mpirun -np 4 --hostfile myhostfile ./hello
+cd ~/summer-2015/parallel/greengraph500/hello
+./run 4
 ```
 
 First, we are compiling the Fortran code mpi_hello.F90 using the MPI gfortran wrapper mpif90 and producing the executable called "hello".
 
 Next, once we have successfully compiled our hello executable, we are using the mpirun process launcher to spawn 4 mpi processes all on your local machine to run the hello executable at the same time. We are providing a hostfile for mpirun to know where to run the mpi processes.
 
-#### Local Graph 500
-
-Now, you can also test out the Graph 500 executable that we are going to be running as well
+Our output will look like (with your hostname instead of cypy):
 
 ```
-cd ~/summer-2015/parallel/graph500/graph500
-mpirun -np 4 ./graph500_mpi_one_sided 1
+==============================================
+Hello from MPI Task:   0 on host: cypy      ||
+Hello from MPI Task:   1 on host: cypy      ||
+Hello from MPI Task:   2 on host: cypy      ||
+Hello from MPI Task:   3 on host: cypy      ||
+==============================================
 ```
 
-You should see 64 iterations and then a summary once complete. Try running with 1, 2, or 4 MPI processes by changing the number after "-np". Try scaling the problem up from 1 to 2, 3, ..., up to 10 or so by changing the second number on the command line.
+#### MPI Hello World with a Friend
+
+NOTE: You must first have successfully run MPI Hello World above.
+
+First, figure out what your local IP address is:
+
+```
+hostname -I
+```
+
+and you will likely see something like
+
+```
+10.123.4.56
+```
+
+Exchange your IP address with your neighbor and place the IP address of your neighbor in myhostfile. myhostfile will now have your hostname and your neighbor`s IP address. For instance:
+
+```
+cypy
+10.123.4.56
+```
+
+Now, rerun hello world:
+
+```
+./run 4
+```
+
+If successful, you should see output similar to:
+
+```
+==============================================
+Hello from MPI Task:   0 on host: cypy      ||
+Hello from MPI Task:   1 on host: ras1      ||
+Hello from MPI Task:   2 on host: cypy      ||
+Hello from MPI Task:   3 on host: ras1      ||
+==============================================
+```
+
+Where both you and your neighbor`s hostnames should be displayed.
+
+What happens when you try 
+
+```
+./run 8
+```
+
+#### Pi on Your Pis
+
+There is no better way to utilize your pi`s power other than computing the value of Pi! In this case, we can calculate the integral of a function f(x): 
+
+<img src="/fig/fx.png" height="50">
+
+over the interval between 0 and 1:
+
+<img src="/fig/int.png" height="50">
+
+to find that the answer is, in fact, Pi.
+
+Computers generally cannot play with numbers in infinite precision like we can with pencil and paper. Instead, they can try really hard to *approximate* the answer to this integral. One way to tell the raspberry pi to approximate the answer is with:
+
+
+<img src="/fig/approx.png" height="50">
+
+where
+
+<img src="/fig/h.png" height="50">
+
+and N is the number of subintervals used. We are, in essence, using rectangles to approximate the area under our function f(x). 
+
+<img src="/fig/riemann_3.png" height="300">
+
+The more subintervals (N) used
+
+<img src="/fig/riemann_10.png" height="300">
+
+the closer the computer gets to the actual answer
+
+<img src="/fig/riemann_200.png" height="300">
+
+and the harder the computer has to work to get that answer.
+
+We can use this approximation in parallel via MPI and working with our neighbor`s raspberry pis to help out. To do this:
+
+```
+cd ~/summer-2015/parallel/greengraph500/pi
+./run 1 3
+```
+
+where the first number (1 in this case), is the number of MPI processes to use in the pi calculation and the second number (3 in this case) is the number of subintervals, N, to use for the approximation.
+
+You will get output similar to:
+
+```
+pi@cypy:pi>./run 1 3
+
+==========================================
+Hello from MPI Task:   0 on host: cypy  ||
+==========================================
+
+
+=================================================================
+MPI Task:   0 num_subintervals Value:                       3  ||
+=================================================================
+
+
+==================================================================
+MPI Task:   0 offload_threshold Value:                       1  ||
+==================================================================
+
+
+====================================================================
+MPI Task:   0 my_num_subintervals Value:                       3  ||
+====================================================================
+
+
+=======================================================================
+Hello from MPI Task:  0 OMP Thread:  0 MPI Total:  1 OMP Total:  1   ||
+=======================================================================
+
+=========================
+OpenMP is NOT enabled  ||
+=========================
+
+====================================================================
+MPI Task:   0 num_offload_devices Value:                       0  ||
+====================================================================
+
+
+===============================================================
+MPI Task:   0 my_start_index Value:                       1  ||
+===============================================================
+
+
+===============================================================
+MPI Task:   0   my_end_index Value:                       3  ||
+===============================================================
+
+
+===================================
+MPI Task:   0 Running on a HOST  ||
+===================================
+
+
+==============================================================
+MPI Task:   0 omp_get_wtime Value:  -0.100000000000000E+01  ||
+==============================================================
+
+
+==============================================================
+MPI Task:   0     mpi_wtime Value:   0.166392326354980E-02  ||
+==============================================================
+
+
+==============================================================
+MPI Task:   0  system_clock Value:   0.165000000000000E-02  ||
+==============================================================
+
+
+==============================================================
+MPI Task:   0      cpu_time Value:   0.000000000000000E+00  ||
+==============================================================
+
+
+===============================================================
+MPI Task:   0 my_subintegral Value:   0.315084920986560E+01  ||
+===============================================================
+
+
+===============================================================
+MPI Task:   0       local_pi Value:   0.315084920986560E+01  ||
+===============================================================
+
+
+===============================================================
+MPI Task:   0      global_pi Value:   0.315084920986560E+01  ||
+===============================================================
+
+
+=================================================================
+                       exact_answer:    0.314159265358979E+01  ||
+                 approximate_answer:    0.315084920986560E+01  ||
+                absolute_difference:    0.925655627581046E-02  ||
+                 percent_difference:    0.294645337460708 %    ||
+=================================================================
+                 omp_wtime_total(s):   -0.100000000000000E+01  ||
+                 mpi_wtime_total(s):    0.166392326354980E-02  ||
+              system_clock_total(s):    0.165000000000000E-02  ||
+                  cpu_time_total(s):    0.000000000000000E+00  ||
+=================================================================
+      omp_wtime_avg_per_mpi_task(s):   -0.100000000000000E+01  ||
+      mpi_wtime_avg_per_mpi_task(s):    0.166392326354980E-02  ||
+   system_clock_avg_per_mpi_task(s):    0.165000000000000E-02  ||
+       cpu_time_avg_per_mpi_task(s):    0.000000000000000E+00  ||
+=================================================================
+      omp_wtime_avg_per_omp_task(s):   -0.100000000000000E+01  ||
+      mpi_wtime_avg_per_omp_task(s):    0.166392326354980E-02  ||
+   system_clock_avg_per_omp_task(s):    0.165000000000000E-02  ||
+       cpu_time_avg_per_omp_task(s):    0.000000000000000E+00  ||
+=================================================================
+
+```
+
+Try out several values of N starting with 1 and going up to something crazy big, like 1 billion! See how long the pi takes to run and watch how close the pi can get to the right answer with the absolute and percent difference reported. Try with your neighbor and see if you can do the same size problem faster than you did alone.
+
+Try opening and second terminal and starting nmon with
+
+```
+nmon
+```
+
+Then press *c* and *m* to see the compute power and memory used while running with some big numbers.
+
+
 
 ## Network Logistics
 
-At this point, we have the right software installed and we have tested that it is working as expected. The next step is for us to hook up all 32 pis to our 48 port switch, acquire an IP address and report it to our "reference" pi.
+At this point, we have the right software installed and we have tested that it is working as expected. The next step is for us to hook up all 32 pis to our 48 port switch, acquire an IP address and have our "reference" pi pick up this information.
 
-We will break up into three groups of 8 -- each group is a set of big tables. When your group is called, you will shutdown your pi (save any of your work first!) from the command line with
+When we are ready, everyone will shutdown their pi (save any of your work first!) from the command line with
 
 ```
 sudo shutdown -h now
@@ -123,61 +337,42 @@ Wait until the green light stops flashing and only the red light remains.
 
 ***Take out your USB wifi adapter*** and put it in your ziplock bag for safe keeping!
 
-We will rearrange the room so that there will be four stations for you all to plug in an Ethernet cable from the switch into your pi, restart your pi using a monitor from one of the stations. Wait until it boots up, open a terminal window and type
+Disconnect your keyboard, mouse and monitor. We will need to rearrange the room so that we can have all the pis together in front of the switch. Bring your power cord, find an Ethernet cable to attach from your pi to the switch and then plug in and power up your pi.
 
-```
-hostname -I
-```
-Repeatedly until you get an IP address that starts with 192 -- not 169. At that point, you will need to run a command to send your hostname and IP address to our reference pi:
-
-```
-cd ~/summer-2015/parallel/graph500/setup
-./mpi_install <reference pi IP address which I will give you>
-```
-
-This will do several things:
-
-1. It will set up your ssh keys so that we can switch between the pis without needing a password.
-2. It will copy a file that is comprised of your hostname and IP address to the reference pi.
-3. It will set up a ~/.bashrc  and ~/.vimrc file for you -- neither are necessary for our graph500 but it makes it easier for me to navigate your pi if we run into trouble.
-
-Try running
-
-```
-source ~/.bashrc
-```
-
-and watch what happens!
-
-Once everyone has hooked up their pis and sent their hostname and IP address to the reference pi, I will be running a few scripts to set up files that include
+Once everyone has hooked up their pis, I will be running a few scripts to set up files that include
 
 1. creating a master /etc/hosts file
 2. creating hostfile for mpirun
 3. distributing the authorized keys for ssh to allow for passwordless access
 4. distributing the /etc/hosts file
 
-From there, we will try to run the MPI hello executable across all the pis at the same time! If that works, we are all set to run the graph 500 benchmark!
+From there, we will try to run the MPI hello executable across all the pis at the same time! If that works, we are all set to run the green graph 500 benchmark!
 
 
 
-# Running the Graph 500 Benchmark
+# Running the Green Graph 500 Benchmark
 
 <img src="https://www.alcf.anl.gov/files/field/image/graph500-logo.jpg" align="lefgt" width="600" height="400">
 
-#### What is Graph 500?
+#### What is the Green Graph 500?
 
 
-[Graph 500](http://www.graph500.org) is a relatively new benchmark meant to represent data intensive workloads in the fields of Cybersecurity, Medical Informatics, Data Enrichment, Social Networks, and Symbolic Networks. 
+[Graph 500](http://green.graph500.org/) is a relatively new benchmark meant to represent data intensive workloads in the fields of Cybersecurity, Medical Informatics, Data Enrichment, Social Networks, and Symbolic Networks. 
 
 <img src="http://corte.si/%2Fposts/privacy/neighbourhoods-of-trust/images/full.png" align="lefgt" width="600" height="600">
 
 Graph algorithms are a core part of many analytics workloads. The argument by over 50 international HPC experts is that a new set of benchmarks is needed in order to guide the design of hardware architectures and software systems intended to support such applications and to help procurements. The hope is that Graph 500 can rise to that challenge and become a compliment to the well known [Top 500 List](http://www.top500.org) which runs a benchmark called HPL (High Performance LINPACK).
 
-On the Graph 500 website, a benchmark specification is provided. Problem classes ranging from toy (level 10) on up to huge (level 15) are outlined. We are hoping that when all 24 of the Raspberry Pis (along with a few extra) are connected together, we ***might*** be able to run the toy class of the problem.
+On the Graph 500 website, a benchmark specification is provided. Problem classes ranging from toy (level 10) on up to huge (level 15) are outlined. We are hoping that when all 28 of the Raspberry Pis (along with a few extra) are connected together, we ***might*** be able to run the toy class of the problem.
 
-The benchmark is measured in GTEPS (Giga - Transversed Edges Per Second) and by the number of vertices (given by 2^(SCALE)).
+The benchmark is measured in MTEPS / Watt (Mega (Million) - Transversed Edges Per Second) and by the number of vertices (given by 2^(SCALE)).
 
-With a total of 32 Pis with 4 cores each, we can run efficiently a total of 128 MPI processes. The benchmark will be started towards the end of the day and it will be run on increasing problem scales until we either run out of time or we run out of memory!
+With a total of 32 Pis with 4 cores each, we can run efficiently up to a total of 128 MPI processes. The benchmark will be started towards the end of the day and it will be run on increasing problem scales until we either run out of time or we run out of memory!
+
+We will be using Kill A Watt EZ power monitors to figure out how much electricity we use for our raspberry cluster.
+
+
+<img src="http://www.p3international.com/products/images/main_p4460.jpg" align="lefgt" width="400" height="400">
 
 
 ## Challenge
@@ -219,8 +414,10 @@ The problem is how to design a discipline of behavior (a concurrent algorithm) s
 
 You may want to assign numbers to the philosophers and to the forks as well for easier reference.
 
+<!---
 # Overall Results
 
 <img src="https://rawgit.com/CODE-at-TACC/summer-2015/master/parallel/graph500/graph500/results/04_run/results.svg">
 
 We were able to run all 32 pis together at a scale of 26 for a final score of 35.5917 GTEPS (Giga - Traversed Edges Per Second)! If officially accepted, this could place us at position 62 on the Graph 500 Benchmark.
+-->
