@@ -159,34 +159,34 @@ What happens when you try
 
 There is no better way to utilize your pi`s power other than computing the value of Pi! In this case, we can calculate the integral of a function f(x): 
 
-<img src="/fig/fx.png" height="50">
+<img src="./fig/fx.png" height="50">
 
 over the interval between 0 and 1:
 
-<img src="/fig/int.png" height="50">
+<img src="./fig/int.png" height="50">
 
 to find that the answer is, in fact, Pi.
 
 Computers generally cannot play with numbers in infinite precision like we can with pencil and paper. Instead, they can try really hard to *approximate* the answer to this integral. One way to tell the raspberry pi to approximate the answer is with:
 
 
-<img src="/fig/approx.png" height="50">
+<img src="./fig/approx.png" height="50">
 
 where
 
-<img src="/fig/h.png" height="50">
+<img src="./fig/h.png" height="50">
 
 and N is the number of subintervals used. We are, in essence, using rectangles to approximate the area under our function f(x). 
 
-<img src="/fig/riemann_3.png" height="300">
+<img src="./fig/riemann_3.png" height="300">
 
 The more subintervals (N) used
 
-<img src="/fig/riemann_10.png" height="300">
+<img src="./fig/riemann_10.png" height="300">
 
 the closer the computer gets to the actual answer
 
-<img src="/fig/riemann_200.png" height="300">
+<img src="./fig/riemann_200.png" height="300">
 
 and the harder the computer has to work to get that answer.
 
