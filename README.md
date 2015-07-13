@@ -60,12 +60,12 @@ This is the online material for TACC's summer high school program "CODE@TACC" in
 ## Day 3: Networked Computing
 |Time           | Topic                                                        |
 |---------------|--------------------------------------------------------------|
-| 9:00 -   9:30 | [Step 1: Parallel Computing Introduction](parallel/01-introduction.md) |
-|  9:30 - 10:45 | [Step 2: Simple Graphics](parallel/02-simple-graphics.md) |
+| 9:00 -   9:30 | [Parallel Computing Introduction](parallel/01-introduction.md) |
+|  9:30 - 10:45 | [Simple Graphics](parallel/02-simple-graphics.md) |
 | 10:45 - 11:00 | Break |
-| 11:00 - 12:00 | [Step 3: Simple Animation](parallel/02-simple-graphics.md) |
+| 11:00 - 12:00 | [Simple Animation](parallel/02-simple-graphics.md) |
 | 12:00 -  1:00 | Lunch, Questions, and Challenges |
-|  1:00 -  2:00 | [Step 4: Distributed Graphics](parallel/03-distributed-graphics.md) |
+|  1:00 -  2:00 | [Message Passing and Distributed Graphics](parallel/03-distributed-graphics.md) |
 |  2:00 -  2:15 | Questions |
 |  2:15 -  2:30 | Break |
 |  2:30 -  3:45 | [Running the Green Graph 500 Benchmark](parallel/greengraph500/01-greengraph500.md) |
