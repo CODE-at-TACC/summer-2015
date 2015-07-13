@@ -1,6 +1,6 @@
 # Parallel computing
 
-After your Stampede tour, you should know that a super computer is actually a lot of little computers networked together. Problems are solved faster on it through parallel computation, the simultaneous use of multiple compute resources to solve a computational problem \[Barney\]. Things like games and videos are run on multiple processor cores on your personal computers. Time consuming computational problems are broken up and run on hundreds of computers inside Stampede.
+After your Stampede tour, you should know that a super computer is actually a collection of computers networked together. Besides solving many separate problems, complex problems can also be solved faster through parallel computation, the simultaneous use of multiple compute resources to solve a computational problem \[Barney\]. Your personal computers will use multiple cores to manipulate images and render the graphics in a video game. Scientists use thousands of cores on Stampede to predict the weather, simulate atoms, and analyze DNA.
 
 To learn about Super Computing today, you will
 
@@ -12,7 +12,7 @@ To learn about Super Computing today, you will
 
 # Introduction
 
-Software is typically written for sequential execution, where tasks are completed one-by-one and in order. If you're like me and can't multitask, your typical homework workflow may look like this.
+Software is typically written for sequential execution, where tasks are completed one-by-one and in order. If you're like me and can't multitask, your typical sequential homework workflow may look like this.
 
 ![sequential homework](images/sequential_homework.png)
 
@@ -20,15 +20,11 @@ This is pretty inefficient and a homework deadline may interfere with your more 
 
 ![super sad cat](http://cdn.meme.am/instances/57147564.jpg)
 
-To minimize internet cat neglection, you can increase your cat-likes per minute (clpm) and homework problems per minute. The only problem is that the speed of your brain, just like the clock rate of current silicon processors, can only go so fast. According to the Stanford CPU database \[Danowitz et al.\], processors haven't gotten faster since 2005.
+To minimize internet-cat neglection, you can increase your cat-likes per minute (clpm) by completing each individual task faster. The only problem is that the speed of your brain, just like the clock rate of current silicon processors, can only go so fast. According to the Stanford CPU database \[Danowitz et al.\], processors haven't gotten faster since 2005.
 
 ![Clock rates](images/clock.png)
 
-With current technology, sequential (single-core) programs won't be running any faster. No matter how much we spend on the latest and greatest PC, it will never be any faster and performance will never improve.
-
-| Super Mario World (1990) | Risk of Rain (2013) |
-|--------------------------|---------------------|
-|![mario](https://upload.wikimedia.org/wikipedia/en/f/f4/Supermarioworld.jpg)|<img src="http://riskofraingame.com/wp-content/uploads/2012/04/lava_new.png" height="238">|
+No matter how much we've spent on the latest and greatest PC, sequential (single-core) programs won't be going any faster. You can see how 3D graphics have stagnated in the last 10 years with Animal Crossing in 2002 and Minecraft in 2011.
 
 | Animal Crossing (2002) | Minecraft (2011) |
 |---|---|
