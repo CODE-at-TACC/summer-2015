@@ -19,7 +19,7 @@ void setup() {
     // Wait until partner's server is running.
     delay(500);
   }
-  // Connect to partners server
+  // Connect to partner's server
   partner = new Client(this, partnerIP, port);
   if(!partner.active()){
     // Check to see if connection worked
