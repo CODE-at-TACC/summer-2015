@@ -23,30 +23,39 @@ $ hostname -I
 Exchange ip addresses with your neighbor to fill in the `partnerIP` variable in the `send_mesage` sketch. Now, you just need to make in a message to send to your partner by modifying `myMessage`. After you've both modified these variables, run both of your sketch and you Pis connect to eachother you should see the following output:
 
 ```
-Server Running
-Connected to partner at N.N.N.N
+My server is running on port 5204
+Connecting to partner at N.N.N.N:5204
+Connected!
 ```
 
-If you don't see the "connected" message, make sure your partner launched their program and then verify that the IP address you filled in before trying again. The setup portion of the code is somewhat complicated but necessary because processing doesn't like to automatically establish a connection when there wasn't one.
+If you don't see the "Connected!" message, make sure your partner launched their program and then verify that partnerIP does match your partner's IP address and both of your port variables are set to 5204. The setup portion of the code is somewhat complicated but necessary because processing doesn't like to automatically establish a connection when there wasn't one.
 
 ```processing
 void setup() {
+  // Start up your server
   me = new Server(this, port);
-  println("Server Running");
-  while( !connected ){
-    partner = new Client(this, partnerIP, port);
-    if( partner.active() ) {
-      connected = true;
-    }
+  println("My server is running on port",port);
+  println("Connecting to partner at",partnerIP+':'+port);
+  while( !pingable(partnerIP, port) ){
+    // Wait until partner's server is running.
+    delay(500);
   }
-  println("Connected to partner at "+partnerIP);
+  // Connect to partners server
+  partner = new Client(this, partnerIP, port);
+  if(!partner.active()){
+    // Check to see if connection worked
+    println("Something went wrong with the connection");
+    println("Please restart this program");
+  }
+  println("Connected!"); // Wooo
 }
 ```
 
-I force the program to wait until it has an "active" connection to your partners computer. After you get the "Connectect" status message, try hitting any key to send your message, which triggers the `keyPressed()`.
+This forces your program to wait until your partner's server is pingable and your connection to them is active. After you get the "Connected!" status message, switch to the canvas window and hit any key to send your message, which triggers the `keyPressed()`.
 
 ```processing
 void keyPressed() {
+  // Sends your message when you press any key
   println("Sending: "+myMessage);
   partner.write(myMessage);
 }
