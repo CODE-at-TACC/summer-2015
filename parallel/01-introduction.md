@@ -30,22 +30,24 @@ No matter how much we've spent on the latest and greatest PC, sequential (single
 |---|---|
 |![animal crossing](https://upload.wikimedia.org/wikipedia/en/5/5a/Animal_Crossing_gameplay.jpg)|<img src="http://upload.wikimedia.org/wikipedia/en/c/c9/Minecraft_Mobs.png" height="192"> |
 
-So what magic makes the graphics in games like Skyrim and Forza possible?
+Haha, just kidding. Independent developers are brining back retro graphics, not hardware limitations. So what allows games like Skyrim and Forza have realistic graphics?
 
 | Skyrim (2010) | Forza Horizon 2 (2014)|
 |---|---|
 |<img src="http://cms.elderscrolls.com/sites/default/files/tes/screenshots/Whiterun_wLegal.jpg" height="190">| <img src="http://petr.hospitalrecords.com/amy/HRR-RICKY.jpg" height="190">|
 
-Parallelism. Computers are increasing their throughput without relying on their clock rate. This is often measured through the number of operation a processor can perform every second, and it correlates with the number of transistors on the die. Moore's law
+Parallel computation!
+
+You already know that the time it takes to do a single operation will never decrease, but we can perform multiple operations at once. All computers (and phones) today are usually dual-core or quad-core, allowing them to perform more tasks simultaneously. While clock-rates haven't changed since 2005, but as predicted by Moore's law
 
 > The number of transistors incorporated in a chip will approximately double every 24 months.
 > --Gordon Moore
 
-still holds true today, and the trend is still exponential. Plotting the number of transistors for each processor in the Stanford CPU DB on the logarithmic scale shows that the trend is linear, and would be exponential on a linear scale \[Danowitz et al.\].
+leading to more complex instructions and more cores. Plotting the number of transistors for each CPU in the Stanford CPU DB \[Danowitz et al.\] on the logarithmic scale shows a linear trend (exponential), supporting Moore's Law.
 
 ![Transistor counts](images/transistors.png)
 
-Since we can no longer rely on raw speed, we now push the bounds of computation through parallel methods. Insead of executing a single instruction at a time, we can execute multiple simultaneously. You can even apply this to your homework workflow.
+You can even think about transisitors, or electronic switches, as the neurons in your brain. If you're exremely talented and work at TACC, so you have enough monitors, you can complete your homework workflow in parallel.
 
 ![parallel homework](images/parallel_homework.png)
 
