@@ -61,7 +61,7 @@ All super computers, like Stampede here at TACC, are collections of computers ne
 
 ![IB](http://cdn2.bigcommerce.com/n-nr1m3w/uxkkta8o/products/2759/images/5292/CBL_00190_96901__02925.1431463153.220.290.jpg)
 
-You won't get ultra-fast streaming from netflix on a protocol like this, but stampede will be able to predict where [Bill will be going](http://earth.nullschool.net/). 
+You won't get ultra-fast streaming from netflix on a protocol like this, but stampede will be able to predict [the next hurricane](http://earth.nullschool.net/). 
 
 # Next
 
@@ -74,7 +74,7 @@ Now that you have an idea of what parallel computation can be, lets learn about 
 
 # Citations
 
-Data for CPU freqency and transisort figures came from Danowitz et al.
+Data for CPU freqency and transisor figures came from Danowitz et al.
 
 1. Barney, Blaise. "Introduction to parallel computing." Lawrence Livermore National Laboratory 6, no. 13 (2010): 10.
 2. Danowitz, Andrew, Kyle Kelley, James Mao, John P. Stevenson, and Mark Horowitz. "CPU DB: recording microprocessor history." Communications of the ACM 55, no. 4 (2012): 55-63.
