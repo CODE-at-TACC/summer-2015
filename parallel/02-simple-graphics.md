@@ -158,7 +158,7 @@ Now that you can make simple shapes and understand how to draw them to different
 
 ## [Setup](https://processing.org/reference/setup_.html)
 
-Processing automatically looks for and call the `setup()` function when a program starts. Your Processing sketch can have only one `setup()` function. It is used to define initial environment properties like:
+Processing automatically looks for and calls the `setup()` function when a program starts. Your Processing sketch can have only one `setup()` function. It is used to define initial environment properties like:
 
 #### Canvas size
 The canvas size can be specified with the [`size()`](https://processing.org/reference/size_.html) command, which takes the two arguments: width and height. Processing defaults to a 100 by 100 pixel canvas. If we wanted to create a canvas that was 300 pixels wide and 200 pixels tall, we would define `setup()` like so:
