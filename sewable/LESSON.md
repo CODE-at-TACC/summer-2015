@@ -36,7 +36,7 @@ Lilypad is a sewable electronics system. The parts are designed to be easily emb
 This provides power using a CR2032 battery. It will provide 3.7 volts of electricity. Notice that it has two positive and negative terminal paris. That means it could, in theory, power two separate circuits. We're only going to use one side.
 
 ### Lilypad LED
-![Lilypad LED](images/Lilypad-LED.jpg "Lilypad LED")
+<img src="images/LilyPad-LED.jpg" width=200>
 
 This component is a combination of an LED and a resistor, since you would never use an LED without a resistor. Notice that it has a positive anode side and a negative cathode side.
 
