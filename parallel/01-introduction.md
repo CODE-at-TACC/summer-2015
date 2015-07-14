@@ -57,11 +57,11 @@ The idea of discrete portions of your brain independently completing certain tas
 
 Besides working on a lots of unrelated problems, super computers, like Stampede, can also cooperate to complete tasks faster. You can think of these problems like group projects, where each separte computer is a member of the group. To make sure everyone contributes, and the project gets done on time, you probably make each member responsible for certain tasks. This is the same for computers, where tasks are distributed across computers to efficiently share the load. Just like people, computers can also ask for help to solve a problem and share knowledge amongst eachother, but instead of talking they send messages over a network. 
 
-<img src="http://cdn2.bigcommerce.com/n-nr1m3w/uxkkta8o/products/2759/images/5292/CBL_00190_96901__02925.1431463153.220.290.jpg" align="left"> At TACC, we focus on low-latencey communication over [InfiniBand](https://en.wikipedia.org/wiki/InfiniBand), by Mellanox. This allows for thousands of computers to synchronize without waiting long periods just for a chance to speak. You won't be getting ultra-fast streaming from netflix or youtube on a protocol like this, but Stampede will be able to predict [the next hurricane](http://earth.nullschool.net/)!<br><br><br><br><br>
+<img src="http://cdn2.bigcommerce.com/n-nr1m3w/uxkkta8o/products/2759/images/5292/CBL_00190_96901__02925.1431463153.220.290.jpg" align="left" hspace=30px> At TACC, we focus on low-latencey communication over [InfiniBand](https://en.wikipedia.org/wiki/InfiniBand), by Mellanox. This allows for thousands of computers to synchronize without waiting long periods just for a chance to speak. You won't be getting ultra-fast streaming from netflix or youtube on a protocol like this because it was designed for short distances, but Stampede will be able to predict [the next hurricane](http://earth.nullschool.net/)!<br><br><br><br>
 
 # Next
 
-Now that you have an idea of what parallel computation can be, lets learn about graphics in Processing so we can eventually make some parallel visualizations today.
+Now that you have an idea of what parallel computation can be, lets learn about making graphics in the Processing programming language, so we can eventually make some parallel visualizations today.
 
 #### Objectives
 
