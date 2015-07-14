@@ -158,7 +158,7 @@ Now that you can make simple shapes and understand how to draw them to different
 
 ## [Setup](https://processing.org/reference/setup_.html)
 
-Processing automatically looks for and calls the `setup()` function when a program starts. Your Processing sketch can have only one `setup()` function. It is used to define initial environment properties like:
+Processing automatically looks for and calls the `setup()` function when a program starts. Your Processing sketch can have **only one `setup()` function.** It is used to define initial environment properties like:
 
 #### Canvas size
 The canvas size can be specified with the [`size()`](https://processing.org/reference/size_.html) command, which takes the two arguments: width and height. Processing defaults to a 100 by 100 pixel canvas. If we wanted to create a canvas that was 300 pixels wide and 200 pixels tall, we would define `setup()` like so:
@@ -194,7 +194,7 @@ void setup() {
 ```
 
 You can also pick a different color from http://www.w3schools.com/tags/ref_colorpicker.asp.
-
+<!--
 #### Execution rate
 
 When we finally make our animation, we can specify the framerate to render the animation at with the `frameRate()` command. By default, Processing tries to render at 60 frames per second (fps), so lets change it to a sane 30 fps for the Pis with the code:
@@ -203,9 +203,9 @@ When we finally make our animation, we can specify the framerate to render the a
 void setup() {
   frameRate(30);
 }
-```
+```-->
 
-**Just make sure that whatever you do, you keep it all in the same `setup()` function because there can only be one per program, and any extras won't be called. You will get "duplicate method setup()..." errors if you try to include more than one**.
+Make sure that any commands are all in the same `setup()` function because there can only be one per program, and any extras won't be called. Otherwise, you will get "duplicate method setup()..." errors if you try to include more than one.
 
 ## [Draw](https://processing.org/reference/draw_.html)
 
