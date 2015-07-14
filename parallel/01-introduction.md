@@ -51,15 +51,13 @@ You can even think about transisitors, or electronic switches, as the neurons in
 
 ![parallel homework](images/parallel_homework.png)
 
-This increasing core-count trend is present in all aspects of computing: our phones, our desktops, and our graphics processing units (GPUs). This means we can solve more problems, complete more tasks, and render more polygons than ever before; even at the same speed. We can even make super computers by facilitating efficient parallel computations that are distributed across thousands of machines!
+The idea of discrete portions of your brain independently completing certain tasks is essentially how a multi-core processor works. However our focus has limits, so we don't scale as well as the average computer.
 
-# Super Computers
+## Super Computers
 
-All super computers, like Stampede here at TACC, are collections of computers networked together to facilitate efficient cooporative work on a single problem or separate work on lots of little problems. Work that is distributed across multiple computers requrires communication between the computers over the network so they know how to coordinate on a problem. At home, you probably have ethernet connections. At TACC we have ethernet, fiber, and a technology called [InfiniBand](https://en.wikipedia.org/wiki/InfiniBand), by Mellanox, designed for low-latency at short distances.
+Besides working on a lots of unrelated problems, super computers, like Stampede, can also cooperate to complete tasks faster. You can think of these problems like group projects, where each separte computer is a member of the group. To make sure everyone contributes, and the project gets done on time, you probably make each member responsible for certain tasks. This is the same for computers, where tasks are distributed across computers to efficiently share the load. Just like people, computers can also ask for help to solve a problem and share knowledge amongst eachother, but instead of talking they send messages over a network. 
 
-![IB](http://cdn2.bigcommerce.com/n-nr1m3w/uxkkta8o/products/2759/images/5292/CBL_00190_96901__02925.1431463153.220.290.jpg)
-
-You won't get ultra-fast streaming from netflix on a protocol like this, but stampede will be able to predict [the next hurricane](http://earth.nullschool.net/). 
+<img src="http://cdn2.bigcommerce.com/n-nr1m3w/uxkkta8o/products/2759/images/5292/CBL_00190_96901__02925.1431463153.220.290.jpg" align="left"> At TACC, we focus on low-latencey communication over [InfiniBand](https://en.wikipedia.org/wiki/InfiniBand), by Mellanox. This allows for thousands of computers to synchronize without waiting long periods just for a chance to speak. You won't be getting ultra-fast streaming from netflix or youtube on a protocol like this, but Stampede will be able to predict [the next hurricane](http://earth.nullschool.net/)!<br><br><br><br><br>
 
 # Next
 
