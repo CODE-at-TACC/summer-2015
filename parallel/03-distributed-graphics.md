@@ -73,79 +73,140 @@ Now that sent your first message over the network, lets work on shoving a ball t
 
 # Send a ball
 
-Take a look at the base example [`bouncing_network/bouncing_network.pde`](bouncing_network/bouncing_network.pde). Depending on how you and your partner are seated, we want to send a message whenever the ball hits the edge that you share. If you're on the left, this means your right edge. If you're seated on the right, your left edge.
+Take a look at the base example [`bouncing_network/bouncing_network.pde`](bouncing_network/bouncing_network.pde). Just like the send message program, you first need to fill in your partner's IP address.
+```processing
+void setup() { // sets up server
+  size(500, 500);
+  fill(0);
+  server = new Server(this, 2342);
+  left = new Computer(this, "N.N.N.N", 2342); // left computer's IP
+  right = new Computer(this, "N.N.N.N", 2342); // right computer's IP
 
+  background(255);
+  bag.add(50, 50, 1, 2, 25);
+}
+```
 ![partner layout](images/partner_layout.png)
 
-The message that Processing will send from each computer will be the parameters for the ball, and not an actual graphic. Since we assume that the incoming message will be for a ball, we only need to send the
+If you're seated on the left, put your partner's IP address in the `right` variable; otherwise the `left`. If you start the program now, the barrier between your two windows will be soft, and the ball won't bounce. You computer will send the coordinates, and parameters of our ball (not a graphic or image) as a string to your partner's computer.
 
-(x-coordinate, y-coordinate, x-velocity, and y-velocity)
+#### Message
+`x-position, y-position, x-velocity, y-velocity, radius`
 
-all encoded as a string.
+This works because each computer knows how to interpret this message when it shows up. If it ever got a different message, the program would break because it wouldn't be expected. You would have to update the program on all computers. That being said, you can do whatever you want to the ball on your computer. Some things you can change are:
 
-"x-coordinate,y-coordinate,x-velocity,y-velocity"
+- Size
+- Velocity
+- Color (lost on transmission)
 
-Right now position and velocity are the only things that can change on a ball, but feel free to work with your partnet to incorporate something new. After you get the two balls bouncing back and forth between your two monitors, I have a series of challenges for you to try out.
+You can also create different obstacles for your ball to encounter. This is because each computer is running a separate simulation. If you happen to have 100 balls on your screen, your program will probably crawl along while other computers are still speedy.
+
+After you and your partner have the basics down, try completing some of the challenges with your whole table.
 
 # Challenges
 
 #### 1. Click to add
-Add a new ball wherever you click on the canvas. Take a look at the section
+Add a new ball wherever you click on the canvas by modifying the `mouseClicked()` section.
 ```processing
 void mouseClicked() {
   // mouseX and mouseY are handy
   // random(lower, upper) is cool too
 }
 ```
+You can add new balls to your screen with the command
+```
+bag.add(x-pos, y-pos, x-vel, y-vel, radius);
+```
+and filling in the appropriate values. You can even have those values correspond to your mouse with `mouseX` and `mouseY`. Lastly, make the ball have varying velocities and radii with the `random(min, max)` command. A radius must be a positive value, and velocities should probably be between -10 and 10.
 #### 2. Create obstacles
-Add a new object to the screen that the balls either bounce off of or speed up over. I'd insert this change in the update method of the bag function.
+Add a new object to the screen that the balls either bounce off of or speed up over. First, create some area on your canvas and make it a different color with the `fill()` command.
+```
+void draw() {
+  background(255);
+  
+  // New object
+  fill(150);
+  rect(200,200,100,100);
+  // End of new object
+  
+  fill(0);
+  bag.update();
+  bag.draw();
+.
+.
+.
+}
+```
+
+Then, alter the ball's `update()` method to react when encountering this object.
+
 ```processing
-  void update() {
-    if(balls == null){return;}
-    for(i=balls.size()-1; i>=0; i--) {
-      b = balls.get(i);
-      if( b.ret(0) < radius ) {
-        if( leftIP != "" ) {
-          println("sending left");
-          left.write(b.toStr());
-          balls.remove(i);
-        } else {
-          b.flop(2);
-          b.update();
-        }
-      } else if ( b.ret(0) > width-radius ) {
-        if( rightIP != "" ) {
-          println("sending right");
-          right.write(b.toStr());
-          balls.remove(i);
-        } else {
-          b.flop(2);
-          b.update();
-        }
-      } else if ( b.ret(1) > height-radius || b.ret(1) < radius ) {
-        b.flop(3);
-        b.update();
-      } else { b.update(); }
+class Ball {
+.
+.
+.
+  boolean update() {
+    this.x += this.xv;
+    this.y += this.yv;
+
+    if (this.x < this.radius) {
+      return goTo(left);
+    } else if (this.x > width - this.radius) {
+      return goTo(right);
+    } else if (this.y > height - this.radius || this.y < this.radius) {
+      flipY();
     }
-    // Think about adding a new else if to check whether balls have collided
+
+    // check to see if over new object
+    if( this.x >= 200 && this.x <= 300 && this.y >= 200 && this.y <= 300 ) {
+      //speed up
+      //this.xv += 0.1;
+      //this.yv += 0.1;
+      //slow down
+      //this.xv -= 0.1;
+      //this.yv -= 0.1;
+    }
+    
+    return false;
   }
 ```
+You can also have it bounce back like from a wall!
+
+If you have more time, see if you can use the keyboard to move the object like a pong paddle.
+
 #### 3. Add more monitors
 You have a left and a right, so try to make a ring around your table and see how crazy it gets.
 #### 4. Add color
 Assign a random color to each of your balls and render them that way on your screen. This would be achieved in the inital `ball()` constructor and with the `fill()` command in `ball.draw()`.
 #### 5. Make the balls ricochet
-Again, this would be achieved inside the `bag.update()` function, and you'll need to add another for loop to make a pairwise comparison between all balls.
+This would be achieved inside the `bag.update()` function, and you'll need to add another for loop to make a pairwise comparison between all balls.
 
 You and your partner don't even need to complete the same goals and have the same code, as long as your changes don't affect the structure of the ball.
 
 As long as you're not changing the structure of the ball, you can do whatever you want on your end.
 
-# More information
+# Other Methods
 
-https://github.com/shiffman/Most-Pixels-Ever-Processing
+What you just made was a distributed visualization. This means that each computer was responsible for rendering a certain portion of a visualization and just needed to communicate changes to its neighbors. A processing library called [Most Pixels Ever](https://github.com/shiffman/Most-Pixels-Ever-Processing) exists, which seems similar, but only the view of the visualization is distributed. Each computer MUST render EVERYTHING, so it doesn't make the computation any easier, it just means you can spread it across more monitors.
 
-This only distributes the view, and not the computation.
+# Your First Computation
+
+Open up the `pi/pi.pde` processing sketch and run it. This program incrementally [approximates the value of pi through monte carlo integration.](http://polymer.bu.edu/java/java/montepi/MontePi.html)
+
+```
+PI ~ 4*(# dots in circle)/(# total dots)
+```
+
+Now, try uncommenting
+
+```processing
+/* remove this line to uncomment
+me = new Server(this, port);
+connectToPartner(this);
+*/
+```
+
+by removing both /* and */ fences to run the computation with your partner. This gives you twice as many points per second, making your computation twice as effective.
 
 # Next
 
