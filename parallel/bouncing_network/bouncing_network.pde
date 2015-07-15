@@ -32,16 +32,25 @@ void draw() {
   if (client != null) {
     // If a message is waiting to be read, add it to bag
     String message = client.readString();
-    println("Got:",message,"Frome:",client.ip());
+    println("Got:",message,"From:",client.ip());
     String[] nums = message.split(",");
-    // Convert strings to floats.
-    float x = float(nums[0]);
-    float y = float(nums[1]);
-    float xv = float(nums[2]);
-    float yv = float(nums[3]);
-    float radius = float(nums[4]);
-    // Create ball from parameters and make sure ball is put on this canvas.
-    bag.add(xv < 0 ? width-radius : radius, y, xv, yv, radius);
+    if (nums.length == 5) {
+      // Convert strings to floats.
+      float x = float(nums[0]);
+      float y = float(nums[1]);
+      float xv = float(nums[2]);
+      float yv = float(nums[3]);
+      float radius = float(nums[4]);
+      // Added constraints on the variables to check for corrupted packets.
+      if ( x >= 0 && y >= 0 && abs(xv) >= 0 && abs(yv) >= 0 && radius > 0 && radius < 500) { 
+        // Create ball from parameters and make sure ball is put on this canvas.
+        bag.add(xv < 0 ? width-radius : radius, y, xv, yv, radius);
+      } else {
+        println("Got a bad packet");
+      }
+    } else {
+      println("Got a bad packet");
+    }
   }
 }
 
@@ -160,7 +169,6 @@ class Computer {
     // catchable way to see if servers are on
     try {
       this.soc = new Socket(this.ip, this.port);
-      soc.close();
       return true; 
     } catch(UnknownHostException e) {
       return false;
