@@ -35,6 +35,12 @@ String partnerIP = "192.168.1.4"; //write your partner's ip here
 Now, you just need to make in a message to send to your partner by modifying `myMessage` to something fun.
 
 ```processing
+String myMessage = "";
+```
+
+to
+
+```processing
 String myMessage = "cats";
 ```
 
@@ -69,7 +75,7 @@ void setup() {
 }
 ```
 
-This forces your program to wait until your partner's server is [pingable](send_message/send_message.pde#L49-61) and your connection to them is active. After you get the "Connected!" status message, switch to the canvas window and hit any key to send your message, which triggers the `keyPressed()`.
+This forces your program to wait until your partner's server is [pingable](send_message/send_message.pde#L49-61) and your connection to them is active. After you get the "Connected!" status message, **switch to the canvas window and hit any key** to *send* your message, which triggers the `keyPressed()`.
 
 ```processing
 void keyPressed() {
@@ -106,7 +112,14 @@ void setup() { // sets up server
 ```
 ![partner layout](images/partner_layout.png)
 
-If you're seated on the left, put your partner's IP address in the `right` variable; otherwise the `left`. If you start the program now, the barrier between your two windows will be soft, and the ball won't bounce. You computer will send the coordinates, and parameters of our ball (not a graphic or image) as a string to your partner's computer.
+If you're seated on the left, put your partner's IP address in the `right` variable; otherwise the `left`. Lets say I'm on the left and my partner's IP is 1.2.3.4. I should then alter my code to look like
+
+```processing
+left = new Computer(this, "N.N.N.N", 2342); // left computer's IP
+right = new Computer(this, "1.2.3.4", 2342); // right computer's IP
+```
+
+If you start the program now, the barrier between your two windows will be soft, and the ball won't bounce. You computer will send the coordinates, and parameters of our ball (not a graphic or image) as a string to your partner's computer.
 
 #### Message
 `x-position, y-position, x-velocity, y-velocity, radius`
@@ -115,7 +128,6 @@ This works because each computer knows how to interpret this message when it sho
 
 - Size
 - Velocity
-- Color (lost on transmission)
 
 You can also create different obstacles for your ball to encounter. This is because each computer is running a separate simulation. If you happen to have 100 balls on your screen, your program will probably crawl along while other computers are still speedy.
 
@@ -135,7 +147,13 @@ You can add new balls to your screen with the command
 ```
 bag.add(x-pos, y-pos, x-vel, y-vel, radius);
 ```
-and filling in the appropriate values. You can even have those values correspond to your mouse with `mouseX` and `mouseY`. Lastly, make the ball have varying velocities and radii with the `random(min, max)` command. A radius must be a positive value, and velocities should probably be between -10 and 10.
+and filling in the appropriate values. You can even have those values correspond to your mouse with `mouseX` and `mouseY`. Lastly, make the ball have varying velocities and radii with the `random(min, max)` command. Just make sure you don't pass invalid values.
+
+- Radius must be > 1 (so its larger than a single pixel)
+- x-velocity should be somewhere between -10 and 10
+- y-velocity should be somewhere between -10 and 10 (so you can see it)
+
+I'll let you figure out the rest.
 #### 2. Create obstacles
 Add a new object to the screen that the balls either bounce off of or speed up over. First, create some area on your canvas and make it a different color with the `fill()` command.
 ```
@@ -150,9 +168,9 @@ void draw() {
   fill(0);
   bag.update();
   bag.draw();
-.
-.
-.
+  .
+  .
+  .
 }
 ```
 
@@ -211,9 +229,7 @@ What you just made was a distributed visualization. This means that each compute
 
 Open up the `pi/pi.pde` processing sketch and run it. This program incrementally [approximates the value of pi through monte carlo integration.](http://polymer.bu.edu/java/java/montepi/MontePi.html)
 
-```
-PI ~ 4*(# dots in circle)/(# total dots)
-```
+![pi calc](images/pi_calc.png)
 
 Now, try uncommenting
 
