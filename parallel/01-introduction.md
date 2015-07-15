@@ -1,8 +1,8 @@
 # Parallel computing
 
-After your Stampede tour, you should know that a super computer is actually a collection of computers networked together. Besides solving many separate problems, complex problems can also be solved faster through parallel computation, the simultaneous use of multiple compute resources to solve a computational problem \[Barney\]. Your personal computers will use multiple cores to manipulate images and render the graphics in a video game. Scientists use thousands of cores on Stampede to predict the weather, simulate atoms, and analyze DNA.
+After your Stampede tour, you should know that a supercomputer is actually a collection of computers networked together. Besides solving many separate problems, complex problems can also be solved faster through parallel computation, the simultaneous use of multiple compute resources to solve a computational problem \[Barney\]. Your personal computers will use multiple cores to manipulate images and render the graphics in a video game. Scientists use thousands of cores on Stampede to predict the weather, simulate atoms, and analyze DNA.
 
-To learn about Super Computing today, you will
+To learn about Supercomputing today, you will
 
 #### Objectives
 1. Learn about sequential and parallel computation
@@ -53,9 +53,9 @@ You can even think about transisitors, or electronic switches, as the neurons in
 
 The idea of discrete portions of your brain independently completing certain tasks is essentially how a multi-core processor works. However our focus has limits, so we don't scale as well as the average computer.
 
-## Super Computers
+## Supercomputers
 
-Besides working on a lots of unrelated problems, super computers, like Stampede, can also cooperate to complete tasks faster. You can think of these problems like group projects, where each separte computer is a member of the group. To make sure everyone contributes, and the project gets done on time, you probably make each member responsible for certain tasks. This is the same for computers, where tasks are distributed across computers to efficiently share the load. Just like people, computers can also ask for help to solve a problem and share knowledge amongst eachother, but instead of talking they send messages over a network. 
+Besides working on a lots of unrelated problems, supercomputers, like Stampede, can also cooperate to complete tasks faster. You can think of these problems like group projects, where each separte computer is a member of the group. To make sure everyone contributes, and the project gets done on time, you probably make each member responsible for certain tasks. This is the same for computers, where tasks are distributed across computers to efficiently share the load. Just like people, computers can also ask for help to solve a problem and share knowledge amongst eachother, but instead of talking they send messages over a network. 
 
 <img src="http://cdn2.bigcommerce.com/n-nr1m3w/uxkkta8o/products/2759/images/5292/CBL_00190_96901__02925.1431463153.220.290.jpg" align="left" hspace=30px> At TACC, we focus on low-latencey communication over [InfiniBand](https://en.wikipedia.org/wiki/InfiniBand), by Mellanox. This allows for thousands of computers to synchronize without waiting long periods just for a chance to speak. You won't be getting ultra-fast streaming from netflix or youtube on a protocol like this because it was designed for short distances, but Stampede will be able to predict [the next hurricane](http://earth.nullschool.net/)!<br><br><br><br>
 
