@@ -20,11 +20,23 @@ You'll see that you need your partner's IP address, so your program knows *where
 $ hostname -I
 ```
 
-Exchange ip addresses with your neighbor to fill in the `partnerIP` variable in the `send_mesage` sketch. Now, you just need to make in a message to send to your partner by modifying `myMessage`. After you've both modified these variables, run both of your sketch and you Pis connect to eachother you should see the following output:
+Exchange ip addresses with your neighbor to fill in the `partnerIP` variable in the `send_mesage` sketch. 
+
+```processing
+String partnerIP = "N.N.N.N"; //write your partner's ip here
+```
+
+becomes
+
+```processing
+String partnerIP = "192.168.1.4"; //write your partner's ip here
+```
+
+Now, you just need to make in a message to send to your partner by modifying `myMessage`. After you've both modified these variables, run both of your sketch and you Pis connect to eachother you should see the following output:
 
 ```
 My server is running on port 5204
-Connecting to partner at N.N.N.N:5204
+Connecting to partner at 192.168.1.4:5204
 Connected!
 ```
 
