@@ -277,61 +277,68 @@ Now that you can make a shape move across your Processing canvas, try to do the 
 
 # Reactive Animation
 
-To put the finishing touches on the animation we made, we're going to use conditional (if) statements to make changes to our velocity based on the position of the shape. Lets change our basic case, to a rectangle that moves from the top-left to the top-right side of the canvas and have it bounce off the right boundary of the 100 by 100 pixel canvas without going past it by reversing its x-veolocity.
-
+To put the finishing touches on the animation we made, we're going to use conditional (if) statements to make changes to our animation to make our rectangle bounce when it hits the edge of our canvas. To do so, we first need to introduce a velocity variable.
 ```processing
 float xPos = 0.0;
-float xVel = 0.5;
 float yPos = 0.0;
-
+float xVel = 1.0; //x-velocity
+```
+This allows to to change it from positive (moving left to right) to negative (right to left) when our program runs. Now, lets incorporate xVel into our draw update.
+```processing
 void draw() {
-  background(204);
+  background(#99CCFF);
   rect(xPos,yPos,50,50);
-  if(xPos > 100) {
-    xVel = xVel * -1.0;
-  }
   xPos += xVel;
+  yPos += 0.5;
 }
 ```
 
-While the code above makes the rectangle bounce back from the right side, it does so *after* moving past the edge. We can fix this by changing the bound to 100 minus the width of the rectangle (50).
+If you run the program, your shape should run off the right of your screen twice as fast as it usually did, so we just need it to change directions when it reaches the right wall of your canvas.
 
 ```processing
-float xPos = 0.0;
-float xVel = 0.5;
-float yPos = 0.0;
-
 void draw() {
-  background(204);
+  background(#99CCFF);
   rect(xPos,yPos,50,50);
-  if(xPos > 100-50) {
-    xVel = xVel * -1.0;
+  if(xPos > width) { // width equals the width of your canvas
+    xVel *= -1;
   }
   xPos += xVel;
+  yPos += 0.5;
+}
+```
+
+While the code above makes the rectangle bounce back from the right side, it does so *after* moving past the edge. We can fix this by changing the bound to the canvas width minus the width of the rectangle (50).
+
+```processing
+void draw() {
+  background(#99CCFF);
+  rect(xPos,yPos,50,50);
+  if(xPos > width-50) {
+    xVel *= -1.0;
+  }
+  xPos += xVel;
+  yPos += 0.5;
 }
 ```
 
 Now we just need to make the rectangle bounce off the left side as well.
 
 ```processing
-float xPos = 0.0;
-float xVel = 0.5;
-float yPos = 0.0;
-
 void draw() {
-  background(204);
+  background(#99CCFF);
   rect(xPos,yPos,50,50);
-  if(xPos > 100-50) {
-    xVel = xVel * -1.0;
+  if(xPos > width-50) {
+    xVel *= -1.0;
   }
   if(xPos < 0) {
     xVel = xVel * -1.0;
   }
   xPos += xVel;
+  yPos += 0.5;
 }
 ```
 
-Your rectangle should now be infinitely bouncing back and forth forever!
+If you remove the yPos update, you rectangle will bounce between the two walls forever!
 
 ## Activity
 
