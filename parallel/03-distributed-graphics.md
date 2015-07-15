@@ -51,7 +51,7 @@ void setup() {
 }
 ```
 
-This forces your program to wait until your partner's server is pingable and your connection to them is active. After you get the "Connected!" status message, switch to the canvas window and hit any key to send your message, which triggers the `keyPressed()`.
+This forces your program to wait until your partner's server is [pingable](send_message/send_message.pde#L49-61) and your connection to them is active. After you get the "Connected!" status message, switch to the canvas window and hit any key to send your message, which triggers the `keyPressed()`.
 
 ```processing
 void keyPressed() {
@@ -61,17 +61,21 @@ void keyPressed() {
 }
 ```
 
-All types of networked communication works though interactions of this manner. Internet browsers are clients asking servers for files residing in a specific location at an internet addresss. [Open MPI](https://en.wikipedia.org/wiki/Open_MPI) passes messages between programs on a network to coordinate work because separate nodes have no shared memory. Welcome to the world of distributed computing! This was your first step, but this will also be the first test we run after assembling the cluster for Graph500.
+Your partner should get your message and you should get theirs. You can even modify this code to send a letter at a time, so you can send any message.
 
-I know you're impressed with the messages we just sent, so lets work on shoving a bouncing ball through our wireless connection. If hackerman can hack anything through time, we can do this.
+### Welcome to the world of Distributed Computing!
 
-<img src="http://i.imgur.com/YRBRRRI.png" height="200">
+This first step was only slightly exciting, but it will also be the first test after we assemble our cluster. This ensures that each computer is able to talk to the other. All types of networked communication works though client/server interactions of this manner. Internet browsers are clients asking servers for files residing in a specific location at an internet addresss. On supercomputers, we use [Open MPI](https://en.wikipedia.org/wiki/Open_MPI) to coordinate work over a network because a program can't span two computers.
+
+Now that sent your first message over the network, lets work on shoving a ball through our wireless tube.
+
+![internet cats](http://weknowmemes.com/wp-content/uploads/2012/02/the-internet-is-a-series-of-tubes-and-theyre-full-of-cats.jpg)
 
 # Send a ball
 
-Take a look at the base example `bouncing_network/bouncing_network.pde`. Depending on how you and your partner are seated, we want to send a message whenever the ball hits the edge that you share. If you're on the left, this means your right edge. If you're seated on the right, your left edge.
+Take a look at the base example [`bouncing_network/bouncing_network.pde`](bouncing_network/bouncing_network.pde). Depending on how you and your partner are seated, we want to send a message whenever the ball hits the edge that you share. If you're on the left, this means your right edge. If you're seated on the right, your left edge.
 
-**[ L ] [ R ]**
+![partner layout](images/partner_layout.png)
 
 The message that Processing will send from each computer will be the parameters for the ball, and not an actual graphic. Since we assume that the incoming message will be for a ball, we only need to send the
 
