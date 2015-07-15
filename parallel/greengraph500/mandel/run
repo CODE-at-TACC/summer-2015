@@ -1,0 +1,29 @@
+#!/bin/bash
+
+
+if [[ $# -ne 3 ]]; then
+  printf "ERROR! I need to three input arguments!\n"
+  printf "  Argument #1: the number of MPI processes\n"
+  printf "  Argument #2: the size of the picture in pixels\n"
+  printf "  Argument #3: the number of function iterations\n\n"
+  printf "For example, to run with 4 MPI processes, for a 300x300\n"
+  printf "picture using 10 function iterations, I would write:\n"
+  printf "./run 4 300 10\n"
+  exit 1
+fi
+
+if [ ! -f ./myhostfile ]; then
+  printf "Creating \"myhostfile\"\n"
+  echo `hostname` > ./myhostfile
+fi
+
+if [ ! -f ./mandel_bulk ]; then
+  make mandel_bulk
+fi
+
+
+mpirun --hostfile myhostfile -np $1 ./mandel_bulk steps $2 iters $3 && \
+display mandelpicture.ppm
+
+
+
