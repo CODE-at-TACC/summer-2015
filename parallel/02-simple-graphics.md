@@ -254,7 +254,7 @@ float xPos = 0.0;
 float yPos = 0.0;
 
 void draw() {
-  background(204);
+  background(#99CCFF);
   rect(xPos,yPos,50,50);
   xPos+=0.5;
   yPos+=0.5;
