@@ -22,8 +22,6 @@ if [ ! -f ./mandel_bulk ]; then
 fi
 
 
-mpirun --hostfile myhostfile -np $1 ./mandel_bulk steps $2 iters $3 && \
-display mandelpicture.ppm
-
+mpirun --hostfile myhostfile -np $1 ./mandel_bulk steps $2 iters $3
 
 
