@@ -32,7 +32,13 @@ becomes
 String partnerIP = "192.168.1.4"; //write your partner's ip here
 ```
 
-Now, you just need to make in a message to send to your partner by modifying `myMessage`. After you've both modified these variables, run both of your sketch and you Pis connect to eachother you should see the following output:
+Now, you just need to make in a message to send to your partner by modifying `myMessage` to something fun.
+
+```processing
+String myMessage = "cats";
+```
+
+After you've both modified these variables, run both of your sketch and you Pis connect to eachother you should see the following output:
 
 ```
 My server is running on port 5204
