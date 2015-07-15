@@ -331,7 +331,7 @@ void draw() {
     xVel *= -1.0;
   }
   if(xPos < 0) {
-    xVel = xVel * -1.0;
+    xVel *= -1.0;
   }
   xPos += xVel;
   yPos += 0.5;
