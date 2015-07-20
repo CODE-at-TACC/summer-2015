@@ -1,0 +1,6 @@
+#!/bin/bash
+
+while read host; do
+  echo ${host}
+  ssh pi@${host} "killall python " &
+done <hostfile

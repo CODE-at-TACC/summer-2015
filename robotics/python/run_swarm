@@ -1,0 +1,7 @@
+#!/bin/bash
+
+while read host; do
+  echo ${host}
+  scp swarm.py pi@${host}:~/summer-2015/robotics/python
+  ssh pi@${host} "cd ~/summer-2015/robotics/python; nohup python swarm.py & " &
+done <hostfile
