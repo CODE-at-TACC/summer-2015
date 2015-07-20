@@ -1,0 +1,4 @@
+#!/bin/bash
+
+scp $1 $2:~/summer-2015/robotics/python
+ssh $2 "cd ~/summer-2015/robotics/python; python -u $1"
