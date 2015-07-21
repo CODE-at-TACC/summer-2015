@@ -80,7 +80,7 @@ def Read_EV3_Touch(port, default=0, delay=POLL_DELAY):
         return default
 
 def Read_EV3_Color(port, default=0, delay=POLL_DELAY):
-    if BrickPi.SensorType[port] in [TYPE_SENSOR_EV3_COLOR_M0, TYPE_SENSOR_EV3_COLOR_M1,TYPE_SENSOR_EV3_COLOR_M2,TYPE_SENSOR_EV3_COLOR_M3,TYPE_SENSOR_EV3_COLOR_M4]:
+    if BrickPi.SensorType[port] in [TYPE_SENSOR_LIGHT_OFF, TYPE_SENSOR_EV3_COLOR_M0, TYPE_SENSOR_EV3_COLOR_M1,TYPE_SENSOR_EV3_COLOR_M2,TYPE_SENSOR_EV3_COLOR_M3,TYPE_SENSOR_EV3_COLOR_M4]:
         color_value = Read_Sensor_Robustly(port, default=0, delay=POLL_DELAY)
         if BrickPi.SensorType[port] == TYPE_SENSOR_EV3_COLOR_M2:
             return EV3_COLORNAMES[color_value]

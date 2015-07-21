@@ -31,4 +31,4 @@ BrickPiWait(5)
 forward()
 BrickPiWait(3)
 stop()
-BrickPiUpdateValues()
+
