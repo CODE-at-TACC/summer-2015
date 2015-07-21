@@ -2,6 +2,6 @@
 
 while read host; do
   echo ${host}
-  scp swarm.py pi@${host}:~/summer-2015/robotics/python
-  ssh pi@${host} "cd ~/summer-2015/robotics/python; nohup python swarm.py & " &
+  scp $1 pi@${host}:~/summer-2015/robotics/python
+  ssh pi@${host} "cd ~/summer-2015/robotics/python; nohup python $1 & " &
 done <hostfile

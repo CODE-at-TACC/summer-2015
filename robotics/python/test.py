@@ -3,5 +3,5 @@
 import time
 
 while True:
-	print "ECHO"
+	print "Test works!"
 	time.sleep(1)
