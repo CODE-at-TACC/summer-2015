@@ -25,7 +25,7 @@ Some other popular distributions include Ubuntu, CentOS, Mint, and SUSE. Slackwa
 
 On our Debian-based systems, we have been using apt-get to grab pre-compiled software packages from the "cloud" -- for free I might add. For us to run Graph 500 across our of our pis, we will be using a library called MPI (Message Passing Interface). MPI has become the defacto standard in high performance computing for distributed memory clusters. One implementation that we can get from apt-get is called [Open MPI](https://www.open-mpi.org). MPI has rules for the C and Fortran languages.
 
-To install the software we need to make our Pi cluster, run the mpi_install script in parallel/graph500/setup/mpi_install. I will provide you with an IP address to give to the script. The first time, while you are still at your stations you will verify that your repository is located in your home directory. 
+To install the software we need to make our Pi cluster, run the mpi_install script in parallel/greengraph500/setup/mpi_install. The first time, while you are still at your stations you will verify that your repository is located in your home directory. 
 
 ```
 ls ~/summer-2015
@@ -366,6 +366,11 @@ We will be using Kill A Watt EZ power monitors to figure out how much electricit
 2. Over the next six days, work up to the toy class which consists of 67,108,864 vertices taking up over 17 GB RAM across all 32 Raspberry Pis.
 
 
+# Overall Results
+
+We were able to run all 32 pis together at a scale of 26 for a final score of 35.8254 GTEPS (Giga - Traversed Edges Per Second)! Power was measured for a 16 minute interval taking instaneous measurements every 2 minutes. The router, switch and raspberry pis averaged in 147.18 +/- 0.60 watts during the measurement period. The final Green Graph 500 score was 243.42 MTEPS/Watt. Unofficially, this is good enough for second place in the "Small Data" category!
+
+
 # MPI Thought Experiments While You Wait
 
 You all will be broken into teams of 8. Your job is to come up with solutions to the following two thought experiments. These represent some important and fundamental concepts in distributed parallel computing which are leveraged heavily in MPI libraries.
@@ -379,7 +384,7 @@ You all will be broken into teams of 8. Your job is to come up with solutions to
 5. Each team member, may (or may not), participate in the actual summation.
 5. Design at least two different algorithms to come up with the sum of all 80 numbers. 
 6. Note that communication of any numbers from one team member to another must be taken into account.
-7. Design your alogrithms such that they are more efficient than what the other teams come up with.
+7. Design your algorithms such that they are more efficient than what the other teams come up with.
 8. Can you come up with a third algorithm that is the least efficient?
 
 ### The Spaghetti Philosophers

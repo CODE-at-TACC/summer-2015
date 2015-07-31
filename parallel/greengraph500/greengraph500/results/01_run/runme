@@ -1,0 +1,12 @@
+#!/bin/bash
+
+
+
+# for p in 128 64 32 16 8 4 2 1; do
+for p in 32; do
+  for i in {20..26}; do 
+    echo "$p MPI Processes, Scale $i, output_${p}_${i}.log" ; 
+    mpirun -np $p --hostfile hostfile --bind-to-core ./cyrus_graph500_mpi_replicated_no_validate $i 2>&1 | tee output_${p}_${i}.log ; 
+    echo "This benchmark was run on $p MPI Processes, Scale $i, written output_${p}_${i}.log" >> output_${p}_${i}.log; 
+  done
+done
