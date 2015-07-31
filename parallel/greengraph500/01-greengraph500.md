@@ -370,6 +370,7 @@ We will be using Kill A Watt EZ power monitors to figure out how much electricit
 
 We were able to run all 32 pis together at a scale of 26 for a final score of 35.8254 GTEPS (Giga - Traversed Edges Per Second)! Power was measured for a 16 minute interval taking instaneous measurements every 2 minutes. The router, switch and raspberry pis averaged in 147.18 +/- 0.60 watts during the measurement period. The final Green Graph 500 score was 243.42 MTEPS/Watt. Unofficially, this is good enough for second place in the "Small Data" category!
 
+<img src="./fig/results.png" height="500">
 
 # MPI Thought Experiments While You Wait
 

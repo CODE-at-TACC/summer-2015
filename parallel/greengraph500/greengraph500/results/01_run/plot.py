@@ -71,7 +71,7 @@ def plot_data(x_list, y_list, s_list, l_list):
       cap.set_markeredgewidth(1)
    
  
-  plt.title("CODE@TACC Super2PiR Raspberry Pi 2 Model B Cluster \n Graph 500 Benchmark Results") 
+  plt.title("CODE@TACC Monty Pi-thon Raspberry Pi 2 Model B Cluster \n Graph 500 Benchmark Results") 
   ax.set_xlabel("Problem Scale (Powers of Two)")
   ax.set_ylabel("Traversed Edges Per Second (TEPS)") 
   ax.set_yscale('log')
